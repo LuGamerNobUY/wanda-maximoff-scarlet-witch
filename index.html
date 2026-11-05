@@ -1,0 +1,3516 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wanda Maximoff · The Scarlet Witch</title>
+<meta name="description" content="Fan site no oficial de Wanda Maximoff, la Bruja Escarlata del Universo Cinematográfico de Marvel: perfil, historia, poderes, evolución, relaciones, curiosidades, galería y frases.">
+<meta name="theme-color" content="#050203">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='28 20 64 64'%3E%3Cpath d='M60 26 L65 50 L79 33 L72.5 56 L87 51 L77 72 L43 72 L33 51 L47.5 56 L41 33 L55 50 Z' fill='%23c8102e' stroke='%23ecd39a' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://static.wikia.nocookie.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+<script>
+  document.documentElement.className = 'js';
+  /* Red de seguridad: si el script principal fallara, el contenido se muestra igualmente. */
+  setTimeout(function () { if (!window.__scarletReady) document.documentElement.className = 'no-js'; }, 4500);
+</script>
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root {
+  --ink: #050203;
+  --ink-2: #0a0405;
+  --ink-3: #12060a;
+  --wine: #2a0610;
+  --burgundy: #5c0d1d;
+  --burgundy-2: #7d1428;
+  --crimson: #c8102e;
+  --scarlet: #ff2b4a;
+  --scarlet-2: #ff6b80;
+  --gold: #c9a35a;
+  --gold-2: #ecd39a;
+  --gold-3: #8c6a2c;
+  --text: #f4ebe6;
+  --text-2: rgba(244, 235, 230, .76);
+  --text-3: rgba(244, 235, 230, .52);
+  --line: rgba(201, 163, 90, .16);
+  --line-2: rgba(201, 163, 90, .32);
+  --f-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --f-serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --f-ui: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+  --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+  --nav-h: 72px;
+  --gutter: clamp(16px, 4vw, 44px);
+  --maxw: 1240px;
+  color-scheme: dark;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  background: var(--ink);
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html.is-locked { overflow: hidden; }
+html.is-locked body, html.is-locked .nav { padding-right: var(--sbw, 0px); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--text);
+  font: 400 16px/1.7 var(--f-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 50% at 85% 10%, rgba(92, 13, 29, .22), transparent 70%),
+    radial-gradient(60% 50% at 0% 100%, rgba(92, 13, 29, .18), transparent 70%),
+    var(--ink);
+}
+main { display: block; overflow-x: clip; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
+button, a { touch-action: manipulation; }
+h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
+::selection { background: rgba(200, 16, 46, .6); color: #fff; }
+:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 3px; border-radius: 6px; }
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+.container { width: min(100% - 2 * var(--gutter), var(--maxw)); margin-inline: auto; }
+.section { position: relative; padding-block: clamp(96px, 12vw, 168px); }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ico {
+  width: 24px; height: 24px;
+  fill: none; stroke: currentColor;
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+  flex: none;
+}
+.skip-link {
+  position: fixed; left: 16px; top: 12px; z-index: 200;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--crimson); color: #fff;
+  font: 600 13px/1 var(--f-ui);
+  transform: translateY(-160%);
+  transition: transform 200ms var(--ease-out);
+}
+.skip-link:focus-visible { transform: none; }
+.noscript {
+  position: fixed; inset: auto 16px 16px; z-index: 300;
+  padding: 14px 18px; border-radius: 14px;
+  background: var(--burgundy); color: #fff; text-align: center;
+}
+
+/* =========================================================
+   CAPAS MÁGICAS: partículas, aura del cursor, grano
+   ========================================================= */
+.magic {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 40;
+  pointer-events: none;
+}
+.aura {
+  position: fixed; left: 0; top: 0;
+  width: 560px; height: 560px;
+  z-index: 41;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 43, 74, .13) 0%, rgba(200, 16, 46, .06) 35%, transparent 68%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  will-change: transform;
+}
+.aura.is-on { opacity: 1; }
+.grain {
+  position: fixed; inset: -50%;
+  z-index: 45;
+  pointer-events: none;
+  opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-3%, 2%, 0); }
+  40% { transform: translate3d(2%, -3%, 0); }
+  60% { transform: translate3d(-2%, -1%, 0); }
+  80% { transform: translate3d(3%, 3%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+.intro { display: none; }
+.js .intro {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-content: center; justify-items: center; gap: 22px;
+  background: radial-gradient(60% 50% at 50% 50%, rgba(92, 13, 29, .45), transparent 70%), var(--ink);
+  animation: intro-safety 0s linear 5.5s forwards;
+}
+.intro.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 800ms ease, visibility 0s linear 800ms;
+}
+.intro__sigil {
+  width: 132px; height: 132px;
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 18px rgba(255, 43, 74, .65));
+  transition: transform 900ms var(--ease-out), filter 900ms ease;
+}
+.intro.is-leaving .intro__sigil { transform: scale(1.22); filter: drop-shadow(0 0 40px rgba(255, 43, 74, .9)) blur(4px); }
+.intro__ring { stroke: rgba(236, 211, 154, .55); stroke-width: 1; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s var(--ease-in-out) forwards; }
+.intro__ring--in { stroke: rgba(255, 107, 128, .5); animation-delay: .15s; }
+.intro__crown { stroke: var(--gold-2); stroke-width: 1.6; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s var(--ease-in-out) .3s forwards; }
+.intro__gem { stroke: var(--scarlet); stroke-width: 1.6; fill: rgba(255, 43, 74, 0); stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw .6s var(--ease-in-out) .9s forwards, gem 1s ease 1.1s forwards; }
+.intro__label {
+  font: 500 12px/1 var(--f-display);
+  letter-spacing: .6em; padding-left: .6em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  opacity: 0;
+  animation: fade-in 1s ease .5s forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes gem { to { fill: rgba(255, 43, 74, .85); } }
+@keyframes fade-in { to { opacity: .85; } }
+@keyframes intro-safety { to { opacity: 0; visibility: hidden; } }
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+.btn {
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: 14px;
+  height: 56px; padding: 0 30px;
+  border-radius: 999px;
+  font: 700 12px/1 var(--f-ui);
+  letter-spacing: .26em; text-transform: uppercase;
+  isolation: isolate; overflow: hidden;
+  user-select: none; -webkit-user-select: none;
+  transition: scale 160ms var(--ease-out), box-shadow 300ms ease, border-color 300ms ease, background-color 300ms ease;
+}
+.btn:active { scale: .97; }
+.btn .ico { width: 18px; height: 18px; transition: transform 300ms var(--ease-out); }
+.btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, #d61937 0%, #9d1029 55%, #5c0d1d 100%);
+  border: 1px solid rgba(236, 211, 154, .4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), 0 14px 40px -12px rgba(255, 43, 74, .6), 0 0 70px -24px rgba(255, 43, 74, .8);
+}
+.btn--primary::before {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .3) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+.btn--ghost {
+  color: var(--text);
+  border: 1px solid var(--line-2);
+  background: rgba(255, 255, 255, .02);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary::before { transition: transform 900ms var(--ease-out); }
+  .btn--primary:hover::before { transform: translateX(120%); }
+  .btn--primary:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 18px 50px -12px rgba(255, 43, 74, .75), 0 0 90px -20px rgba(255, 43, 74, .95); }
+  .btn:hover .ico { transform: translateX(4px); }
+  .btn--ghost:hover { border-color: var(--gold); background: rgba(255, 255, 255, .05); }
+}
+.icon-btn {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: rgba(12, 4, 7, .55);
+  color: var(--text);
+  transition: scale 160ms var(--ease-out), border-color 200ms ease, background-color 200ms ease, opacity 200ms ease;
+}
+.icon-btn .ico { width: 20px; height: 20px; }
+.icon-btn:active { scale: .94; }
+.icon-btn:disabled { opacity: .3; cursor: default; }
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:not(:disabled):hover { border-color: var(--gold); background: rgba(92, 13, 29, .45); }
+}
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
+  border-bottom: 1px solid transparent;
+  transition: background-color 400ms ease, border-color 400ms ease, -webkit-backdrop-filter 400ms ease, backdrop-filter 400ms ease;
+}
+.nav.is-scrolled, html.menu-open .nav {
+  background: rgba(6, 2, 4, .74);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom-color: var(--line);
+}
+.nav__inner { height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; }
+.brand__mark {
+  width: 30px; height: 30px;
+  color: var(--gold-2);
+  stroke-width: 2.4;
+  filter: drop-shadow(0 0 10px rgba(255, 43, 74, .55));
+}
+.brand__text { display: grid; line-height: 1; }
+.brand__text b { font: 600 14px/1 var(--f-display); letter-spacing: .28em; }
+.brand__text small { margin-top: 5px; font: 600 8.5px/1 var(--f-ui); letter-spacing: .42em; color: var(--scarlet-2); text-transform: uppercase; }
+.nav__links { position: relative; display: flex; align-items: center; gap: clamp(14px, 1.7vw, 30px); }
+.nav__links a {
+  position: relative;
+  padding: 12px 0;
+  font: 600 10.5px/1 var(--f-ui);
+  letter-spacing: .24em; text-transform: uppercase;
+  color: var(--text-3);
+  transition: color 200ms ease;
+}
+.nav__links a.is-active { color: var(--text); }
+@media (hover: hover) and (pointer: fine) { .nav__links a:hover { color: var(--text); } }
+.nav__indicator {
+  position: absolute; left: 0; bottom: 2px;
+  width: 100px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-2) 20%, var(--scarlet) 80%, transparent);
+  box-shadow: 0 0 10px rgba(255, 43, 74, .8);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 450ms var(--ease-out), opacity 300ms ease;
+}
+.nav__toggle {
+  display: none; place-items: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: rgba(12, 4, 7, .5);
+  transition: scale 160ms var(--ease-out), border-color 200ms ease;
+}
+.nav__toggle:active { scale: .94; }
+.nav__toggle span {
+  grid-area: 1 / 1;
+  width: 18px; height: 1.5px; border-radius: 2px;
+  background: var(--text);
+  transition: transform 300ms var(--ease-out);
+}
+.nav__toggle span:first-child { transform: translateY(-3.5px); }
+.nav__toggle span:last-child { transform: translateY(3.5px); }
+.nav__toggle[aria-expanded="true"] span:first-child { transform: rotate(45deg); }
+.nav__toggle[aria-expanded="true"] span:last-child { transform: rotate(-45deg); }
+.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; overflow: hidden; pointer-events: none; }
+.progress span {
+  display: block; height: 100%;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--burgundy-2), var(--scarlet) 60%, var(--gold-2));
+  box-shadow: 0 0 12px rgba(255, 43, 74, .7);
+}
+@media (max-width: 1099px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: grid; }
+}
+
+/* Menú móvil */
+.menu {
+  position: fixed; inset: 0; z-index: 48;
+  display: grid; align-content: center;
+  padding: calc(var(--nav-h) + 24px + env(safe-area-inset-top, 0px)) var(--gutter) 40px;
+  background: radial-gradient(120% 70% at 50% 0%, rgba(92, 13, 29, .6), transparent 60%), rgba(5, 2, 3, .95);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  opacity: 0; visibility: hidden;
+  transition: opacity 220ms ease, visibility 0s linear 220ms;
+}
+.menu.is-open { opacity: 1; visibility: visible; transition: opacity 320ms var(--ease-out), visibility 0s; }
+.menu ol { list-style: none; margin: 0 auto; padding: 0; width: min(100%, 560px); display: grid; }
+.menu a {
+  display: flex; align-items: baseline; gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font: 500 clamp(26px, 7.4vw, 40px)/1.15 var(--f-display);
+  letter-spacing: .03em;
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 160ms ease, transform 160ms ease, color 200ms ease;
+}
+.menu a span { min-width: 28px; font: 600 11px/1 var(--f-ui); letter-spacing: .3em; color: var(--gold); }
+.menu a.is-active { color: var(--scarlet-2); }
+.menu.is-open a {
+  opacity: 1; transform: none;
+  transition: opacity 500ms var(--ease-out), transform 600ms var(--ease-out), color 200ms ease;
+  transition-delay: calc(80ms + var(--i, 0) * 45ms);
+}
+.menu__foot {
+  margin: 34px auto 0; width: min(100%, 560px);
+  font: 600 10px/1.6 var(--f-ui); letter-spacing: .4em; text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* =========================================================
+   ENCABEZADOS DE SECCIÓN
+   ========================================================= */
+.sec-head { max-width: 780px; }
+.sec-head--center { margin-inline: auto; text-align: center; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font: 600 11px/1 var(--f-ui);
+  letter-spacing: .38em; text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow b { font-weight: 700; color: var(--scarlet-2); letter-spacing: .2em; }
+.eyebrow::after { content: ""; width: 48px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
+.sec-head--center .eyebrow::before { content: ""; width: 48px; height: 1px; background: linear-gradient(270deg, var(--gold), transparent); }
+.sec-title {
+  margin-top: 20px;
+  font: 500 clamp(38px, 5.6vw, 76px)/1.04 var(--f-display);
+  letter-spacing: .015em;
+  text-wrap: balance;
+}
+.sec-title em {
+  font: italic 500 1.1em/1 var(--f-serif);
+  letter-spacing: 0;
+  padding-right: .06em;
+  background: linear-gradient(100deg, var(--scarlet-2), var(--crimson) 45%, var(--gold-2) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.sec-lead {
+  margin-top: 22px;
+  max-width: 60ch;
+  font-size: clamp(16px, 1.3vw, 18.5px); line-height: 1.75;
+  color: var(--text-2);
+}
+.sec-head--center .sec-lead { margin-inline: auto; }
+
+/* =========================================================
+   MEDIA (imágenes con arte de respaldo)
+   ========================================================= */
+.media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: #0d0507;
+  background-image:
+    radial-gradient(110% 80% at 50% 30%, rgba(200, 16, 46, .3), transparent 62%),
+    radial-gradient(70% 60% at 85% 100%, rgba(201, 163, 90, .12), transparent 70%),
+    linear-gradient(160deg, #1b070d, #070203 70%);
+}
+.media::before {
+  content: "";
+  position: absolute; left: 50%; top: 46%;
+  width: min(34%, 120px); aspect-ratio: 1;
+  translate: -50% -50%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' fill='none' stroke='%23c9a35a' stroke-width='1.2' stroke-linejoin='round'%3E%3Ccircle cx='60' cy='60' r='54' opacity='.5'/%3E%3Ccircle cx='60' cy='60' r='46' opacity='.28'/%3E%3Cpath d='M60 26 L65 50 L79 33 L72.5 56 L87 51 L77 72 L43 72 L33 51 L47.5 56 L41 33 L55 50 Z'/%3E%3Cpath d='M60 59 L63.5 63.5 L60 68 L56.5 63.5 Z' stroke='%23ff2b4a'/%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: .5;
+  transition: opacity 600ms ease;
+}
+.media::after {
+  content: attr(data-label);
+  position: absolute; inset: auto 8% 11% 8%;
+  text-align: center;
+  font: 600 10px/1.5 var(--f-ui);
+  letter-spacing: .3em; text-transform: uppercase;
+  color: rgba(236, 211, 154, .5);
+  transition: opacity 600ms ease;
+}
+.media > img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 900ms ease, transform 1600ms var(--ease-out);
+  -webkit-user-drag: none;
+}
+.media.is-loaded > img { opacity: 1; transform: none; }
+.media.is-loaded::before, .media.is-loaded::after { opacity: 0; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  position: relative;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero__bg { position: absolute; inset: 0; z-index: -4; overflow: hidden; background: var(--ink); }
+.hero__media { position: absolute; top: -7%; bottom: -7%; left: 30%; right: 0; will-change: transform; }
+.hero__shade {
+  position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--ink) 0%, var(--ink) 28%, rgba(5, 2, 3, .86) 37%, rgba(5, 2, 3, .35) 52%, rgba(5, 2, 3, 0) 66%),
+    linear-gradient(0deg, var(--ink) 0%, rgba(5, 2, 3, .55) 16%, rgba(5, 2, 3, 0) 38%),
+    linear-gradient(180deg, rgba(5, 2, 3, .75) 0%, rgba(5, 2, 3, 0) 22%),
+    radial-gradient(90% 90% at 66% 45%, transparent 45%, rgba(5, 2, 3, .6) 100%);
+}
+.hero__aura {
+  position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(34% 40% at 64% 44%, rgba(255, 43, 74, .2), transparent 70%),
+    radial-gradient(30% 30% at 30% 78%, rgba(200, 16, 46, .16), transparent 70%);
+  animation: breathe 7s ease-in-out infinite alternate;
+}
+@keyframes breathe { from { opacity: .55; transform: scale(1); } to { opacity: 1; transform: scale(1.06); } }
+.hero__ringwrap {
+  position: absolute; left: 65%; top: 50%; z-index: -1;
+  width: min(98vh, 64vw); aspect-ratio: 1;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+.hero__ring { width: 100%; height: 100%; opacity: .2; animation: spin 160s linear infinite; }
+@keyframes spin { to { rotate: 360deg; } }
+.ring-line { fill: none; stroke: rgba(236, 211, 154, .4); stroke-width: 1; }
+.ring-line--dash { stroke: rgba(255, 107, 128, .45); stroke-dasharray: 2 10; }
+.ring-text { font: 500 15px var(--f-display); letter-spacing: 3px; fill: rgba(236, 211, 154, .78); }
+.hero__inner { position: relative; padding-top: calc(var(--nav-h) + 40px); padding-bottom: 104px; }
+.hero__content { max-width: min(700px, 58%); will-change: transform, opacity; }
+.hero__eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  font: 600 11px/1 var(--f-ui);
+  letter-spacing: .44em; text-transform: uppercase;
+  color: var(--gold-2);
+}
+.hero__eyebrow::before { content: ""; width: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.hero__eyebrow span { color: var(--scarlet-2); }
+.hero__title {
+  margin-top: 24px;
+  display: flex; flex-direction: column;
+  font: 600 clamp(52px, 7.4vw, 132px)/.92 var(--f-display);
+  letter-spacing: .04em;
+  color: #fbf1ec;
+  text-shadow: 0 0 34px rgba(255, 43, 74, .38), 0 0 90px rgba(200, 16, 46, .4);
+}
+.hero__line { display: block; white-space: nowrap; }
+.hero__title .ch { display: inline-block; }
+.hero__subtitle {
+  margin-top: 22px;
+  display: flex; align-items: center; gap: 16px;
+  font: 500 clamp(13px, 1.35vw, 19px)/1 var(--f-display);
+  letter-spacing: .58em; text-transform: uppercase;
+}
+.hero__subtitle span {
+  background: linear-gradient(90deg, #b08638, #f6e2ad 50%, #b08638);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.hero__subtitle::before { content: ""; width: 56px; height: 1px; flex: none; background: linear-gradient(90deg, var(--scarlet), var(--gold)); box-shadow: 0 0 10px rgba(255, 43, 74, .8); }
+.hero__quote {
+  margin-top: 32px;
+  max-width: 34ch;
+  font: italic 400 clamp(19px, 1.9vw, 26px)/1.45 var(--f-serif);
+  color: var(--text);
+  text-wrap: pretty;
+}
+.hero__quote-cite {
+  margin-top: 12px;
+  font: 600 10px/1.6 var(--f-ui);
+  letter-spacing: .32em; text-transform: uppercase;
+  color: var(--text-3);
+}
+.hero__cta { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 14px; }
+.hero__scroll {
+  position: absolute; left: 50%; bottom: 26px;
+  translate: -50% 0;
+  display: grid; justify-items: center; gap: 10px;
+  font: 600 9px/1 var(--f-ui); letter-spacing: .5em; padding-left: .5em; text-transform: uppercase;
+  color: var(--text-3);
+}
+.hero__scroll i {
+  position: relative;
+  width: 1px; height: 46px;
+  background: linear-gradient(var(--line-2), transparent);
+  overflow: hidden;
+}
+.hero__scroll i::after {
+  content: ""; position: absolute; left: 0; top: 0;
+  width: 1px; height: 16px;
+  background: var(--scarlet);
+  box-shadow: 0 0 8px var(--scarlet);
+  animation: scroll-cue 2.4s var(--ease-in-out) infinite;
+}
+@keyframes scroll-cue { from { transform: translateY(-16px); } to { transform: translateY(46px); } }
+.js .hero.is-pre .hero__eyebrow,
+.js .hero.is-pre .ch,
+.js .hero.is-pre .hero__subtitle,
+.js .hero.is-pre .hero__quote,
+.js .hero.is-pre .hero__quote-cite,
+.js .hero.is-pre .hero__cta,
+.js .hero.is-pre .hero__scroll { opacity: 0; }
+
+@media (max-width: 899px), (orientation: portrait) {
+  .hero { align-items: flex-end; }
+  .hero__media { left: 0; top: -4%; bottom: -4%; }
+  .hero__shade {
+    background:
+      linear-gradient(0deg, var(--ink) 0%, rgba(5, 2, 3, .94) 24%, rgba(5, 2, 3, .55) 46%, rgba(5, 2, 3, .05) 68%),
+      linear-gradient(180deg, rgba(5, 2, 3, .7) 0%, rgba(5, 2, 3, 0) 20%);
+  }
+  .hero__aura { background: radial-gradient(60% 40% at 50% 34%, rgba(255, 43, 74, .2), transparent 70%); }
+  .hero__ringwrap { left: 50%; top: 32%; width: min(128vw, 68vh); }
+  .hero__inner { padding-bottom: 72px; }
+  .hero__content { max-width: none; text-align: center; margin-inline: auto; display: grid; justify-items: center; }
+  .hero__eyebrow { justify-content: center; letter-spacing: .34em; font-size: 10px; }
+  .hero__eyebrow::before { display: none; }
+  .hero__title { align-items: center; font-size: clamp(46px, 13.6vw, 104px); margin-top: 18px; }
+  .hero__subtitle { justify-content: center; letter-spacing: .48em; padding-left: .48em; }
+  .hero__subtitle::before { display: none; }
+  .hero__quote { margin-top: 22px; font-size: clamp(18px, 4.8vw, 24px); }
+  .hero__cta { margin-top: 28px; justify-content: center; }
+  .hero__scroll { display: none; }
+}
+
+/* =========================================================
+   PERFIL
+   ========================================================= */
+.profile {
+  margin-top: clamp(48px, 6vw, 80px);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: center;
+}
+.portrait { position: relative; max-width: 470px; width: 100%; margin-inline: auto; }
+.portrait::before {
+  content: "";
+  position: absolute; inset: 8% -10% -6%;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 43, 74, .4), transparent 70%);
+  filter: blur(30px);
+}
+.portrait__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 22px 22px / 34% 34% 22px 22px;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  box-shadow: 0 50px 120px -50px rgba(255, 43, 74, .6), 0 0 0 10px rgba(5, 2, 3, .6), 0 0 0 11px var(--line);
+}
+.portrait__frame::after {
+  content: ""; position: absolute; inset: 12px;
+  border-radius: inherit;
+  border: 1px solid rgba(236, 211, 154, .22);
+  pointer-events: none;
+}
+.portrait__media { position: absolute; inset: 0; }
+.portrait__tag {
+  position: absolute; left: -18px; bottom: 44px;
+  display: grid; gap: 4px;
+  padding: 14px 18px 15px;
+  border-radius: 16px;
+  border: 1px solid var(--line-2);
+  background: rgba(10, 4, 6, .78);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .9);
+}
+.portrait__tag span { font: 600 9px/1 var(--f-ui); letter-spacing: .4em; text-transform: uppercase; color: var(--gold); }
+.portrait__tag strong { font: 600 17px/1.2 var(--f-display); letter-spacing: .06em; }
+.portrait__tag small { font: 500 11px/1 var(--f-ui); letter-spacing: .2em; color: var(--scarlet-2); text-transform: uppercase; }
+.dossier__kicker { font: 600 10.5px/1 var(--f-ui); letter-spacing: .4em; text-transform: uppercase; color: var(--gold); }
+.dossier__name { margin-top: 14px; font: 600 clamp(34px, 4.2vw, 58px)/1 var(--f-display); letter-spacing: .03em; }
+.dossier__alias { margin-top: 12px; font: italic 500 clamp(19px, 1.8vw, 24px)/1.3 var(--f-serif); color: var(--scarlet-2); }
+.dossier__alias span { color: var(--gold); padding-inline: 6px; }
+.facts { margin-top: 30px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+.fact { padding: 16px 0 17px; border-top: 1px solid var(--line); }
+.fact dt { font: 600 9.5px/1.4 var(--f-ui); letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+.fact dd { margin-top: 7px; font-size: 15.5px; line-height: 1.5; color: var(--text); }
+.fact dd small { display: block; margin-top: 3px; font-size: 13px; color: var(--text-3); }
+.stats {
+  margin-top: clamp(56px, 7vw, 88px);
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(42, 6, 16, .45), rgba(8, 3, 5, .6));
+}
+.stat { position: relative; padding: clamp(22px, 3vw, 34px) clamp(18px, 2.4vw, 30px); }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat__num {
+  display: block;
+  font: 500 clamp(36px, 4.2vw, 56px)/1 var(--f-display);
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, #fff6f1, #e9b9b2);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.stat__label { display: block; margin-top: 12px; font: 600 10px/1.5 var(--f-ui); letter-spacing: .28em; text-transform: uppercase; color: var(--text-3); }
+.keys { margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; list-style: none; padding: 0; }
+.keys li {
+  position: relative;
+  padding: 22px 22px 22px 58px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .015);
+  color: var(--text-2);
+  font-size: 15px; line-height: 1.6;
+}
+.keys li::before {
+  content: "";
+  position: absolute; left: 22px; top: 26px;
+  width: 14px; height: 14px;
+  transform: rotate(45deg);
+  border: 1px solid var(--gold);
+  background: radial-gradient(circle, var(--scarlet) 0 35%, transparent 40%);
+  box-shadow: 0 0 14px rgba(255, 43, 74, .6);
+}
+.keys strong { color: var(--text); font-weight: 600; }
+@media (max-width: 899px) {
+  .profile { grid-template-columns: minmax(0, 1fr); }
+  .portrait { max-width: 420px; }
+  .portrait__tag { left: 50%; translate: -50% 0; bottom: -22px; text-align: center; justify-items: center; }
+  .dossier { margin-top: 20px; }
+  .keys { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 639px) {
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n + 3) { border-top: 1px solid var(--line); }
+}
+
+/* =========================================================
+   HISTORIA
+   ========================================================= */
+.story { margin-top: clamp(48px, 6vw, 80px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 100px); }
+.story__stage {
+  position: sticky;
+  top: calc(var(--nav-h) + 28px);
+  height: min(760px, calc(100vh - var(--nav-h) - 56px));
+  display: flex; flex-direction: column;
+}
+.stage__frame {
+  position: relative; flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  background: #0c0507;
+  box-shadow: 0 50px 120px -50px rgba(255, 43, 74, .5);
+}
+.stage__img { position: absolute; inset: 0; opacity: 0; transition: opacity 900ms ease; }
+.stage__img > img { transform: scale(1.1); transition: opacity 900ms ease, transform 2200ms var(--ease-out); }
+.stage__img.is-active { opacity: 1; }
+.stage__img.is-active.is-loaded > img { transform: scale(1); }
+.stage__frame::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgba(5, 2, 3, .92) 0%, rgba(5, 2, 3, .2) 38%, transparent 60%), radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(5, 2, 3, .55) 100%);
+}
+.stage__meta {
+  position: absolute; left: 26px; right: 26px; bottom: 22px; z-index: 2;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 18px;
+}
+.stage__num {
+  font: 500 clamp(64px, 6.4vw, 104px)/.8 var(--f-display);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(236, 211, 154, .75);
+  text-shadow: 0 0 40px rgba(255, 43, 74, .35);
+}
+.stage__where { display: grid; justify-items: end; text-align: right; gap: 6px; }
+.stage__place { font: 600 10px/1.5 var(--f-ui); letter-spacing: .3em; text-transform: uppercase; color: var(--gold-2); }
+.stage__year { font: italic 500 22px/1 var(--f-serif); color: var(--text); }
+.stage__dots { margin-top: 16px; display: flex; gap: 6px; }
+.stage__dot { flex: 1; height: 26px; position: relative; }
+.stage__dot::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px;
+  border-radius: 2px;
+  background: rgba(244, 235, 230, .14);
+  transition: background-color 400ms ease, box-shadow 400ms ease;
+}
+.stage__dot.is-active::before { background: linear-gradient(90deg, var(--crimson), var(--gold-2)); box-shadow: 0 0 10px rgba(255, 43, 74, .6); }
+.chapter {
+  min-height: 74vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding-block: 7vh;
+  opacity: .3;
+  transition: opacity 700ms ease;
+}
+.chapter.is-active { opacity: 1; }
+.chapter__media { display: none; }
+.chapter__num {
+  display: flex; flex-wrap: wrap; align-items: center; column-gap: 10px; row-gap: 6px;
+  font: 600 10.5px/1 var(--f-ui);
+  letter-spacing: .34em; text-transform: uppercase;
+  color: var(--gold);
+}
+.chapter__num span { color: var(--scarlet-2); }
+.chapter__num::after { content: ""; width: 40px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
+.chapter__title { margin: 16px 0 20px; font: 500 clamp(30px, 3.3vw, 48px)/1.1 var(--f-display); text-wrap: balance; }
+.chapter__title em { font: italic 500 1.08em/1 var(--f-serif); color: var(--scarlet-2); }
+.chapter p { max-width: 56ch; font-size: 17px; line-height: 1.85; color: var(--text-2); }
+.chapter p + p { margin-top: 16px; }
+.chapter__pull {
+  margin-top: 26px; padding-left: 20px;
+  border-left: 1px solid var(--scarlet);
+  font: italic 500 22px/1.4 var(--f-serif);
+  color: var(--text);
+}
+.chapter__pull small { display: block; margin-top: 6px; font: 600 10px/1 var(--f-ui); font-style: normal; letter-spacing: .3em; text-transform: uppercase; color: var(--text-3); }
+@media (max-width: 899px) {
+  .story { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .story__stage { display: none; }
+  .chapter { min-height: 0; opacity: 1; padding-block: 34px; }
+  .chapter__num { letter-spacing: .26em; }
+  .chapter__num::after { display: none; }
+  .chapter + .chapter { border-top: 1px solid var(--line); }
+  .chapter__media { display: block; aspect-ratio: 16 / 10; border-radius: 18px; margin-bottom: 24px; border: 1px solid var(--line); }
+}
+
+/* =========================================================
+   PODERES
+   ========================================================= */
+.powers {
+  margin-top: clamp(48px, 6vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.power {
+  position: relative;
+  height: 452px;
+  perspective: 1200px;
+  border-radius: 22px;
+  transition: scale 160ms var(--ease-out);
+}
+.power:active { scale: .985; }
+.power__inner {
+  position: relative; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 820ms var(--ease-drawer);
+}
+.power.is-flipped .power__inner { transform: rotateY(180deg); }
+.power__face {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: 28px 26px 24px;
+  border-radius: 22px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(165deg, rgba(38, 8, 15, .96), rgba(10, 3, 6, .98));
+  box-shadow: 0 30px 70px -40px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .04);
+  transition: border-color 400ms ease;
+}
+.power__face--back {
+  transform: rotateY(180deg);
+  background: linear-gradient(165deg, rgba(96, 14, 30, .97), rgba(22, 5, 10, .99));
+  border-color: var(--line-2);
+}
+.power__face::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: radial-gradient(90% 60% at 50% 0%, rgba(255, 43, 74, .14), transparent 70%);
+}
+.power__glow {
+  position: absolute; left: 0; top: 0;
+  width: 360px; height: 360px;
+  margin: -180px 0 0 -180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 43, 74, .26), rgba(201, 163, 90, .06) 45%, transparent 68%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+.power__num {
+  position: absolute; top: 18px; right: 22px;
+  font: 500 62px/1 var(--f-display);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 163, 90, .22);
+}
+.power__icon {
+  position: relative;
+  width: 76px; height: 76px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--gold-2);
+  border: 1px solid var(--line-2);
+  background: radial-gradient(circle, rgba(255, 43, 74, .28), rgba(92, 13, 29, .1) 60%, transparent 72%);
+  box-shadow: 0 0 40px -6px rgba(255, 43, 74, .45);
+  transition: box-shadow 400ms ease, color 400ms ease;
+}
+.power__icon .ico { width: 36px; height: 36px; stroke-width: 1.3; }
+.power__icon::after {
+  content: ""; position: absolute; inset: -9px;
+  border-radius: 50%;
+  border: 1px dashed rgba(236, 211, 154, .22);
+  animation: spin 40s linear infinite;
+}
+.power__name { margin-top: auto; font: 500 25px/1.15 var(--f-display); letter-spacing: .01em; position: relative; }
+.power__name--sm { margin-top: 8px; font-size: 21px; }
+.power__en { margin-top: 8px; font: 600 9.5px/1.4 var(--f-ui); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); position: relative; }
+.power__face--back .power__en { margin-top: 0; }
+.power__tag { margin-top: 14px; font: italic 500 18px/1.35 var(--f-serif); color: var(--text-2); position: relative; }
+.power__hint {
+  margin-top: 22px;
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 600 9.5px/1 var(--f-ui); letter-spacing: .3em; text-transform: uppercase;
+  color: var(--text-3);
+  position: relative;
+  transition: color 300ms ease;
+}
+.power__hint .ico { width: 16px; height: 16px; color: var(--scarlet-2); }
+.power__desc { margin-top: 12px; font-size: 14px; line-height: 1.62; color: var(--text-2); position: relative; }
+.power__mark {
+  position: absolute; right: -46px; top: 50%;
+  width: 230px; height: 230px;
+  translate: 0 -58%;
+  color: var(--gold-2);
+  stroke-width: .6;
+  opacity: .07;
+  pointer-events: none;
+  transition: opacity 500ms ease, transform 900ms var(--ease-out);
+}
+.power__moment {
+  position: relative;
+  margin-top: auto;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(5, 2, 3, .35);
+  border: 1px solid var(--line);
+}
+.power__moment span, .power__level-head span { font: 600 9px/1 var(--f-ui); letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+.power__moment p { margin-top: 8px; font-size: 13.5px; line-height: 1.5; color: var(--text); }
+.power__moment small { display: block; margin-top: 6px; font: italic 500 14px/1.3 var(--f-serif); color: var(--scarlet-2); }
+.power__level { position: relative; margin-top: 16px; }
+.power__level-head { display: flex; justify-content: space-between; align-items: baseline; }
+.power__level-head b { font: 600 14px/1 var(--f-display); color: var(--text); }
+.bar { margin-top: 10px; height: 3px; border-radius: 3px; overflow: hidden; background: rgba(255, 255, 255, .08); }
+.bar > i {
+  display: block; height: 100%;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--crimson), var(--scarlet), var(--gold-2));
+  box-shadow: 0 0 10px rgba(255, 43, 74, .8);
+}
+.power .bar > i { transition: transform 1200ms var(--ease-out) 350ms; }
+.power.is-flipped .bar > i { transform: scaleX(var(--lvl, 1)); }
+.power__hit { position: absolute; inset: 0; z-index: 3; border-radius: 22px; }
+.power__hit:focus-visible { outline-offset: 4px; border-radius: 22px; }
+.powers__hint { margin-top: 26px; text-align: center; font: 600 10px/1.6 var(--f-ui); letter-spacing: .32em; text-transform: uppercase; color: var(--text-3); }
+@media (hover: hover) and (pointer: fine) {
+  .power:hover .power__glow { opacity: 1; }
+  .power:hover .power__face { border-color: var(--line-2); }
+  .power:hover .power__icon { box-shadow: 0 0 60px -4px rgba(255, 43, 74, .75); color: #fff3d9; }
+  .power:hover .power__hint { color: var(--text); }
+  .power:hover .power__mark { opacity: .12; transform: rotate(-8deg) scale(1.04); }
+}
+@media (max-width: 1099px) { .powers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) {
+  .powers {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    gap: 14px;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 6px var(--gutter) 18px;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+  .powers::-webkit-scrollbar { display: none; }
+  .power { flex: 0 0 84%; height: 480px; scroll-snap-align: center; }
+}
+
+/* =========================================================
+   EVOLUCIÓN (línea temporal)
+   ========================================================= */
+.tl { margin-top: clamp(48px, 6vw, 76px); }
+.tl__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  padding-top: 8px;
+}
+.tl__line { position: absolute; left: 6.25%; right: 6.25%; top: 17px; height: 1px; background: var(--line-2); pointer-events: none; }
+.tl__line i {
+  position: absolute; inset: 0;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--burgundy-2), var(--scarlet) 70%, var(--gold-2));
+  box-shadow: 0 0 14px rgba(255, 43, 74, .7);
+  transition: transform 800ms var(--ease-out);
+}
+.tl__node {
+  position: relative;
+  display: grid; justify-items: center; align-content: start; gap: 12px;
+  padding: 0 4px 8px;
+  color: var(--text-3);
+  border-radius: 14px;
+}
+.tl__dot {
+  position: relative;
+  width: 19px; height: 19px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: var(--ink);
+  transition: transform 400ms var(--ease-out), border-color 300ms ease, box-shadow 300ms ease;
+}
+.tl__dot::after {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold);
+  opacity: .45;
+  transform: scale(.5);
+  transition: transform 400ms var(--ease-out), opacity 300ms ease, background-color 300ms ease;
+}
+.tl__node.is-past .tl__dot { border-color: rgba(255, 43, 74, .55); }
+.tl__node.is-past .tl__dot::after { opacity: 1; background: var(--scarlet); transform: scale(.65); }
+.tl__node[aria-selected="true"] { color: var(--text); }
+.tl__node[aria-selected="true"] .tl__dot { transform: scale(1.3); border-color: var(--scarlet); box-shadow: 0 0 0 6px rgba(255, 43, 74, .12), 0 0 26px rgba(255, 43, 74, .8); }
+.tl__node[aria-selected="true"] .tl__dot::after { opacity: 1; transform: scale(1); background: var(--gold-2); }
+.tl__year { font: 500 19px/1 var(--f-display); transition: color 200ms ease; }
+.tl__label { font: 600 9px/1.35 var(--f-ui); letter-spacing: .2em; text-transform: uppercase; text-align: center; }
+@media (hover: hover) and (pointer: fine) {
+  .tl__node:hover { color: var(--text-2); }
+  .tl__node:hover .tl__dot { border-color: var(--gold); }
+}
+.tl__panel {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(14px, 1.6vw, 20px);
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(42, 6, 16, .6), rgba(8, 3, 5, .8));
+  box-shadow: 0 50px 120px -60px rgba(255, 43, 74, .4);
+  touch-action: pan-y;
+}
+.tl__visual { position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; background: #0c0507; }
+.tl__img { position: absolute; inset: 0; opacity: 0; transition: opacity 700ms ease; }
+.tl__img > img { transform: scale(1.08); transition: opacity 900ms ease, transform 1600ms var(--ease-out); }
+.tl__img.is-active { opacity: 1; }
+.tl__img.is-active.is-loaded > img { transform: scale(1); }
+.tl__visual::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, rgba(5, 2, 3, .55), transparent 40%); }
+.tl__content { padding: 10px clamp(6px, 2vw, 26px) 10px 0; }
+.tl__era { font: 600 10.5px/1 var(--f-ui); letter-spacing: .36em; text-transform: uppercase; color: var(--gold); }
+.tl__title { margin-top: 14px; font: 500 clamp(30px, 3.4vw, 46px)/1.05 var(--f-display); }
+.tl__film { margin-top: 10px; font: italic 500 20px/1.35 var(--f-serif); color: var(--scarlet-2); }
+.tl__text { margin-top: 16px; font-size: 16px; line-height: 1.75; color: var(--text-2); }
+.tl__facts { margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tl__chip { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: rgba(5, 2, 3, .3); }
+.tl__chip span { display: block; font: 600 9px/1 var(--f-ui); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.tl__chip p { margin-top: 8px; font-size: 13.5px; line-height: 1.45; color: var(--text); }
+.tl__meter { margin-top: 18px; }
+.tl__meter-head { display: flex; justify-content: space-between; align-items: baseline; }
+.tl__meter-head span { font: 600 9.5px/1 var(--f-ui); letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+.tl__meter-head b { font: 600 15px/1 var(--f-display); }
+.tl__meter .bar > i { transition: transform 900ms var(--ease-out); }
+.tl.is-legacy .tl__meter .bar > i { background: linear-gradient(90deg, var(--gold-3), var(--gold-2)); box-shadow: 0 0 10px rgba(236, 211, 154, .5); }
+.tl__controls { margin-top: 22px; display: flex; align-items: center; gap: 14px; }
+.tl__count { font: 600 12px/1 var(--f-display); letter-spacing: .2em; color: var(--text-3); font-variant-numeric: tabular-nums; }
+@media (max-width: 899px) {
+  .tl__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 8px var(--gutter) 6px;
+    scrollbar-width: none;
+  }
+  .tl__track::-webkit-scrollbar { display: none; }
+  .tl__node { flex: 0 0 116px; scroll-snap-align: center; }
+  .tl__line { left: calc(var(--gutter) + 58px); right: auto; width: calc(116px * 7); top: 17px; }
+  .tl__panel { grid-template-columns: minmax(0, 1fr); padding: 12px; }
+  .tl__visual { aspect-ratio: 16 / 11; }
+  .tl__content { padding: 4px 10px 12px; }
+}
+@media (max-width: 479px) { .tl__facts { grid-template-columns: minmax(0, 1fr); } }
+
+/* =========================================================
+   RELACIONES
+   ========================================================= */
+.rels { margin-top: clamp(48px, 6vw, 72px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.rel {
+  position: relative;
+  display: flex; flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(170deg, rgba(30, 7, 12, .9), rgba(8, 3, 5, .95));
+  transition: transform 500ms var(--ease-out), border-color 400ms ease, box-shadow 500ms ease;
+}
+.rel__media { aspect-ratio: 16 / 11; }
+.rel__media::before { top: 44%; }
+.rel__media > img { transition: opacity 900ms ease, transform 1400ms var(--ease-out); }
+.rel__shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(0deg, rgba(10, 3, 6, 1) 0%, rgba(10, 3, 6, .55) 22%, transparent 52%); }
+.rel__body { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; padding: 4px 26px 26px; margin-top: -34px; }
+.rel__role { font: 600 9.5px/1.4 var(--f-ui); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+.rel__name { margin-top: 10px; font: 500 27px/1.1 var(--f-display); }
+.rel__text { margin-top: 14px; font-size: 15px; line-height: 1.7; color: var(--text-2); }
+.rel__meta { margin: auto 0 0; padding: 18px 0 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.rel__meta li {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .02);
+  font-size: 12.5px; color: var(--text);
+}
+.rel__meta span { font: 600 8.5px/1 var(--f-ui); letter-spacing: .28em; text-transform: uppercase; color: var(--scarlet-2); }
+.rel__quote { margin-top: 14px; font: italic 500 18px/1.4 var(--f-serif); color: var(--gold-2); }
+@media (hover: hover) and (pointer: fine) {
+  .rel:hover { transform: translateY(-6px); border-color: var(--line-2); box-shadow: 0 40px 90px -50px rgba(255, 43, 74, .6); }
+  .rel:hover .media.is-loaded > img { transform: scale(1.06); }
+}
+@media (max-width: 1099px) { .rels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .rels { grid-template-columns: minmax(0, 1fr); } }
+
+/* =========================================================
+   CURIOSIDADES
+   ========================================================= */
+.facts-grid { margin-top: clamp(48px, 6vw, 72px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.factcard {
+  position: relative;
+  padding: 28px 26px 28px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(165deg, rgba(30, 7, 12, .75), rgba(8, 3, 5, .85));
+  overflow: hidden;
+  transition: border-color 400ms ease, transform 500ms var(--ease-out);
+}
+.factcard::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(80% 50% at 100% 0%, rgba(255, 43, 74, .1), transparent 70%);
+}
+.factcard__num {
+  position: absolute; top: 16px; right: 20px;
+  font: 500 48px/1 var(--f-display);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 163, 90, .2);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 43, 74, .3);
+  background: rgba(200, 16, 46, .1);
+  font: 600 9px/1 var(--f-ui); letter-spacing: .3em; text-transform: uppercase;
+  color: var(--scarlet-2);
+}
+.chip::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--scarlet); box-shadow: 0 0 8px var(--scarlet); }
+.factcard__title { margin-top: 18px; font: 500 21px/1.2 var(--f-display); position: relative; }
+.factcard p { margin-top: 12px; font-size: 15px; line-height: 1.7; color: var(--text-2); position: relative; }
+@media (hover: hover) and (pointer: fine) { .factcard:hover { border-color: var(--line-2); transform: translateY(-4px); } }
+@media (max-width: 1099px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .facts-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Cómics vs MCU */
+.versus {
+  margin-top: clamp(56px, 7vw, 96px);
+  padding: clamp(20px, 3vw, 40px);
+  border-radius: 30px;
+  border: 1px solid var(--line-2);
+  background: radial-gradient(80% 60% at 50% 0%, rgba(92, 13, 29, .4), transparent 70%), linear-gradient(170deg, rgba(22, 6, 10, .9), rgba(6, 2, 4, .95));
+}
+.versus__head { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(14px, 3vw, 40px); }
+.versus__fig { position: relative; }
+.versus__fig .media { aspect-ratio: 16 / 10; border-radius: 20px; border: 1px solid var(--line); }
+.versus__fig figcaption {
+  position: absolute; left: 16px; bottom: 14px;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(5, 2, 3, .72);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border: 1px solid var(--line-2);
+  font: 600 10px/1 var(--f-ui); letter-spacing: .32em; text-transform: uppercase;
+}
+.versus__vs {
+  width: 70px; height: 70px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: radial-gradient(circle, rgba(255, 43, 74, .35), rgba(92, 13, 29, .3) 60%, transparent 75%);
+  font: 600 18px/1 var(--f-display); letter-spacing: .08em;
+  box-shadow: 0 0 50px -6px rgba(255, 43, 74, .6);
+}
+.versus__title { margin-top: 34px; text-align: center; font: 500 clamp(24px, 2.8vw, 36px)/1.15 var(--f-display); }
+.versus__title em { font: italic 500 1.1em/1 var(--f-serif); color: var(--scarlet-2); }
+.vswitch { display: none; position: relative; margin: 24px auto 0; width: min(100%, 320px); }
+.vswitch__track, .vswitch__active { grid-area: 1 / 1; display: grid; grid-template-columns: 1fr 1fr; border-radius: 999px; }
+.vswitch__track { border: 1px solid var(--line-2); background: rgba(255, 255, 255, .03); }
+.vswitch__opt, .vswitch__active span {
+  display: grid; place-items: center;
+  height: 46px;
+  font: 600 11px/1 var(--f-ui); letter-spacing: .3em; text-transform: uppercase;
+  color: var(--text-3);
+}
+.vswitch__active {
+  pointer-events: none;
+  background: linear-gradient(135deg, #d61937, #7d1428);
+  box-shadow: 0 0 30px -6px rgba(255, 43, 74, .7);
+  clip-path: inset(0 50% 0 0 round 999px);
+  transition: clip-path 380ms var(--ease-out);
+}
+.vswitch__active span { color: #fff; }
+.vswitch[data-view="mcu"] .vswitch__active { clip-path: inset(0 0 0 50% round 999px); }
+.vtable { margin-top: 28px; }
+.vrow {
+  display: grid;
+  grid-template-columns: minmax(130px, .7fr) minmax(0, 1.4fr) minmax(0, 1.4fr);
+  gap: clamp(14px, 2.6vw, 34px);
+  padding: 18px 4px;
+  border-top: 1px solid var(--line);
+}
+.vrow--head { border-top: 0; padding-bottom: 8px; }
+.vrow--head div { font: 600 9.5px/1 var(--f-ui); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+.vrow--head div:last-child { color: var(--scarlet-2); }
+.vrow__k { font: 600 15px/1.4 var(--f-display); color: var(--gold-2); }
+.vrow__c, .vrow__m { font-size: 15px; line-height: 1.65; color: var(--text-2); }
+.vrow__m { color: var(--text); }
+.vrow__tag { display: none; }
+@media (max-width: 767px) {
+  .versus__head { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .versus__vs { display: none; }
+  .vswitch { display: grid; }
+  .vrow { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .vrow--head { display: none; }
+  .versus[data-view="comics"] .vrow__m, .versus[data-view="mcu"] .vrow__c { display: none; }
+}
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+.gallery {
+  margin-top: clamp(48px, 6vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(150px, 15.5vw, 228px);
+  grid-auto-flow: dense;
+  gap: 14px;
+}
+.g-item {
+  position: relative;
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  text-align: left;
+  isolation: isolate;
+  transition: border-color 400ms ease, scale 160ms var(--ease-out);
+}
+.g-item:active { scale: .985; }
+.g-item--wide { grid-column: span 2; }
+.g-item--tall { grid-row: span 2; }
+.g-item--big { grid-column: span 2; grid-row: span 2; }
+.g-item .media { position: absolute; inset: 0; }
+.g-item .media > img { transition: opacity 900ms ease, transform 1400ms var(--ease-out); }
+.g-item.is-hidden { visibility: hidden; }
+.g-item[hidden] { display: none; }
+.g-item__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  display: grid; gap: 4px;
+  padding: 46px 16px 14px;
+  background: linear-gradient(0deg, rgba(5, 2, 3, .9), transparent);
+}
+.g-item__cap b { font: 500 15px/1.25 var(--f-display); }
+.g-item__cap small { font: 600 9px/1.4 var(--f-ui); letter-spacing: .24em; text-transform: uppercase; color: var(--gold-2); }
+.g-film--short { display: none; }
+.g-item__zoom {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(5, 2, 3, .6);
+  border: 1px solid var(--line-2);
+  color: var(--text);
+}
+.g-item__zoom .ico { width: 17px; height: 17px; }
+@media (hover: hover) and (pointer: fine) {
+  .g-item__cap { opacity: 0; transform: translateY(8px); transition: opacity 350ms ease, transform 450ms var(--ease-out); }
+  .g-item__zoom { opacity: 0; scale: .9; transition: opacity 300ms ease, scale 300ms var(--ease-out); }
+  .g-item:hover { border-color: var(--line-2); }
+  .g-item:hover .media.is-loaded > img { transform: scale(1.06); }
+  .g-item:hover .g-item__cap, .g-item:focus-visible .g-item__cap { opacity: 1; transform: none; }
+  .g-item:hover .g-item__zoom, .g-item:focus-visible .g-item__zoom { opacity: 1; scale: 1; }
+}
+@media (max-width: 899px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 180px; } }
+@media (max-width: 639px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; gap: 10px; }
+  .g-item { border-radius: 14px; }
+  .g-item__zoom { display: none; }
+  .g-item__cap { padding: 34px 12px 10px; }
+  .g-item__cap b { font-size: 13px; }
+  .g-film { display: none; }
+  .g-film--short { display: inline; }
+}
+
+/* Filtros de la galería: el chip activo es una copia recortada con clip-path,
+   así el cambio de color entre chips es una sola transición continua */
+.gfilters { margin-top: clamp(32px, 4vw, 44px); }
+.gfilters__scroller {
+  position: relative;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 4px 2px;
+}
+.gfilters__scroller::-webkit-scrollbar { display: none; }
+.gfilters__list { position: relative; display: flex; gap: 8px; width: max-content; }
+.gfilters__list--active {
+  position: absolute; left: 2px; top: 4px;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0 round 999px);
+  transition: clip-path 420ms var(--ease-out);
+}
+.gchip {
+  display: inline-flex; align-items: center; gap: 9px;
+  height: 42px; padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: rgba(255, 255, 255, .02);
+  font: 600 10.5px/1 var(--f-ui);
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+  user-select: none; -webkit-user-select: none;
+  transition: border-color 200ms ease, color 200ms ease, scale 160ms var(--ease-out);
+}
+button.gchip:active { scale: .96; }
+.gchip b { font: 600 11px/1 var(--f-display); letter-spacing: .04em; color: var(--gold); }
+.gfilters__list--active .gchip {
+  color: #fff;
+  border-color: rgba(236, 211, 154, .45);
+  background: linear-gradient(135deg, #d61937, #7d1428);
+}
+.gfilters__list--active .gchip b { color: var(--gold-2); }
+@media (hover: hover) and (pointer: fine) {
+  button.gchip:hover { border-color: var(--gold); color: var(--text); }
+}
+@media (max-width: 1099px) {
+  .gfilters__scroller { margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .gfilters__list--active { left: var(--gutter); }
+  /* Desvanecido en los bordes: indica que la fila de chips se puede deslizar */
+  .gfilters__scroller.is-overflow {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--gutter), #000 calc(100% - var(--gutter) - 24px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 var(--gutter), #000 calc(100% - var(--gutter) - 24px), transparent 100%);
+  }
+}
+.gmore { margin-top: 34px; display: flex; justify-content: center; }
+.gmore[hidden] { display: none; }
+.gmore__count { color: var(--gold-2); }
+.gmore__btn .ico { width: 18px; height: 18px; }
+.gmore__btn[aria-expanded="true"] .ico { transform: rotate(180deg); }
+@media (hover: hover) and (pointer: fine) {
+  .gmore__btn:hover .ico { transform: translateY(3px); }
+  .gmore__btn[aria-expanded="true"]:hover .ico { transform: rotate(180deg) translateY(3px); }
+}
+
+/* Lightbox */
+.lb { position: fixed; inset: 0; z-index: 80; }
+.lb[hidden] { display: none; }
+.lb__backdrop {
+  position: absolute; inset: 0;
+  background: radial-gradient(70% 60% at 50% 45%, rgba(60, 8, 18, .55), transparent 70%), rgba(4, 1, 2, .93);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+.lb.is-open .lb__backdrop { opacity: 1; transition: opacity 360ms var(--ease-out); }
+.lb__img {
+  position: fixed; left: 0; top: 0;
+  object-fit: cover;
+  transform-origin: 0 0;
+  clip-path: inset(0 round 10px);
+  box-shadow: 0 50px 120px -30px rgba(0, 0, 0, .9);
+  touch-action: none;
+  user-select: none; -webkit-user-select: none; -webkit-user-drag: none;
+  cursor: grab;
+  will-change: transform;
+}
+.lb__img.is-dragging { cursor: grabbing; }
+.lb__ui { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 180ms ease; }
+.lb.is-open .lb__ui { opacity: 1; transition: opacity 320ms ease 160ms; }
+.lb__ui > * { pointer-events: auto; }
+.lb__close { position: absolute; top: max(16px, env(safe-area-inset-top, 0px)); right: 16px; }
+.lb__prev, .lb__next { position: absolute; top: 50%; translate: 0 -50%; }
+.lb__prev { left: 22px; }
+.lb__next { right: 22px; }
+.lb__caption {
+  position: absolute; left: 50%; bottom: max(26px, env(safe-area-inset-bottom, 0px));
+  translate: -50% 0;
+  width: min(92vw, 680px);
+  display: grid; justify-items: center; gap: 6px;
+  text-align: center;
+  pointer-events: none;
+}
+.lb__count { font: 600 11px/1 var(--f-display); letter-spacing: .3em; color: var(--gold); font-variant-numeric: tabular-nums; }
+.lb__title { font: 500 clamp(18px, 2.2vw, 24px)/1.2 var(--f-display); }
+.lb__meta { font: italic 500 17px/1.3 var(--f-serif); color: var(--scarlet-2); }
+@media (max-width: 719px) {
+  .lb__prev, .lb__next { top: auto; bottom: max(22px, env(safe-area-inset-bottom, 0px)); translate: none; }
+  .lb__prev { left: 14px; }
+  .lb__next { right: 14px; }
+  .lb__caption { bottom: max(24px, env(safe-area-inset-bottom, 0px)); width: calc(100vw - 150px); }
+}
+
+/* =========================================================
+   FRASES
+   ========================================================= */
+.quotes { position: relative; isolation: isolate; overflow: hidden; }
+.quotes__bg { position: absolute; inset: 0; z-index: -1; }
+.quotes__bg .media { position: absolute; inset: 0; background: none; opacity: 0; transition: opacity 1400ms ease; }
+.quotes__bg .media::before, .quotes__bg .media::after { display: none; }
+.quotes__bg .media.is-active { opacity: .28; }
+.quotes__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(70% 60% at 50% 50%, rgba(5, 2, 3, .45), var(--ink) 100%),
+    linear-gradient(180deg, var(--ink) 0%, transparent 22%, transparent 78%, var(--ink) 100%);
+}
+.qstage { margin-top: clamp(40px, 5vw, 64px); display: grid; }
+.quote {
+  grid-area: 1 / 1;
+  display: grid; justify-items: center; align-content: center;
+  text-align: center;
+  visibility: hidden;
+  transition: visibility 0s linear 400ms;
+}
+.quote.is-active { visibility: visible; transition: visibility 0s; }
+.quote__mark {
+  display: block; height: 70px;
+  font: 400 150px/1 var(--f-serif);
+  color: var(--scarlet);
+  text-shadow: 0 0 40px rgba(255, 43, 74, .7);
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.quote.is-active .quote__mark { opacity: .7; transition: opacity 900ms ease; }
+.quote__en {
+  margin-top: 6px;
+  max-width: 22ch;
+  font: italic 500 clamp(30px, 4.6vw, 64px)/1.15 var(--f-serif);
+  color: #fff3ee;
+  text-wrap: balance;
+}
+.quote__en .w {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, .32em, 0);
+  filter: blur(8px);
+  transition: opacity 260ms ease, transform 260ms ease, filter 260ms ease;
+}
+.quote.is-active .quote__en .w {
+  opacity: 1; transform: none; filter: blur(0);
+  transition: opacity 800ms var(--ease-out), transform 1000ms var(--ease-out), filter 800ms var(--ease-out);
+  transition-delay: calc(140ms + var(--i) * 42ms);
+}
+.quote__extra, .quote__es, .quote__cite { opacity: 0; transition: opacity 260ms ease; }
+.quote.is-active .quote__extra, .quote.is-active .quote__es, .quote.is-active .quote__cite { opacity: 1; transition: opacity 800ms ease 500ms; }
+.quote__extra { margin-top: 14px; font: italic 500 19px/1.4 var(--f-serif); color: var(--gold-2); }
+.quote__es { margin-top: 22px; max-width: 46ch; font-size: clamp(15px, 1.35vw, 18px); line-height: 1.65; color: var(--text-2); }
+.quote__cite { margin-top: 26px; display: grid; gap: 8px; justify-items: center; }
+.quote__cite span { font: 600 10px/1 var(--f-ui); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+.quote__cite cite { font: italic 500 17px/1.3 var(--f-serif); color: var(--scarlet-2); }
+.qnav { margin-top: clamp(40px, 5vw, 60px); display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.qtabs { display: flex; gap: 6px; }
+.qtab { position: relative; width: 38px; height: 34px; }
+.qtab::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; border-radius: 2px; background: rgba(244, 235, 230, .16); }
+.qtab i {
+  position: absolute; left: 0; right: 0; top: 50%; height: 2px; border-radius: 2px;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--crimson), var(--gold-2));
+  box-shadow: 0 0 8px rgba(255, 43, 74, .6);
+}
+.qtab.is-done i { transform: scaleX(1); opacity: .55; }
+.qtab.is-active i { animation: qfill var(--q-dur, 8000ms) linear forwards; }
+.quotes.is-paused .qtab.is-active i { animation-play-state: paused; }
+.quotes.is-static .qtab.is-active i { animation: none; transform: scaleX(1); }
+@keyframes qfill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 560px) {
+  .qnav { gap: 12px; }
+  .qtabs { order: -1; flex: 0 0 100%; justify-content: center; }
+  .qtab { width: 30px; }
+  .qtoggle { order: 1; }
+  .qnext { order: 2; }
+}
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+.finale {
+  position: relative;
+  min-height: 100vh; min-height: 100svh;
+  display: grid; place-items: center;
+  padding-block: 120px;
+  text-align: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+.finale__bg { position: absolute; inset: 0; z-index: -3; opacity: .34; background: none; }
+.finale__bg::before, .finale__bg::after { display: none; }
+.finale__veil {
+  position: absolute; inset: 0; z-index: -2;
+  background:
+    radial-gradient(55% 50% at 50% 50%, rgba(200, 16, 46, .28), transparent 70%),
+    radial-gradient(100% 100% at 50% 50%, transparent 30%, var(--ink) 85%),
+    linear-gradient(180deg, var(--ink) 0%, transparent 25%, transparent 75%, var(--ink) 100%);
+}
+.finale__rings { position: absolute; left: 50%; top: 50%; z-index: -1; width: min(112vh, 130vw); aspect-ratio: 1; translate: -50% -50%; pointer-events: none; }
+.finale__ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+.finale__ring--a { opacity: .45; animation: spin 120s linear infinite; }
+.finale__ring--b { opacity: .35; animation: spin 90s linear infinite reverse; }
+.hexline { fill: none; stroke: rgba(255, 107, 128, .35); stroke-width: 1; }
+.finale__content { position: relative; display: grid; justify-items: center; }
+.finale__crown {
+  width: 92px; height: 92px;
+  color: var(--gold-2);
+  stroke-width: 1.4;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 16px rgba(255, 43, 74, .9));
+  transition: stroke-dashoffset 2400ms var(--ease-in-out) 200ms;
+}
+.finale__content.is-in .finale__crown, .no-js .finale__crown { stroke-dashoffset: 0; }
+.finale__title {
+  margin-top: 30px;
+  display: flex; flex-direction: column; align-items: center; gap: .16em;
+  font: 600 clamp(36px, 6.6vw, 108px)/1.02 var(--f-display);
+  letter-spacing: .05em;
+}
+.finale__t1 { color: #fff4ef; text-shadow: 0 0 30px rgba(255, 43, 74, .6), 0 0 90px rgba(200, 16, 46, .55); }
+.finale__dash { font: 400 .55em/1 var(--f-serif); color: var(--gold-2); }
+.finale__t2 {
+  font-size: .44em;
+  letter-spacing: .4em; padding-left: .4em;
+  background: linear-gradient(90deg, #a77d33, #f6e2ad 50%, #a77d33);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.finale__text { margin-top: 30px; max-width: 54ch; font: italic 500 clamp(19px, 1.8vw, 24px)/1.5 var(--f-serif); color: var(--text-2); }
+.finale__cta { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+@media (max-width: 479px) { .finale__cta .btn { width: min(100%, 300px); } }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer { position: relative; border-top: 1px solid var(--line); padding: 48px 0 calc(48px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(180deg, rgba(20, 5, 9, .4), transparent); }
+.footer__inner { display: grid; grid-template-columns: auto 1fr; gap: 28px 48px; align-items: start; }
+.footer__note { font-size: 13.5px; line-height: 1.7; color: var(--text-3); max-width: 76ch; }
+.footer__note strong { color: var(--text-2); font-weight: 600; }
+.footer__links { grid-column: 2; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.footer__links a { font: 600 10px/1 var(--f-ui); letter-spacing: .26em; text-transform: uppercase; color: var(--text-3); transition: color 200ms ease; }
+@media (hover: hover) and (pointer: fine) { .footer__links a:hover { color: var(--text); } }
+@media (max-width: 767px) { .footer__inner { grid-template-columns: minmax(0, 1fr); } .footer__links { grid-column: auto; } }
+
+/* =========================================================
+   REVELADO AL HACER SCROLL
+   ========================================================= */
+.js [data-reveal]:not(.is-in),
+.js [data-stagger]:not(.is-in) > * { opacity: 0; }
+
+/* =========================================================
+   MOVIMIENTO REDUCIDO
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .grain, .hero__aura { animation: none; }
+  .hero__ring, .finale__ring--a, .finale__ring--b, .power__icon::after, .hero__scroll i::after { animation: none; }
+  .power__inner { transition: none; }
+  .power.is-flipped .power__inner { transform: none; }
+  .power__face { transition: opacity 250ms ease; }
+  .power__face--back { transform: none; opacity: 0; }
+  .power.is-flipped .power__face--back { opacity: 1; }
+  .power.is-flipped .power__face--front { opacity: 0; }
+  .media > img, .stage__img > img, .tl__img > img { transform: none !important; }
+  .quote__en .w { transform: none; filter: none; }
+  .finale__crown { transition: none; stroke-dashoffset: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Iconos SVG reutilizables -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-crown" viewBox="28 20 64 64">
+      <path pathLength="1" d="M60 26 L65 50 L79 33 L72.5 56 L87 51 L77 72 L43 72 L33 51 L47.5 56 L41 33 L55 50 Z"/>
+      <path pathLength="1" d="M60 59 L63.5 63.5 L60 68 L56.5 63.5 Z"/>
+      <path pathLength="1" d="M45 78 H75"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5.5 8.5 12l6.5 6.5"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5.5 15.5 12 9 18.5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+    <symbol id="i-flip" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6"/><path d="M17.7 3v3.4h-3.4M6.3 21v-3.4h3.4"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19.5v-15M6 10.5l6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6"/></symbol>
+    <symbol id="i-chaos" viewBox="0 0 24 24"><path d="M12.2 12.1c.1-1 1.3-1.4 2-.7.9.9.3 2.6-1.1 2.8-1.9.3-3.3-1.5-2.9-3.3.5-2.4 3.4-3.4 5.5-2.2 2.6 1.5 3 5.1 1.1 7.2-2.2 2.5-6.2 2.6-8.6.4-2.7-2.4-2.8-6.8-.3-9.5"/><path d="M18.6 2.8l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></symbol>
+    <symbol id="i-tk" viewBox="0 0 24 24"><rect x="4.6" y="4.4" width="5.2" height="5.2" rx="1" transform="rotate(-14 7.2 7)"/><circle cx="16.6" cy="7" r="2.6"/><path d="M3 19.5c2.2-1.6 4.4-1.6 6.5 0s4.4 1.6 6.5 0 3.6-1.5 5-1"/><path d="M7.2 15.6v-2.6M12 16.2v-3.6M16.8 15.6v-2.6"/></symbol>
+    <symbol id="i-tp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M8.3 8.3a5.2 5.2 0 0 0 0 7.4M15.7 8.3a5.2 5.2 0 0 1 0 7.4M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4"/></symbol>
+    <symbol id="i-reality" viewBox="0 0 24 24"><path d="M12 2.6l8.2 4.7v9.4L12 21.4l-8.2-4.7V7.3z"/><path d="M3.9 12c2.7-2.4 5.4-2.4 8.1 0s5.4 2.4 8.1 0"/><path d="M12 2.6c-2.2 3-2.2 15.8 0 18.8"/></symbol>
+    <symbol id="i-energy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.8"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M18.7 5.3l-2.8 2.8M8.1 15.9l-2.8 2.8"/></symbol>
+    <symbol id="i-illusion" viewBox="0 0 24 24"><path d="M3 6.5c3-1.4 6-1.4 9 0 3-1.4 6-1.4 9 0V11c0 4.2-3.8 7.6-9 9.6C6.8 18.6 3 15.2 3 11z"/><path d="M6.8 11c.9-.9 2.4-.9 3.3 0M13.9 11c.9-.9 2.4-.9 3.3 0M9.5 15.4c1.6 1 3.4 1 5 0"/></symbol>
+    <symbol id="i-mind" viewBox="0 0 24 24"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><path d="M12.1 12c0-.6.7-.9 1.2-.5.7.6.2 1.8-.8 1.9-1.3.1-2.2-1.2-1.8-2.4.5-1.6 2.6-2.1 3.8-1"/></symbol>
+    <symbol id="i-dimension" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9.2" ry="4.4"/><ellipse cx="12" cy="12" rx="4.4" ry="9.2" transform="rotate(35 12 12)"/><ellipse cx="12" cy="12" rx="4.4" ry="9.2" transform="rotate(-35 12 12)"/><circle cx="12" cy="12" r="1.3"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#perfil">Saltar al contenido</a>
+
+<!-- Intro cinematográfica -->
+<div class="intro" id="intro" aria-hidden="true">
+  <svg class="intro__sigil" viewBox="0 0 120 120">
+    <circle class="intro__ring" cx="60" cy="60" r="56" pathLength="1"/>
+    <circle class="intro__ring intro__ring--in" cx="60" cy="60" r="49" pathLength="1"/>
+    <path class="intro__crown" pathLength="1" d="M60 26 L65 50 L79 33 L72.5 56 L87 51 L77 72 L43 72 L33 51 L47.5 56 L41 33 L55 50 Z"/>
+    <path class="intro__gem" pathLength="1" d="M60 59 L63.5 63.5 L60 68 L56.5 63.5 Z"/>
+  </svg>
+  <p class="intro__label">The Scarlet Witch</p>
+</div>
+
+<!-- Capas de magia -->
+<canvas class="magic" id="magic" aria-hidden="true"></canvas>
+<div class="aura" id="aura" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Navegación -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a class="brand" href="#inicio" aria-label="Wanda Maximoff — volver al inicio">
+      <svg class="ico brand__mark" aria-hidden="true"><use href="#i-crown"/></svg>
+      <span class="brand__text"><b>MAXIMOFF</b><small>Scarlet Witch</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#perfil">Perfil</a>
+      <a href="#historia">Historia</a>
+      <a href="#poderes">Poderes</a>
+      <a href="#evolucion">Evolución</a>
+      <a href="#relaciones">Relaciones</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#galeria">Galería</a>
+      <a href="#frases">Frases</a>
+      <span class="nav__indicator" aria-hidden="true"></span>
+    </nav>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span></button>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+
+<div class="menu" id="menu" aria-label="Menú de secciones">
+  <nav aria-label="Secciones (móvil)">
+    <ol>
+      <li><a href="#perfil" style="--i:0"><span>02</span>Perfil</a></li>
+      <li><a href="#historia" style="--i:1"><span>03</span>Historia</a></li>
+      <li><a href="#poderes" style="--i:2"><span>04</span>Poderes</a></li>
+      <li><a href="#evolucion" style="--i:3"><span>05</span>Evolución</a></li>
+      <li><a href="#relaciones" style="--i:4"><span>06</span>Relaciones</a></li>
+      <li><a href="#curiosidades" style="--i:5"><span>07</span>Curiosidades</a></li>
+      <li><a href="#galeria" style="--i:6"><span>08</span>Galería</a></li>
+      <li><a href="#frases" style="--i:7"><span>09</span>Frases</a></li>
+      <li><a href="#final" style="--i:8"><span>10</span>Final</a></li>
+    </ol>
+  </nav>
+  <p class="menu__foot">The Scarlet Witch — The Power of Chaos</p>
+</div>
+
+<main id="main">
+
+  <!-- 01 · PORTADA -->
+  <section class="hero is-pre" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__bg">
+      <div class="hero__media media" data-img="hero" data-eager data-widths="1280,1920,2560,3840" data-sizes="(max-width: 899px) 258vh, (orientation: portrait) 258vh, 272vh" data-label="The Scarlet Witch"></div>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__aura" aria-hidden="true"></div>
+    <div class="hero__ringwrap" aria-hidden="true">
+      <svg class="hero__ring" viewBox="0 0 600 600">
+        <defs><path id="ring-hero" d="M300,300 m-258,0 a258,258 0 1,1 516,0 a258,258 0 1,1 -516,0"/></defs>
+        <circle cx="300" cy="300" r="290" class="ring-line"/>
+        <circle cx="300" cy="300" r="234" class="ring-line ring-line--dash"/>
+        <text class="ring-text"><textPath href="#ring-hero" textLength="1610" lengthAdjust="spacing">THE SCARLET WITCH ✦ CHAOS MAGIC ✦ WUNDAGORE ✦ THE DARKHOLD ✦ WESTVIEW ✦ SOKOVIA ✦</textPath></text>
+      </svg>
+    </div>
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Marvel Cinematic Universe <span>✦</span> Fan Site</p>
+        <h1 class="hero__title" id="hero-title" aria-label="Wanda Maximoff"><span class="hero__line">WANDA</span><span class="hero__line">MAXIMOFF</span></h1>
+        <p class="hero__subtitle"><span>The Scarlet Witch</span></p>
+        <blockquote class="hero__quote" lang="en"><p>“You break the rules and become the hero. I do it and I become the enemy.”</p></blockquote>
+        <p class="hero__quote-cite">Wanda Maximoff · Doctor Strange en el Multiverso de la Locura</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#historia">Descubrir su historia <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <a class="hero__scroll" href="#perfil" aria-label="Bajar a la información personal">Scroll<i></i></a>
+  </section>
+
+  <!-- 02 · INFORMACIÓN PERSONAL -->
+  <section class="section" id="perfil" aria-labelledby="perfil-title">
+    <div class="container">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow"><b>02</b> Perfil</p>
+        <h2 class="sec-title" id="perfil-title">Información <em>personal</em></h2>
+        <p class="sec-lead">Huérfana de la guerra, sujeto de experimentos, Avenger y, finalmente, la hechicera más poderosa del multiverso. Este es su expediente.</p>
+      </header>
+
+      <div class="profile">
+        <div class="portrait" data-reveal>
+          <div class="portrait__frame">
+            <div class="portrait__media media" data-img="profile" data-widths="640,960,1328" data-sizes="(min-width: 900px) 38vw, 92vw" data-label="Wanda Maximoff"></div>
+          </div>
+          <div class="portrait__tag"><span>Expediente</span><strong>W. Maximoff</strong><small>Sokovia · 1989</small></div>
+        </div>
+
+        <div class="dossier">
+          <div data-reveal>
+            <p class="dossier__kicker">Nombre completo</p>
+            <h3 class="dossier__name">Wanda Maximoff</h3>
+            <p class="dossier__alias">Scarlet Witch<span>·</span>La Bruja Escarlata</p>
+          </div>
+          <dl class="facts" data-stagger>
+            <div class="fact"><dt>Alias</dt><dd>Scarlet Witch, la Bruja Escarlata</dd></div>
+            <div class="fact"><dt>Origen</dt><dd>Novi Grad, Sokovia (Europa del Este)</dd></div>
+            <div class="fact"><dt>Nacimiento</dt><dd>1989 · hija de Olek e Iryna Maximoff</dd></div>
+            <div class="fact"><dt>Familia</dt><dd>Pietro (mellizo) · Vision · Billy y Tommy</dd></div>
+            <div class="fact"><dt>Interpretada por</dt><dd>Elizabeth Olsen<small>Michaela Russell, de niña</small></dd></div>
+            <div class="fact"><dt>Creada por</dt><dd>Stan Lee y Jack Kirby</dd></div>
+            <div class="fact"><dt>Primera aparición · cómics</dt><dd>The X-Men #4 (marzo de 1964)</dd></div>
+            <div class="fact"><dt>Primera aparición · MCU</dt><dd>Capitán América y el Soldado del Invierno (2014)<small>Escena a mitad de créditos</small></dd></div>
+            <div class="fact"><dt>Afiliaciones</dt><dd>HYDRA (antes) · Avengers (antes)</dd></div>
+            <div class="fact"><dt>Estado</dt><dd>Fallecida en el Monte Wundagore (2024)<small>Confirmado en Agatha All Along</small></dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="stats" data-stagger>
+        <div class="stat"><span class="stat__num" data-count="1964" data-from="1900">1964</span><span class="stat__label">Debut en los cómics</span></div>
+        <div class="stat"><span class="stat__num" data-count="7">7</span><span class="stat__label">Producciones del MCU</span></div>
+        <div class="stat"><span class="stat__num" data-count="9">9</span><span class="stat__label">Episodios de WandaVision</span></div>
+        <div class="stat"><span class="stat__num">∞</span><span class="stat__label">Realidades posibles</span></div>
+      </div>
+
+      <ul class="keys" data-stagger>
+        <li><strong>Magia innata.</strong> Nació con magia del caos latente: la Gema de la Mente no le dio su poder, solo lo despertó.</li>
+        <li><strong>Frente a Thanos.</strong> Destruyó la Gema de la Mente con una mano mientras lo contenía con la otra.</li>
+        <li><strong>Un pueblo entero.</strong> Su duelo reescribió la realidad de Westview, Nueva Jersey, y de todos sus habitantes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 · HISTORIA -->
+  <section class="section" id="historia" aria-labelledby="historia-title">
+    <div class="container">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow"><b>03</b> Historia</p>
+        <h2 class="sec-title" id="historia-title">Su <em>historia</em></h2>
+        <p class="sec-lead">Una vida marcada por la pérdida, contada en ocho capítulos: de los escombros de Sokovia al trono en ruinas del Monte Wundagore.</p>
+      </header>
+
+      <div class="story">
+        <div class="story__stage" aria-hidden="true">
+          <div class="stage__frame">
+            <div class="stage__img media" data-img="hist1" data-widths="960,1440,1920" data-sizes="190vh" data-label="Sokovia"></div>
+            <div class="stage__img media" data-img="hist2" data-widths="960,1440,1920" data-sizes="190vh" data-label="Novi Grad"></div>
+            <div class="stage__img media" data-img="hist3" data-widths="960,1440,1920" data-sizes="190vh" data-label="Pietro"></div>
+            <div class="stage__img media" data-img="hist4" data-widths="960,1440,1920" data-sizes="190vh" data-label="HYDRA"></div>
+            <div class="stage__img media" data-img="hist5" data-widths="960,1440,1920" data-sizes="190vh" data-label="Avengers"></div>
+            <div class="stage__img media" data-img="hist6" data-widths="960,1440,1920" data-sizes="190vh" data-label="Vision"></div>
+            <div class="stage__img media" data-img="hist7" data-widths="960,1440,1920" data-sizes="190vh" data-label="WandaVision"></div>
+            <div class="stage__img media" data-img="hist8" data-widths="960,1440,1920" data-sizes="190vh" data-label="Multiverso"></div>
+            <div class="stage__meta">
+              <span class="stage__num">I</span>
+              <span class="stage__where"><span class="stage__place">Novi Grad, Sokovia</span><span class="stage__year">1989 – 1999</span></span>
+            </div>
+          </div>
+          <div class="stage__dots">
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo I</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo II</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo III</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo IV</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo V</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo VI</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo VII</span></button>
+            <button class="stage__dot" type="button" tabindex="-1"><span class="sr-only">Capítulo VIII</span></button>
+          </div>
+        </div>
+
+        <div class="story__chapters">
+          <article class="chapter" data-roman="I" data-place="Novi Grad, Sokovia" data-year="1989 – 1999">
+            <div class="chapter__media media" data-img="hist1" data-widths="640,960,1440" data-sizes="100vw" data-label="Sokovia"></div>
+            <p class="chapter__num">Capítulo I · <span>Infancia en Sokovia</span></p>
+            <h3 class="chapter__title">Una niña frente <em>al televisor</em></h3>
+            <p>Wanda nació en 1989 en Sokovia, un pequeño país de Europa del Este desgarrado por la guerra, junto a su hermano mellizo Pietro. Sus padres, Olek e Iryna, ponían series estadounidenses para que los niños practicaran inglés, y ella quedó hechizada por las sitcoms —sobre todo por <em>The Dick Van Dyke Show</em>—: mundos luminosos donde cada problema se resolvía antes de los créditos.</p>
+            <p>Sin saberlo, ya llevaba dentro una magia antigua y dormida: la del caos.</p>
+          </article>
+
+          <article class="chapter" data-roman="II" data-place="Novi Grad, Sokovia" data-year="Marzo de 1999">
+            <div class="chapter__media media" data-img="hist2" data-widths="640,960,1440" data-sizes="100vw" data-label="Novi Grad"></div>
+            <p class="chapter__num">Capítulo II · <span>La muerte de sus padres</span></p>
+            <h3 class="chapter__title">Dos días bajo <em>los escombros</em></h3>
+            <p>Tenía diez años. Era noche de televisión en familia y ella había elegido su programa favorito cuando un proyectil impactó en el edificio y mató a Olek e Iryna en el acto. Pietro la arrastró bajo la cama; un segundo proyectil cayó a un metro de ellos… y no estalló.</p>
+            <p>Durante dos días miraron el nombre grabado en el metal: <strong>Stark Industries</strong>. Años después, Agatha Harkness sugeriría que fue su propia magia, aún dormida, la que impidió la explosión.</p>
+          </article>
+
+          <article class="chapter" data-roman="III" data-place="Sokovia" data-year="1999 – 2014">
+            <div class="chapter__media media" data-img="hist3" data-widths="640,960,1440" data-sizes="100vw" data-label="Pietro"></div>
+            <p class="chapter__num">Capítulo III · <span>Su hermano Pietro</span></p>
+            <h3 class="chapter__title">La otra mitad <em>de su alma</em></h3>
+            <p>Huérfanos, los mellizos sobrevivieron juntos a un orfanato y a una Sokovia convertida en zona de guerra. Pietro, doce minutos mayor, era impulsivo y protector; Wanda, intensa y reservada.</p>
+            <p>Ya adultos, encabezaban protestas contra la presencia de fuerzas extranjeras, sin saber que HYDRA las alentaba en secreto. En 2014 les ofrecieron el poder para terminar la guerra. Wanda dudó; Pietro la convenció.</p>
+          </article>
+
+          <article class="chapter" data-roman="IV" data-place="Base de HYDRA, Sokovia" data-year="2014">
+            <div class="chapter__media media" data-img="hist4" data-widths="640,960,1440" data-sizes="100vw" data-label="HYDRA"></div>
+            <p class="chapter__num">Capítulo IV · <span>Los experimentos de HYDRA</span></p>
+            <h3 class="chapter__title">El roce de <em>la gema</em></h3>
+            <p>En la fortaleza del barón Strucker, HYDRA experimentaba con el cetro de Loki, que ocultaba la Gema de la Mente. Los Maximoff resistieron pruebas que pocos superaban. Al rozar la gema, Wanda vio una silueta coronada, envuelta en luz: la Bruja Escarlata.</p>
+            <p>La piedra no le dio su poder —había nacido con él—: lo despertó y lo amplificó. Pietro, por su parte, obtuvo una velocidad sobrehumana.</p>
+          </article>
+
+          <article class="chapter" data-roman="V" data-place="Sokovia · Lagos · Leipzig" data-year="2015 – 2016">
+            <div class="chapter__media media" data-img="hist5" data-widths="640,960,1440" data-sizes="100vw" data-label="Avengers"></div>
+            <p class="chapter__num">Capítulo V · <span>Los Avengers</span></p>
+            <h3 class="chapter__title">De enemiga <em>a Avenger</em></h3>
+            <p>Aliada de Ultrón, usó visiones para sembrar el miedo entre los Avengers, hasta que leyó su mente y descubrió un plan de extinción. En plena Batalla de Sokovia, Clint Barton le dijo que, si cruzaba esa puerta, sería una Avenger. La cruzó.</p>
+            <p>Ese mismo día, Pietro murió protegiendo a Clint y a un niño, y Wanda le arrancó el corazón a Ultrón. Un año después, el incidente de Lagos y los Acuerdos de Sokovia la convertirían en fugitiva.</p>
+          </article>
+
+          <article class="chapter" data-roman="VI" data-place="Nueva York · Edimburgo · Wakanda" data-year="2016 – 2023">
+            <div class="chapter__media media" data-img="hist6" data-widths="640,960,1440" data-sizes="100vw" data-label="Vision"></div>
+            <p class="chapter__num">Capítulo VI · <span>Vision</span></p>
+            <h3 class="chapter__title">Un amor nacido <em>de una gema</em></h3>
+            <p>Vision, nacido de la misma gema que despertó su poder, fue el primero en mirarla sin miedo. Lo que empezó con conversaciones en el complejo de los Avengers se convirtió en amor y en una vida secreta en Edimburgo.</p>
+            <p>En Wakanda tuvo que destruir la Gema de la Mente —y a Vision con ella— solo para ver cómo Thanos revertía el tiempo y se la arrancaba. Luego, el Chasquido la convirtió en polvo. Cinco años después volvió para enfrentarlo.</p>
+            <blockquote class="chapter__pull" lang="en">“You took everything from me.”<small>Avengers: Endgame · 2019</small></blockquote>
+          </article>
+
+          <article class="chapter" data-roman="VII" data-place="Westview, Nueva Jersey" data-year="2023">
+            <div class="chapter__media media" data-img="hist7" data-widths="640,960,1440" data-sizes="100vw" data-label="WandaVision"></div>
+            <p class="chapter__num">Capítulo VII · <span>WandaVision</span></p>
+            <h3 class="chapter__title">Un duelo que <em>reescribió la realidad</em></h3>
+            <p>Tras volver, fue a S.W.O.R.D. a reclamar el cuerpo de Vision y descubrió que lo estaban desmantelando. Condujo hasta Westview, al terreno que él había comprado para que envejecieran juntos, y su dolor estalló: la magia del caos creó el Hex, una sitcom que viajaba por las décadas, con Vision vivo y dos hijos, Billy y Tommy.</p>
+            <p>Agatha Harkness le reveló la verdad —era la Bruja Escarlata— y Wanda eligió deshacerlo todo y despedirse.</p>
+          </article>
+
+          <article class="chapter" data-roman="VIII" data-place="Kamar-Taj · Tierra-838 · Wundagore" data-year="2024">
+            <div class="chapter__media media" data-img="hist8" data-widths="640,960,1440" data-sizes="100vw" data-label="Multiverso"></div>
+            <p class="chapter__num">Capítulo VIII · <span>El Multiverso de la Locura</span></p>
+            <h3 class="chapter__title">La corona <em>y la caída</em></h3>
+            <p>Corrompida por el Darkhold y obsesionada con sus hijos, persiguió a America Chavez para robar su poder de viajar entre universos. Arrasó Kamar-Taj y acabó con los Illuminati de la Tierra-838. Pero cuando los Billy y Tommy de ese mundo la miraron aterrados, comprendió en qué se había convertido.</p>
+            <p>Para que nadie volviera a usar el libro, destruyó todas sus copias en el multiverso derribando el Monte Wundagore sobre sí misma. Agatha All Along confirmaría después su muerte.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · PODERES -->
+  <section class="section" id="poderes" aria-labelledby="poderes-title">
+    <div class="container">
+      <header class="sec-head sec-head--center" data-reveal>
+        <p class="eyebrow"><b>04</b> Poderes</p>
+        <h2 class="sec-title" id="poderes-title">Sus <em>poderes</em></h2>
+        <p class="sec-lead">La magia del caos le permite reescribir la realidad. Gira cada carta para descubrir de qué es capaz la Bruja Escarlata.</p>
+      </header>
+      <div class="powers" id="powers-grid" data-stagger></div>
+      <p class="powers__hint">Toca o haz clic en una carta para girarla</p>
+    </div>
+  </section>
+
+  <!-- 05 · EVOLUCIÓN -->
+  <section class="section" id="evolucion" aria-labelledby="evolucion-title">
+    <div class="container">
+      <header class="sec-head sec-head--center" data-reveal>
+        <p class="eyebrow"><b>05</b> Evolución</p>
+        <h2 class="sec-title" id="evolucion-title">Su <em>evolución</em></h2>
+        <p class="sec-lead">Siete apariciones en el MCU y un legado. Recorre su transformación etapa por etapa: haz clic en cada año, usa las flechas o desliza.</p>
+      </header>
+      <div class="tl" id="tl" data-reveal>
+        <div class="tl__track" role="tablist" aria-label="Etapas de Wanda en el MCU">
+          <span class="tl__line" aria-hidden="true"><i></i></span>
+        </div>
+        <div class="tl__panel" id="tl-panel" role="tabpanel" aria-label="Detalle de la etapa">
+          <div class="tl__visual"></div>
+          <div class="tl__content">
+            <p class="tl__era"></p>
+            <h3 class="tl__title"></h3>
+            <p class="tl__film"></p>
+            <p class="tl__text"></p>
+            <div class="tl__facts">
+              <div class="tl__chip"><span>Rol</span><p class="tl__role"></p></div>
+              <div class="tl__chip"><span>Momento clave</span><p class="tl__moment"></p></div>
+            </div>
+            <div class="tl__meter">
+              <div class="tl__meter-head"><span>Nivel de poder</span><b></b></div>
+              <div class="bar"><i></i></div>
+            </div>
+            <div class="tl__controls">
+              <button class="icon-btn tl__prev" type="button" aria-label="Etapa anterior"><svg class="ico" aria-hidden="true"><use href="#i-prev"/></svg></button>
+              <span class="tl__count"></span>
+              <button class="icon-btn tl__next" type="button" aria-label="Etapa siguiente"><svg class="ico" aria-hidden="true"><use href="#i-next"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <p class="sr-only" id="tl-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · RELACIONES -->
+  <section class="section" id="relaciones" aria-labelledby="relaciones-title">
+    <div class="container">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow"><b>06</b> Relaciones</p>
+        <h2 class="sec-title" id="relaciones-title">Sus <em>relaciones</em></h2>
+        <p class="sec-lead">Cada vínculo de Wanda dejó una marca: sangre, amor, magia, rivalidad y lealtad.</p>
+      </header>
+      <div class="rels" id="rel-grid" data-stagger></div>
+    </div>
+  </section>
+
+  <!-- 07 · CURIOSIDADES -->
+  <section class="section" id="curiosidades" aria-labelledby="curiosidades-title">
+    <div class="container">
+      <header class="sec-head sec-head--center" data-reveal>
+        <p class="eyebrow"><b>07</b> Curiosidades</p>
+        <h2 class="sec-title" id="curiosidades-title">Secretos y <em>curiosidades</em></h2>
+        <p class="sec-lead">Datos, secretos de producción y las grandes diferencias entre la Wanda de los cómics y la del MCU.</p>
+      </header>
+      <div class="facts-grid" id="facts-grid" data-stagger></div>
+
+      <div class="versus" data-view="comics" data-reveal>
+        <div class="versus__head">
+          <figure class="versus__fig">
+            <div class="media" data-img="cmpComic" data-widths="480,800" data-sizes="(min-width: 768px) 40vw, 46vw" data-label="Cómics"></div>
+            <figcaption>Cómics</figcaption>
+          </figure>
+          <span class="versus__vs" aria-hidden="true">VS</span>
+          <figure class="versus__fig">
+            <div class="media" data-img="cmpMcu" data-widths="480,800" data-sizes="(min-width: 768px) 40vw, 46vw" data-label="MCU"></div>
+            <figcaption>MCU</figcaption>
+          </figure>
+        </div>
+        <h3 class="versus__title">Cómics <em>vs.</em> MCU</h3>
+        <div class="vswitch" data-view="comics" role="group" aria-label="Elegir versión">
+          <div class="vswitch__track">
+            <button class="vswitch__opt" type="button" data-view="comics" aria-pressed="true">Cómics</button>
+            <button class="vswitch__opt" type="button" data-view="mcu" aria-pressed="false">MCU</button>
+          </div>
+          <div class="vswitch__active" aria-hidden="true"><span>Cómics</span><span>MCU</span></div>
+        </div>
+        <div class="vtable" role="table" aria-label="Diferencias entre los cómics y el MCU">
+          <div class="vrow vrow--head" role="row"><div role="columnheader">Aspecto</div><div role="columnheader">Cómics</div><div role="columnheader">MCU</div></div>
+          <div id="versus-rows" role="rowgroup"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · GALERÍA -->
+  <section class="section" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow"><b>08</b> Galería</p>
+        <h2 class="sec-title" id="galeria-title">La <em>galería</em></h2>
+        <p class="sec-lead">Momentos icónicos de Wanda en el cine y la televisión. Filtra por película o serie y haz clic en cualquier imagen para ampliarla; en el visor puedes usar las flechas o deslizar.</p>
+      </header>
+      <div class="gfilters" data-reveal>
+        <div class="gfilters__scroller">
+          <div class="gfilters__list" id="gfilters" role="toolbar" aria-label="Filtrar la galería por película o serie"></div>
+          <div class="gfilters__list gfilters__list--active" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="gallery" id="gallery-grid" data-stagger></div>
+      <p class="sr-only" id="gallery-status" aria-live="polite"></p>
+      <div class="gmore">
+        <button class="btn btn--ghost gmore__btn" type="button" aria-expanded="false" aria-controls="gallery-grid"><span class="gmore__label">Ver toda la galería</span><span class="gmore__count"></span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · FRASES -->
+  <section class="section quotes" id="frases" aria-labelledby="frases-title">
+    <div class="quotes__bg" aria-hidden="true"></div>
+    <div class="container">
+      <header class="sec-head sec-head--center" data-reveal>
+        <p class="eyebrow"><b>09</b> Frases</p>
+        <h2 class="sec-title" id="frases-title">Frases <em>memorables</em></h2>
+      </header>
+      <div class="qstage" data-reveal></div>
+      <div class="qnav" data-reveal>
+        <button class="icon-btn qprev" type="button" aria-label="Frase anterior"><svg class="ico" aria-hidden="true"><use href="#i-prev"/></svg></button>
+        <div class="qtabs" role="tablist" aria-label="Frases"></div>
+        <button class="icon-btn qnext" type="button" aria-label="Frase siguiente"><svg class="ico" aria-hidden="true"><use href="#i-next"/></svg></button>
+        <button class="icon-btn qtoggle" type="button" aria-pressed="false" aria-label="Pausar frases"><svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · FINAL -->
+  <section class="finale" id="final" aria-labelledby="final-title">
+    <div class="finale__bg media" data-img="finale" data-widths="1280,1920" data-sizes="240vh" data-alt="" data-label=""></div>
+    <div class="finale__veil" aria-hidden="true"></div>
+    <div class="finale__rings" aria-hidden="true">
+      <svg class="finale__ring finale__ring--a" viewBox="0 0 600 600">
+        <defs><path id="ring-fin" d="M300,300 m-270,0 a270,270 0 1,1 540,0 a270,270 0 1,1 -540,0"/></defs>
+        <circle cx="300" cy="300" r="292" class="ring-line"/>
+        <text class="ring-text"><textPath href="#ring-fin" textLength="1690" lengthAdjust="spacing">THE POWER OF CHAOS ✦ THE SCARLET WITCH ✦ THE POWER OF CHAOS ✦ THE SCARLET WITCH ✦</textPath></text>
+      </svg>
+      <svg class="finale__ring finale__ring--b" viewBox="0 0 600 600">
+        <circle cx="300" cy="300" r="236" class="ring-line ring-line--dash"/>
+        <polygon class="hexline" points="300,70 499.2,185 499.2,415 300,530 100.8,415 100.8,185"/>
+        <polygon class="hexline" points="300,70 499.2,415 100.8,415"/>
+        <polygon class="hexline" points="300,530 100.8,185 499.2,185"/>
+        <circle cx="300" cy="300" r="120" class="ring-line"/>
+      </svg>
+    </div>
+    <div class="finale__content container" data-reveal>
+      <svg class="ico finale__crown" aria-hidden="true"><use href="#i-crown"/></svg>
+      <h2 class="finale__title" id="final-title">
+        <span class="finale__t1">THE SCARLET WITCH</span>
+        <span class="finale__dash">—</span>
+        <span class="finale__t2">THE POWER OF CHAOS</span>
+      </h2>
+      <p class="finale__text">Huérfana, Avenger, madre, villana y leyenda. Wanda Maximoff demostró que la magia más poderosa del multiverso nace del amor… y del duelo, que no es otra cosa que amor que persevera.</p>
+      <div class="finale__cta">
+        <a class="btn btn--ghost" href="#inicio"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg> Volver al inicio</a>
+        <a class="btn btn--primary" href="#galeria">Ver la galería <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio">
+      <svg class="ico brand__mark" aria-hidden="true"><use href="#i-crown"/></svg>
+      <span class="brand__text"><b>MAXIMOFF</b><small>Scarlet Witch</small></span>
+    </a>
+    <p class="footer__note"><strong>Fan site no oficial y sin fines comerciales.</strong> Wanda Maximoff, la Bruja Escarlata y todos los personajes relacionados son propiedad de Marvel Entertainment y The Walt Disney Company. Las imágenes pertenecen a Marvel Studios y se cargan desde la Marvel Cinematic Universe Wiki (Fandom).</p>
+    <nav class="footer__links" aria-label="Secciones (pie)">
+      <a href="#perfil">Perfil</a><a href="#historia">Historia</a><a href="#poderes">Poderes</a><a href="#evolucion">Evolución</a><a href="#relaciones">Relaciones</a><a href="#curiosidades">Curiosidades</a><a href="#galeria">Galería</a><a href="#frases">Frases</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- Visor de la galería -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
+  <div class="lb__backdrop"></div>
+  <img class="lb__img" alt="" draggable="false">
+  <div class="lb__ui">
+    <button class="icon-btn lb__close" type="button" aria-label="Cerrar visor"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button class="icon-btn lb__prev" type="button" aria-label="Imagen anterior"><svg class="ico" aria-hidden="true"><use href="#i-prev"/></svg></button>
+    <button class="icon-btn lb__next" type="button" aria-label="Imagen siguiente"><svg class="ico" aria-hidden="true"><use href="#i-next"/></svg></button>
+    <div class="lb__caption" aria-live="polite">
+      <span class="lb__count"></span>
+      <span class="lb__title"></span>
+      <span class="lb__meta"></span>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="noscript">Activa JavaScript para disfrutar de la experiencia completa.</p></noscript>
+
+<script>
+(() => {
+  'use strict';
+
+  /* =========================================================
+     1 · IMÁGENES
+     ---------------------------------------------------------
+     Para usar tus propias imágenes, cambia "src" por:
+       · una URL completa:  'https://misitio.com/wanda.jpg'
+       · un archivo local:  'img/wanda.jpg' (junto a este HTML)
+     Las rutas cortas (p. ej. 'f/f5/...') se cargan desde el CDN
+     de la Marvel Cinematic Universe Wiki (Fandom).
+     "pos" ajusta el encuadre (object-position).
+     ========================================================= */
+  const CDN = 'https://static.wikia.nocookie.net/marvelcinematicuniverse/images/';
+  const IMAGES = {
+    hero:        { src: 'f/f5/The_Scarlet_Witch.png', pos: '50% 42%', alt: 'Wanda Maximoff convertida en la Bruja Escarlata, con magia del caos en la mano' },
+    profile:     { src: '8/8e/The_Scarlet_Witch_Promo.jpeg', pos: '50% 16%', alt: 'Retrato de Wanda Maximoff con la corona de la Bruja Escarlata' },
+
+    hist1:       { src: '1/10/Pietro_%26_Wanda_%281999%29.png', pos: '66% 45%', alt: 'Wanda y Pietro de niños en Sokovia' },
+    hist2:       { src: '9/95/Wanda_sees_Stark%27s_name.png', pos: '50% 40%', alt: 'La pequeña Wanda bajo los escombros, frente al proyectil de Stark Industries' },
+    hist3:       { src: 'a/a0/Quicksilver-ScarletWitch-Church-AAoU.jpg', pos: '24% 40%', alt: 'Wanda y Pietro Maximoff en Sokovia' },
+    hist4:       { src: '2/23/Wanda_exposed_to_the_Mind_Stone.png', pos: '50% 40%', alt: 'Wanda iluminada por la Gema de la Mente' },
+    hist5:       { src: '3/3a/Scarlet-Witch-returns-to-battle-AAoU.jpg', pos: '76% 50%', alt: 'Wanda regresa a la Batalla de Sokovia' },
+    hist6:       { src: 'd/d4/Wanda_falls_in_love_with_Vision.png', pos: '50% 45%', alt: 'Wanda y Vision en el complejo de los Avengers' },
+    hist7:       { src: '4/4c/Wanda_opens_the_Hex.png', pos: '50% 40%', alt: 'Wanda abre el Hex con magia del caos' },
+    hist8:       { src: 'c/c5/Wanda%27s_realization.png', pos: '54% 40%', alt: 'Wanda, con lágrimas, lleva la corona de la Bruja Escarlata' },
+
+    tl2014:      { src: '2/2a/Scarlet_Witch_-_CATWS_End_Credit_Scene.png', pos: '36% 45%', alt: 'Wanda en una celda de HYDRA' },
+    tl2015:      { src: 'f/fd/Scarlet_Witch_%28Age_of_Ultron%29.png', pos: '45% 45%', alt: 'Wanda usa su magia en un tren' },
+    tl2016:      { src: 'a/a4/ScarletWitchCW1.jpg', pos: '45% 45%', alt: 'Wanda en la batalla del aeropuerto' },
+    tl2018:      { src: 'e/ef/Scarlet_Witch.png', pos: '50% 35%', alt: 'Wanda flota en el bosque de Wakanda' },
+    tl2019:      { src: 'd/d5/Scarlet_Witch_%28Endgame%29.jpg', pos: '50% 45%', alt: 'Wanda en la Batalla de la Tierra' },
+    tl2021:      { src: '7/7a/Scarlet_Witch_Costume.png', pos: '30% 35%', alt: 'Wanda con el traje de la Bruja Escarlata en Westview' },
+    tl2022:      { src: '3/39/ScarletWitch-DS2.png', pos: '52% 35%', alt: 'La Bruja Escarlata lanza magia del caos' },
+    tl2024:      { src: '9/9b/Speed%2C_Wiccan_%26_Scarlet_Witch.jpg', pos: '58% 30%', alt: 'Billy y Tommy disfrazados junto a Wanda' },
+
+    relPietro:   { src: '5/5e/ScarletWitchQuicksilver.png', pos: '48% 35%', alt: 'Pietro y Wanda Maximoff' },
+    relVision:   { src: 'e/e8/The_Scarlet_Witch_and_The_Vision.png', pos: '50% 35%', alt: 'Wanda y Vision juntos en Westview' },
+    relBilly:    { src: 'b/b0/Scarlet_Witch%27s_children.png', pos: '50% 40%', alt: 'Wanda abraza a Billy y Tommy' },
+    relTommy:    { src: 'e/ef/Wanda%2C_Billy_%26_Tommy.png', pos: '72% 40%', alt: 'Billy y Tommy en la cocina de Westview' },
+    relAgatha:   { src: '4/4b/Wanda_Maximoff_%26_Agatha_Harkness_EP8_WV.jpg', pos: '55% 35%', alt: 'Wanda y Agatha Harkness' },
+    relAvengers: { src: '5/56/VisionWandaRhodeySteveSamTonyNat.jpg', pos: '50% 50%', alt: 'Los Avengers reunidos en su complejo' },
+
+    gTws:        { src: 'c/c7/Scarlet_Witch_Blocks.png', pos: '40% 45%' },
+    gAou1:       { src: '2/2f/Scarlet-Witch-stops-train-redlight.jpg', pos: '50% 45%' },
+    gAou2:       { src: '6/6c/PietroandWanda.jpg', pos: '50% 30%' },
+    gCw1:        { src: '4/45/Scarlet_Witch_Civil_War_Empire.jpg', pos: '50% 30%' },
+    gCw2:        { src: '9/96/Scarlet_Witch_Powers_Civil_War.png', pos: '55% 45%' },
+    gIw1:        { src: '0/05/Scarlet_Witch_joins_the_battle.png', pos: '48% 55%' },
+    gIw2:        { src: '3/30/WandaAIW.jpg', pos: '50% 22%' },
+    gEg:         { src: '7/72/Scarlet_Witch_Endgame_battle_1.png', pos: '42% 40%' },
+    gWv1:        { src: '4/43/WandaVision_B%26W.jpg', pos: '50% 35%' },
+    gWv2:        { src: 'c/c3/Wanda_Maximoff_Halloween.png', pos: '66% 30%' },
+    gWv3:        { src: 'f/f2/The_Scarlet_Witch_is_forged.png', pos: '50% 50%' },
+    gMom1:       { src: 'b/ba/Scarlet_Witch_Dreamwalking.png', pos: '50% 45%' },
+    gMom2:       { src: '5/5f/Wanda_Wundagore.jpg', pos: '34% 50%' },
+    gMom3:       { src: '7/78/Scarlet_Witch_Eyes.png', pos: '50% 50%' },
+    gTws2:       { src: '2/2a/Scarlet_Witch_-_CATWS_End_Credit_Scene.png', pos: '36% 45%' },
+    gAouSide:    { src: '3/30/Maximoffs.png', pos: '45% 40%' },
+    gAouPromo:   { src: '8/82/Scarlet_Witch_Final_Costume.jpg', pos: '50% 22%' },
+    gAouRescue:  { src: '6/6e/Quicksilver-picks-up-Scarlet-Witch.jpg', pos: '62% 50%' },
+    gAouHeart:   { src: '3/37/ScarletWitchUltron%27sHeart.png', pos: '55% 40%' },
+    gCwLagos:    { src: 'c/c1/Wanda_%28Lagos%29.jpg', pos: '45% 30%' },
+    gCwStill:    { src: 'a/a8/Scarlet_Witch_CW_new_still.jpg', pos: '50% 30%' },
+    gCwAirport:  { src: 'a/a4/ScarletWitchCW1.jpg', pos: '45% 45%' },
+    gIwEdin:     { src: '3/37/Scarlet_Witch_S_IW_1.png', pos: '45% 40%' },
+    gIwForest:   { src: 'b/b3/ScarletWitch_AIW.png', pos: '68% 35%' },
+    gIwFloat:    { src: 'e/ef/Scarlet_Witch.png', pos: '50% 35%' },
+    gEgFury:     { src: 'd/d5/Scarlet_Witch_%28Endgame%29.jpg', pos: '50% 45%' },
+    gWv70s:      { src: '7/7a/70s_Wanda_Maximoff.jpg', pos: '42% 35%' },
+    gWvAgnes:    { src: '9/9b/Wanda_%26_Agnes.jpg', pos: '65% 30%' },
+    gWvFamily:   { src: '7/72/Maximoff_Family_Photo.jpg', pos: '50% 35%' },
+    gWvCostumes: { src: 'c/c2/Vision_%26_Scarlet_Witch_%28WandaVision%29.jpg', pos: '45% 30%' },
+    gWvHex:      { src: '4/4c/Wanda_opens_the_Hex.png', pos: '50% 40%' },
+    gWvChaos:    { src: '2/2c/Unleashing_Chaos_Magic.png', pos: '50% 45%' },
+    gWvDuel:     { src: 'e/e0/Scarlet_Witch_defeats_Agatha_Harkness.png', pos: '60% 45%' },
+    gWvDarkhold: { src: '1/1a/Scarlet_Witch_reading_the_Darkhold.png', pos: '50% 40%' },
+    gMomCrown:   { src: '9/9c/Wanda_Maximoff_%28The_Scarlet_Witch%29.png', pos: '50% 35%' },
+    gMomFire:    { src: 'c/cc/WandaMaximoff-ScarletWitch-DSMoM.png', pos: '50% 35%' },
+    gMomKamar:   { src: '2/23/Scarlet_Witch_%28Kamar-Taj_Mirror_Dimension%29.png', pos: '45% 55%' },
+    gMomUltimatum: { src: '9/93/Scarlet_Witch_%28DSMoM%29.jpg', pos: '45% 30%' },
+    gMomTrance:  { src: 'f/fd/Scarlet_Witch_hovering.png', pos: '75% 50%' },
+
+    q1:          { src: '6/64/Scarlet_Witch_Endgame_battle_5.png', pos: '50% 50%' },
+    q2:          { src: 'e/ea/Scarletwitch_Civil_War00.jpg', pos: '60% 40%' },
+    q3:          { src: 'e/e8/The_Scarlet_Witch_and_The_Vision.png', pos: '50% 40%' },
+    q4:          { src: '2/28/Hex_Vision_Flight.png', pos: '50% 40%' },
+    q5:          { src: 'f/fd/Scarlet_Witch_hovering.png', pos: '50% 50%' },
+    q6:          { src: '5/51/That_doesn%27t_seem_fair.png', pos: '45% 40%' },
+    q7:          { src: 'a/ab/Scarlet_Witch_DSITMOM.png', pos: '55% 40%' },
+    q8:          { src: '8/87/Vision_comforts_Wanda.png', pos: '50% 40%' },
+
+    finale:      { src: '9/9c/Wanda_Maximoff_%28The_Scarlet_Witch%29.png', pos: '50% 30%' },
+    cmpComic:    { src: 'b/b8/Scarlet_Witch_%28Halloween%29.png', pos: '42% 25%', alt: 'Wanda con una versión del traje clásico de los cómics' },
+    cmpMcu:      { src: '5/5f/Wanda_Maximoff_%28MoM%29.jpg', pos: '40% 25%', alt: 'Wanda con la corona de la Bruja Escarlata del MCU' }
+  };
+
+  /* =========================================================
+     2 · CONTENIDO
+     ========================================================= */
+  const POWERS = [
+    { icon: 'chaos', name: 'Magia del caos', en: 'Chaos Magic', tag: 'La esencia de la Bruja Escarlata.', desc: 'Una hechicería ancestral, ajena a las reglas de la magia tradicional. Es la fuente de todo su poder: le permite crear desde la nada y deshacer lo que existe.', moment: 'Crea el Hex de Westview y da vida a Vision y a sus hijos.', source: 'WandaVision (2021)', level: 100 },
+    { icon: 'tk', name: 'Telequinesis', en: 'Telekinesis', tag: 'Mover el mundo sin tocarlo.', desc: 'Levanta, aplasta y desvía objetos —y personas— con la mente. Puede detener un tren, contener una explosión o suspender a un titán en el aire.', moment: 'Inmoviliza a Thanos y empieza a quebrar su armadura en la Batalla de la Tierra.', source: 'Avengers: Endgame (2019)', level: 92 },
+    { icon: 'tp', name: 'Telepatía', en: 'Telepathy', tag: 'Leer lo que nadie dice.', desc: 'Percibe pensamientos, emociones y recuerdos ajenos. Así descubrió las verdaderas intenciones de Ultrón y sintió, a distancia, la muerte de su hermano.', moment: 'Lee la mente de Ultrón y descubre su plan de extinción.', source: 'Avengers: Era de Ultrón (2015)', level: 85 },
+    { icon: 'reality', name: 'Manipulación de la realidad', en: 'Reality Warping', tag: 'Reescribir lo que es real.', desc: 'Altera la materia, el tiempo y las leyes de la física a gran escala: transforma un pueblo entero y lo hace viajar de década en década en un parpadeo.', moment: 'Convierte Westview en una sitcom que recorre de los años 50 a los 2000.', source: 'WandaVision (2021)', level: 98 },
+    { icon: 'energy', name: 'Proyección de energía', en: 'Energy Projection', tag: 'Ráfagas de energía escarlata.', desc: 'Lanza descargas, ondas y escudos de energía carmesí capaces de derribar ejércitos enteros.', moment: 'Destruye la Gema de la Mente con una mano mientras contiene a Thanos con la otra.', source: 'Avengers: Infinity War (2018)', level: 90 },
+    { icon: 'illusion', name: 'Creación de ilusiones', en: 'Illusion Casting', tag: 'Ver solo lo que ella quiere.', desc: 'Construye realidades aparentes tan convincentes que engañan a los sentidos: escenarios, rostros y recuerdos hechos a medida.', moment: 'Mantiene la fachada perfecta de Westview ante S.W.O.R.D. y el mundo exterior.', source: 'WandaVision (2021)', level: 88 },
+    { icon: 'mind', name: 'Manipulación mental', en: 'Mind Control', tag: 'Miedo, sueños y voluntad.', desc: 'Induce visiones, pesadillas y obediencia. Doblegó a los Avengers con sus peores miedos y controló la mente de todo un pueblo.', moment: 'Muestra a Tony Stark y al equipo sus peores temores y desata la furia de Hulk.', source: 'Avengers: Era de Ultrón (2015)', level: 90 },
+    { icon: 'dimension', name: 'Manipulación dimensional', en: 'Dimensional Magic', tag: 'Cruzar el multiverso.', desc: 'Con el Darkhold aprendió a proyectar su conciencia entre universos (dreamwalking) y a crear o desgarrar barreras dimensionales como la del Hex.', moment: 'Posee a su variante de la Tierra-838 mediante el dreamwalking.', source: 'Doctor Strange en el Multiverso de la Locura (2022)', level: 95 }
+  ];
+
+  const TIMELINE = [
+    { year: 2014, era: 'Etapa I', title: 'La gemela', film: 'Capitán América y el Soldado del Invierno', img: 'tl2014', role: 'Sujeto de pruebas de HYDRA', moment: 'Hace flotar bloques en su celda (escena a mitad de créditos).', power: 20, text: 'Encerrada en una base de HYDRA, la joven Wanda es uno de los "milagros" del barón Strucker. Es el primer vistazo del MCU a su poder, apenas despertado por la Gema de la Mente.' },
+    { year: 2015, era: 'Etapa II', title: 'La enemiga', film: 'Avengers: Era de Ultrón', img: 'tl2015', role: 'De aliada de Ultrón a Avenger', moment: 'Arranca el corazón metálico de Ultrón tras sentir la muerte de Pietro.', power: 45, text: 'Aliada de Ultrón, usa visiones para quebrar a los Avengers. Al descubrir su plan de extinción cambia de bando, pierde a Pietro en la Batalla de Sokovia y termina uniéndose al equipo.' },
+    { year: 2016, era: 'Etapa III', title: 'La fugitiva', film: 'Capitán América: Civil War', img: 'tl2016', role: 'Avenger renegada', moment: 'Combate del lado del Capitán América en el aeropuerto de Leipzig-Halle.', power: 58, text: 'El incidente de Lagos la convierte en el rostro del miedo hacia los superhumanos. Se rebela contra los Acuerdos de Sokovia y termina encerrada en la Balsa hasta que Steve Rogers la libera.' },
+    { year: 2018, era: 'Etapa IV', title: 'La guardiana', film: 'Avengers: Infinity War', img: 'tl2018', role: 'Protectora de Vision', moment: 'Destruye la Gema de la Mente mientras contiene a Thanos.', power: 78, text: 'Vive en secreto con Vision en Edimburgo hasta que llega la Orden Negra. En Wakanda debe hacer lo impensable: destruir la Gema de la Mente… y al hombre que ama. Thanos revierte el tiempo y gana.' },
+    { year: 2019, era: 'Etapa V', title: 'La vengadora', film: 'Avengers: Endgame', img: 'tl2019', role: 'Avenger', moment: '"You took everything from me."', power: 86, text: 'Regresa tras el Blip con una sola misión. En la Batalla de la Tierra domina a Thanos sin ayuda, hasta que él ordena bombardear el campo para detenerla.' },
+    { year: 2021, era: 'Etapa VI', title: 'La Bruja Escarlata', film: 'WandaVision', img: 'tl2021', role: 'Reina del Hex', moment: 'Se despide de Vision y de sus hijos.', power: 96, text: 'Su duelo se desborda y crea el Hex de Westview. Agatha Harkness revela la verdad: no es una simple hechicera, es la legendaria Bruja Escarlata. Por primera vez porta su corona.' },
+    { year: 2022, era: 'Etapa VII', title: 'La reina del caos', film: 'Doctor Strange en el Multiverso de la Locura', img: 'tl2022', role: 'Antagonista', moment: 'Derriba el Monte Wundagore sobre sí misma.', power: 100, text: 'Corrompida por el Darkhold, persigue a America Chavez para alcanzar un universo donde sus hijos existan. Al verlos aterrados de ella, destruye todo rastro del libro maldito.' },
+    { year: 2024, era: 'Epílogo', title: 'El legado', film: 'Agatha All Along', img: 'tl2024', role: 'Legado', moment: 'Billy recorre el Camino de las Brujas junto a Agatha.', power: null, text: 'Su muerte rompe el hechizo que mantenía a Agatha atrapada como "Agnes". Su hijo Billy reaparece, renacido en el cuerpo del joven William Kaplan, decidido a encontrar a Tommy.' }
+  ];
+
+  const RELATIONS = [
+    { name: 'Pietro Maximoff', role: 'Hermano mellizo', bond: 'Sangre', actor: 'Aaron Taylor-Johnson', img: 'relPietro', text: 'Doce minutos mayor que ella y su escudo desde la infancia. Sobrevivieron juntos a la bomba, a la calle y a HYDRA, que le dio una velocidad sobrehumana. Murió en Sokovia protegiendo a Clint Barton y a un niño; Wanda sintió su muerte en carne propia.' },
+    { name: 'Vision', role: 'El amor de su vida', bond: 'La Gema de la Mente', actor: 'Paul Bettany', img: 'relVision', text: 'Nacido de la misma gema que despertó su poder, fue el único que la miró sin miedo. Su historia terminó en tragedia en Wakanda; en Westview, Wanda lo recreó con su magia… y tuvo que dejarlo ir.', quote: '“We’ll say hello again.”' },
+    { name: 'Billy Maximoff', role: 'Hijo', bond: 'Magia', actor: 'Julian Hilliard · Joe Locke', img: 'relBilly', text: 'Nacido en el Hex, heredó la sensibilidad de su madre: podía oír los pensamientos ajenos. Desapareció con Westview, pero su alma regresó en Agatha All Along, renacida en el joven William Kaplan.' },
+    { name: 'Tommy Maximoff', role: 'Hijo', bond: 'Velocidad', actor: 'Jett Klyne', img: 'relTommy', text: 'Inquieto y veloz como su tío Pietro, desarrolló supervelocidad en Westview. Su paradero sigue siendo un misterio: encontrarlo es ahora la misión de su hermano Billy.' },
+    { name: 'Agatha Harkness', role: 'Rival y espejo oscuro', bond: 'Hechicería', actor: 'Kathryn Hahn', img: 'relAgatha', text: 'Bruja centenaria que se infiltró en Westview como la vecina entrometida "Agnes". Ambicionaba el poder de Wanda, pero fue quien le reveló su verdadera naturaleza. Wanda la condenó a vivir atrapada en su propio personaje.' },
+    { name: 'Los Avengers', role: 'Familia elegida', bond: 'Lealtad', actor: 'El equipo', img: 'relAvengers', text: 'Clint Barton la convenció de ser una Avenger en plena Batalla de Sokovia y Steve Rogers la defendió cuando el mundo la temía. Fue aliada, fugitiva y, al final, la amenaza que Doctor Strange tuvo que enfrentar.' }
+  ];
+
+  const FACTS = [
+    { tag: 'Cómics', title: 'Nació como villana', text: 'Debutó en The X-Men #4 (1964), junto a su hermano Quicksilver, en la Hermandad de Mutantes Diabólicos de Magneto. Al año siguiente se redimió y se unió a los Vengadores.' },
+    { tag: 'MCU', title: 'Un nombre que tardó años', text: 'En el MCU nadie la llama «Scarlet Witch» hasta el final de WandaVision, cuando Agatha Harkness le revela su verdadera naturaleza.' },
+    { tag: 'Familia', title: 'Doce minutos', text: 'Pietro es doce minutos mayor que Wanda, y se encarga de recordárselo en Avengers: Era de Ultrón.' },
+    { tag: 'MCU', title: 'Un acento que desapareció', text: 'Al unirse a los Avengers empezó a disimular su acento sokoviano. En su vida secreta en Edimburgo lo abandonó por completo y se tiñó el cabello de un rubio rojizo.' },
+    { tag: 'Detrás de cámaras', title: 'Dos Pietros', text: 'Evan Peters, el Quicksilver de las películas de X-Men de Fox, apareció en WandaVision como un «Pietro» impostor: en realidad era Ralph Bohner, un vecino controlado por Agatha.' },
+    { tag: 'WandaVision', title: 'Un viaje por la televisión', text: 'Cada episodio homenajea una era de las sitcoms: de The Dick Van Dyke Show y Hechizada a Malcolm in the Middle y Modern Family. Su amor por ellas nació en Sokovia, donde su familia las veía para practicar inglés.' },
+    { tag: 'Premios', title: 'Música de Emmy', text: 'La canción «Agatha All Along», de Kristen Anderson-Lopez y Robert Lopez (autores de las canciones de Frozen), ganó el Emmy a Mejor Música y Letra Original. Elizabeth Olsen fue nominada como Mejor Actriz Protagonista.' },
+    { tag: 'Cómics', title: '«No more mutants»', text: 'En House of M (2005), Wanda reescribió la realidad entera y, con solo tres palabras, dejó sin poderes a casi todos los mutantes del planeta.' },
+    { tag: 'Poderes', title: 'Más allá del Hechicero Supremo', text: 'Según el Darkhold, el poder de la Bruja Escarlata supera al del Hechicero Supremo, y su destino es destruir el mundo.' }
+  ];
+
+  const COMPARE = [
+    { k: 'Debut', c: 'The X-Men #4 (1964), como villana de la Hermandad de Mutantes Diabólicos.', m: 'Escena a mitad de créditos de Capitán América y el Soldado del Invierno (2014).' },
+    { k: 'Lugar de origen', c: 'El Monte Wundagore, en la nación ficticia de Transia.', m: 'Novi Grad, capital de Sokovia.' },
+    { k: 'Origen del poder', c: 'Presentada durante décadas como mutante; más tarde se reveló que su magia venía de su linaje y que el Alto Evolucionador había experimentado con ella.', m: 'Nació con magia del caos latente; la Gema de la Mente, en los experimentos de HYDRA, la despertó y amplificó.' },
+    { k: 'Padres', c: 'Durante años se la presentó como hija de Magneto, hasta que una revelación lo descartó.', m: 'Olek e Iryna Maximoff, muertos en un bombardeo en 1999.' },
+    { k: 'Vision', c: 'Se casan en Giant-Size Avengers #4 (1975).', m: 'Romance desde Civil War; Vision muere en Infinity War y su cuerpo regresa como White Vision.' },
+    { k: 'Billy y Tommy', c: 'Creados con magia, renacen como Wiccan y Speed de los Jóvenes Vengadores.', m: 'Nacen en el Hex de Westview; Billy reaparece en Agatha All Along.' },
+    { k: 'Momento cumbre', c: 'House of M (2005): «No more mutants».', m: 'WandaVision (2021) y su descenso en el Multiverso de la Locura (2022).' },
+    { k: '«Bruja Escarlata»', c: 'Su nombre en clave desde su primera aparición.', m: 'Nadie la llama así hasta el final de WandaVision.' }
+  ];
+
+  /* Películas y series para los filtros de la galería */
+  const FILMS = [
+    { key: 'tws', label: 'Soldado del Invierno', full: 'Capitán América y el Soldado del Invierno' },
+    { key: 'aou', label: 'Era de Ultrón', full: 'Avengers: Era de Ultrón' },
+    { key: 'cw', label: 'Civil War', full: 'Capitán América: Civil War' },
+    { key: 'iw', label: 'Infinity War', full: 'Avengers: Infinity War' },
+    { key: 'eg', label: 'Endgame', full: 'Avengers: Endgame' },
+    { key: 'wv', label: 'WandaVision', full: 'WandaVision' },
+    { key: 'mom', label: 'Multiverso', full: 'Doctor Strange en el Multiverso de la Locura' }
+  ];
+  const FILM = Object.fromEntries(FILMS.map((f) => [f.key, f]));
+
+  /* featured: aparece en la vista inicial de "Todas"; el resto se muestra con "Ver toda la galería".
+     size: wide (2 columnas), tall (2 filas) o big (2 × 2). */
+  const GALLERY = [
+    { img: 'gTws', film: 'tws', year: 2014, title: 'La gemela de HYDRA', size: 'wide', featured: true },
+    { img: 'gTws2', film: 'tws', year: 2014, title: 'Bloques suspendidos' },
+    { img: 'gAou1', film: 'aou', year: 2015, title: 'Poder desatado', featured: true },
+    { img: 'gAou2', film: 'aou', year: 2015, title: 'Los mellizos Maximoff', size: 'tall', featured: true },
+    { img: 'gAouSide', film: 'aou', year: 2015, title: 'Lado a lado' },
+    { img: 'gAouPromo', film: 'aou', year: 2015, title: 'Hija de Sokovia', size: 'tall' },
+    { img: 'gAouRescue', film: 'aou', year: 2015, title: 'Al rescate', size: 'wide' },
+    { img: 'gAouHeart', film: 'aou', year: 2015, title: 'El corazón de Ultrón' },
+    { img: 'gCw1', film: 'cw', year: 2016, title: 'Energía escarlata', size: 'tall', featured: true },
+    { img: 'gCw2', film: 'cw', year: 2016, title: 'El peso del poder', size: 'wide', featured: true },
+    { img: 'gCwLagos', film: 'cw', year: 2016, title: 'Misión en Lagos' },
+    { img: 'gCwStill', film: 'cw', year: 2016, title: 'Bajo vigilancia', size: 'tall' },
+    { img: 'gCwAirport', film: 'cw', year: 2016, title: 'Leipzig-Halle', size: 'wide' },
+    { img: 'gIw1', film: 'iw', year: 2018, title: 'La Batalla de Wakanda', size: 'big', featured: true },
+    { img: 'gIw2', film: 'iw', year: 2018, title: 'Guardiana de la gema', size: 'tall', featured: true },
+    { img: 'gIwEdin', film: 'iw', year: 2018, title: 'Emboscada en Edimburgo', size: 'wide' },
+    { img: 'gIwForest', film: 'iw', year: 2018, title: 'Tras la pérdida' },
+    { img: 'gIwFloat', film: 'iw', year: 2018, title: 'Fuerza imparable' },
+    { img: 'gEg', film: 'eg', year: 2019, title: 'La Batalla de la Tierra', size: 'wide', featured: true },
+    { img: 'gEgFury', film: 'eg', year: 2019, title: 'Furia escarlata', size: 'wide' },
+    { img: 'gWv1', film: 'wv', year: 2021, title: 'Hogar, dulce hogar', featured: true },
+    { img: 'gWv70s', film: 'wv', year: 2021, title: 'Los años 70' },
+    { img: 'gWvAgnes', film: 'wv', year: 2021, title: 'La vecina Agnes' },
+    { img: 'gWvFamily', film: 'wv', year: 2021, title: 'Retrato de familia', size: 'tall' },
+    { img: 'gWv2', film: 'wv', year: 2021, title: 'Halloween en Westview', featured: true },
+    { img: 'gWvCostumes', film: 'wv', year: 2021, title: 'Disfraces clásicos' },
+    { img: 'gWvHex', film: 'wv', year: 2021, title: 'Nace el Hex', size: 'wide', featured: true },
+    { img: 'gWvChaos', film: 'wv', year: 2021, title: 'Magia del caos' },
+    { img: 'gWvDuel', film: 'wv', year: 2021, title: 'Duelo de brujas', size: 'wide' },
+    { img: 'gWv3', film: 'wv', year: 2021, title: 'Nace la Bruja Escarlata', size: 'wide', featured: true },
+    { img: 'gWvDarkhold', film: 'wv', year: 2021, title: 'El Darkhold' },
+    { img: 'gMomCrown', film: 'mom', year: 2022, title: 'La Bruja Escarlata', size: 'big', featured: true },
+    { img: 'gMom1', film: 'mom', year: 2022, title: 'Dreamwalking', featured: true },
+    { img: 'gMom2', film: 'mom', year: 2022, title: 'Monte Wundagore', size: 'wide', featured: true },
+    { img: 'gMom3', film: 'mom', year: 2022, title: 'Los ojos del caos', size: 'wide', featured: true },
+    { img: 'gMomFire', film: 'mom', year: 2022, title: 'Entre las llamas' },
+    { img: 'gMomKamar', film: 'mom', year: 2022, title: 'Asedio a Kamar-Taj' },
+    { img: 'gMomUltimatum', film: 'mom', year: 2022, title: 'El ultimátum', size: 'wide' },
+    { img: 'gMomTrance', film: 'mom', year: 2022, title: 'En trance' }
+  ];
+
+  const QUOTES = [
+    { en: 'You took everything from me.', extra: '—I don’t even know who you are. —You will.', es: 'Me lo quitaste todo. —Ni siquiera sé quién eres. —Lo sabrás.', who: 'Wanda a Thanos', src: 'Avengers: Endgame', year: 2019, img: 'q1' },
+    { en: 'I can’t control their fear, only my own.', es: 'No puedo controlar su miedo, solo el mío.', who: 'Wanda a Vision', src: 'Capitán América: Civil War', year: 2016, img: 'q2' },
+    { en: 'You are my sadness and my hope. But mostly, you’re my love.', es: 'Eres mi tristeza y mi esperanza. Pero, sobre todo, eres mi amor.', who: 'Wanda a Vision', src: 'WandaVision', year: 2021, img: 'q3' },
+    { en: 'We’ll say hello again.', es: 'Volveremos a decirnos hola.', who: 'Wanda a Vision', src: 'WandaVision', year: 2021, img: 'q4' },
+    { en: 'Every night, the same dream, and every morning, the same nightmare.', es: 'Cada noche, el mismo sueño; y cada mañana, la misma pesadilla.', who: 'Wanda Maximoff', src: 'Doctor Strange en el Multiverso de la Locura', year: 2022, img: 'q5' },
+    { en: 'I’m not a monster, Stephen. I’m a mother.', es: 'No soy un monstruo, Stephen. Soy una madre.', who: 'Wanda a Doctor Strange', src: 'Doctor Strange en el Multiverso de la Locura', year: 2022, img: 'q6' },
+    { en: 'This is me being reasonable.', es: 'Así soy yo siendo razonable.', who: 'Wanda a Doctor Strange', src: 'Doctor Strange en el Multiverso de la Locura', year: 2022, img: 'q7' },
+    { en: 'What is grief, if not love persevering?', es: '¿Qué es el duelo, sino amor que persevera?', who: 'Vision a Wanda', src: 'WandaVision', year: 2021, img: 'q8' }
+  ];
+
+  /* =========================================================
+     3 · UTILIDADES
+     ========================================================= */
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  const mq = (q) => window.matchMedia(q);
+  const reduced = mq('(prefers-reduced-motion: reduce)').matches;
+  const fine = mq('(hover: hover) and (pointer: fine)').matches;
+  const EASE_OUT = 'cubic-bezier(.23, 1, .32, 1)';
+  const EASE_DRAWER = 'cubic-bezier(.32, .72, 0, 1)';
+  const hasIO = 'IntersectionObserver' in window;
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pad = (n) => String(n).padStart(2, '0');
+  /* factor de suavizado independiente de los fps (tipo muelle) */
+  const damp = (rate, dt) => 1 - Math.pow(1 - rate, dt / 16.667);
+  const isCdn = (p) => /^[0-9a-f]\/[0-9a-f]{2}\//.test(p);
+  const imgUrl = (p, w) => (isCdn(p) ? CDN + p + '/revision/latest' + (w ? '/scale-to-width-down/' + w : '') : p);
+  const imgSet = (p, ws) => (isCdn(p) ? ws.map((w) => imgUrl(p, w) + ' ' + w + 'w').join(', ') : '');
+
+  let lockCount = 0;
+  function lockScroll() {
+    if (lockCount++ > 0) return;
+    const sw = window.innerWidth - document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--sbw', sw + 'px');
+    document.documentElement.classList.add('is-locked');
+  }
+  function unlockScroll() {
+    if (lockCount === 0 || --lockCount > 0) return;
+    document.documentElement.classList.remove('is-locked');
+    document.documentElement.style.removeProperty('--sbw');
+  }
+
+  /* Imagen con fundido y arte de respaldo si falla la carga */
+  function mountMedia(el) {
+    const def = IMAGES[el.dataset.img];
+    if (!def || el.dataset.mounted) return;
+    el.dataset.mounted = '1';
+    const img = document.createElement('img');
+    img.alt = el.dataset.alt != null ? el.dataset.alt : (def.alt || '');
+    img.decoding = 'async';
+    img.draggable = false;
+    if ('eager' in el.dataset) img.setAttribute('fetchpriority', 'high');
+    else img.loading = 'lazy';
+    const widths = (el.dataset.widths || '640,960,1440').split(',').map(Number);
+    const set = imgSet(def.src, widths);
+    if (set) { img.sizes = el.dataset.sizes || '100vw'; img.srcset = set; }
+    img.src = imgUrl(def.src, widths[Math.min(1, widths.length - 1)]);
+    img.style.objectPosition = el.dataset.pos || def.pos || '50% 50%';
+    const ok = () => el.classList.add('is-loaded');
+    img.addEventListener('load', ok, { once: true });
+    img.addEventListener('error', () => { el.classList.add('is-error'); img.remove(); }, { once: true });
+    el.appendChild(img);
+    if (img.complete && img.naturalWidth) ok();
+  }
+
+  /* =========================================================
+     4 · RENDER DE SECCIONES DINÁMICAS
+     ========================================================= */
+  function renderPowers() {
+    const grid = $('#powers-grid');
+    if (!grid) return;
+    grid.innerHTML = POWERS.map((p, i) => `
+      <article class="power">
+        <div class="power__inner">
+          <div class="power__face power__face--front">
+            <span class="power__glow" aria-hidden="true"></span>
+            <svg class="ico power__mark" aria-hidden="true"><use href="#i-${p.icon}"/></svg>
+            <span class="power__num" aria-hidden="true">${pad(i + 1)}</span>
+            <span class="power__icon" aria-hidden="true"><svg class="ico"><use href="#i-${p.icon}"/></svg></span>
+            <h3 class="power__name">${p.name}</h3>
+            <p class="power__en">${p.en}</p>
+            <p class="power__tag">${p.tag}</p>
+            <span class="power__hint" aria-hidden="true"><svg class="ico"><use href="#i-flip"/></svg>Descubrir</span>
+          </div>
+          <div class="power__face power__face--back" id="power-back-${i}">
+            <span class="power__glow" aria-hidden="true"></span>
+            <p class="power__en">${p.en}</p>
+            <h3 class="power__name power__name--sm">${p.name}</h3>
+            <p class="power__desc">${p.desc}</p>
+            <div class="power__moment"><span>Momento clave</span><p>${p.moment}</p><small>${p.source}</small></div>
+            <div class="power__level">
+              <div class="power__level-head"><span>Dominio</span><b>${p.level}%</b></div>
+              <div class="bar"><i style="--lvl:${p.level / 100}"></i></div>
+            </div>
+          </div>
+        </div>
+        <button class="power__hit" type="button" aria-expanded="false" aria-controls="power-back-${i}"><span class="sr-only">Ver detalles: ${p.name}</span></button>
+      </article>`).join('');
+  }
+
+  function renderRelations() {
+    const grid = $('#rel-grid');
+    if (!grid) return;
+    grid.innerHTML = RELATIONS.map((r) => `
+      <article class="rel">
+        <div class="rel__media media" data-img="${r.img}" data-widths="640,960" data-sizes="(min-width: 1100px) 34vw, (min-width: 640px) 50vw, 100vw" data-label="${esc(r.name)}"><span class="rel__shade"></span></div>
+        <div class="rel__body">
+          <p class="rel__role">${r.role}</p>
+          <h3 class="rel__name">${r.name}</h3>
+          <p class="rel__text">${r.text}</p>
+          ${r.quote ? `<p class="rel__quote" lang="en">${r.quote}</p>` : ''}
+          <ul class="rel__meta"><li><span>Vínculo</span>${r.bond}</li><li><span>Intérprete</span>${r.actor}</li></ul>
+        </div>
+      </article>`).join('');
+  }
+
+  function renderCuriosities() {
+    const grid = $('#facts-grid');
+    if (grid) {
+      grid.innerHTML = FACTS.map((f, i) => `
+        <article class="factcard">
+          <span class="factcard__num" aria-hidden="true">${pad(i + 1)}</span>
+          <span class="chip">${f.tag}</span>
+          <h3 class="factcard__title">${f.title}</h3>
+          <p>${f.text}</p>
+        </article>`).join('');
+    }
+    const rows = $('#versus-rows');
+    if (rows) {
+      rows.innerHTML = COMPARE.map((r) => `
+        <div class="vrow" role="row">
+          <div class="vrow__k" role="rowheader">${r.k}</div>
+          <div class="vrow__c" role="cell">${r.c}</div>
+          <div class="vrow__m" role="cell">${r.m}</div>
+        </div>`).join('');
+    }
+  }
+
+  function renderGallery() {
+    const grid = $('#gallery-grid');
+    if (!grid) return [];
+    grid.innerHTML = GALLERY.map((g, i) => {
+      const big = g.size === 'wide' || g.size === 'big';
+      const film = FILM[g.film].full;
+      return `
+      <button class="g-item${g.size ? ' g-item--' + g.size : ''}" type="button" data-index="${i}" aria-label="Ampliar: ${esc(g.title)}, ${esc(film)} (${g.year})"${g.featured ? '' : ' hidden'}>
+        <span class="media" data-img="${g.img}" data-widths="640,960,1440" data-sizes="(min-width: 900px) ${big ? '50vw' : '25vw'}, ${big ? '100vw' : '50vw'}" data-label="${esc(film)}" data-alt=""></span>
+        <span class="g-item__cap"><b>${g.title}</b><small><span class="g-film">${film}</span><span class="g-film g-film--short">${FILM[g.film].label}</span> · ${g.year}</small></span>
+        <span class="g-item__zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+      </button>`;
+    }).join('');
+
+    /* Chips de filtro: lista base (botones) + copia "activa" recortada con clip-path */
+    const base = $('#gfilters'), overlay = $('.gfilters__list--active');
+    if (base && overlay) {
+      const counts = {};
+      GALLERY.forEach((g) => { counts[g.film] = (counts[g.film] || 0) + 1; });
+      const chips = [{ key: 'all', label: 'Todas', n: GALLERY.length }].concat(FILMS.map((f) => ({ key: f.key, label: f.label, n: counts[f.key] || 0 })));
+      base.innerHTML = chips.map((c) => `<button class="gchip" type="button" data-filter="${c.key}" aria-pressed="${c.key === 'all'}">${c.label}<b>${c.n}</b></button>`).join('');
+      overlay.innerHTML = chips.map((c) => `<span class="gchip">${c.label}<b>${c.n}</b></span>`).join('');
+    }
+    return $$('.g-item', grid);
+  }
+
+  /* Filtros + "Ver toda la galería" con transiciones FLIP: las imágenes que se quedan
+     se deslizan a su nueva posición y las nuevas aparecen escalonadas */
+  function initGalleryFilters(items) {
+    const grid = $('#gallery-grid');
+    const base = $('#gfilters');
+    const overlay = $('.gfilters__list--active');
+    const scroller = $('.gfilters__scroller');
+    const moreWrap = $('.gmore');
+    const moreBtn = $('.gmore__btn');
+    const status = $('#gallery-status');
+    const fallback = () => items.map((el, i) => i).filter((i) => !items[i].hidden);
+    if (!grid || !base || !items.length) return fallback;
+    const chips = $$('.gchip', base);
+    const total = GALLERY.length;
+    const featuredCount = GALLERY.filter((g) => g.featured).length;
+    let filter = 'all', expanded = false, token = 0;
+
+    const isVisible = (g) => (filter === 'all' ? expanded || g.featured : g.film === filter);
+    const pageRect = (el) => { const r = el.getBoundingClientRect(); return { x: r.left + window.scrollX, y: r.top + window.scrollY }; };
+
+    function moveClip(instant) {
+      const chip = chips.find((c) => c.dataset.filter === filter);
+      if (!chip || !overlay) return;
+      const w = base.offsetWidth, x = chip.offsetLeft, cw = chip.offsetWidth;
+      if (instant) overlay.style.transition = 'none';
+      overlay.style.clipPath = `inset(0 ${(w - x - cw).toFixed(1)}px 0 ${x.toFixed(1)}px round 999px)`;
+      if (instant) { void overlay.offsetWidth; overlay.style.transition = ''; }
+      const overflow = !!scroller && scroller.scrollWidth > scroller.clientWidth + 2;
+      if (scroller) scroller.classList.toggle('is-overflow', overflow);
+      if (overflow) {
+        scroller.scrollTo({ left: chip.offsetLeft - (scroller.clientWidth - cw) / 2, behavior: instant || reduced ? 'auto' : 'smooth' });
+      }
+    }
+    function syncMore() {
+      if (!moreWrap) return;
+      moreWrap.hidden = filter !== 'all';
+      moreBtn.setAttribute('aria-expanded', String(expanded));
+      $('.gmore__label', moreBtn).textContent = expanded ? 'Ver menos' : 'Ver toda la galería';
+      $('.gmore__count', moreBtn).textContent = expanded ? '' : `(${total})`;
+    }
+    function announce() {
+      if (!status) return;
+      const n = items.filter((el) => !el.hidden).length;
+      const name = filter === 'all' ? 'todas las películas y series' : FILM[filter].full;
+      status.textContent = `${n} imágenes: ${name}.`;
+    }
+
+    function apply() {
+      const t = ++token;
+      const next = GALLERY.map(isVisible);
+      const before = new Map();
+      items.forEach((el) => { if (!el.hidden) before.set(el, pageRect(el)); });
+      const leaving = items.filter((el, i) => !el.hidden && !next[i]);
+
+      const layout = () => {
+        if (t !== token) return;
+        items.forEach((el, i) => {
+          el.getAnimations().forEach((a) => a.cancel());
+          el.hidden = !next[i];
+        });
+        announce();
+        let k = 0;
+        items.forEach((el, i) => {
+          if (!next[i]) return;
+          const b = before.get(el);
+          if (b && !leaving.includes(el)) {
+            if (reduced) return;
+            const a = pageRect(el);
+            const dx = b.x - a.x, dy = b.y - a.y;
+            if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+              el.animate([{ transform: `translate3d(${dx}px, ${dy}px, 0)` }, { transform: 'translate3d(0, 0, 0)' }],
+                { duration: 560, easing: 'cubic-bezier(.65, 0, .35, 1)' });
+            }
+          } else if (reduced) {
+            el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300, easing: 'ease', fill: 'backwards' });
+          } else {
+            el.animate([
+              { opacity: 0, transform: 'translate3d(0, 16px, 0) scale(.96)' },
+              { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)' }
+            ], { duration: 520, delay: 90 + Math.min(k++, 14) * 40, easing: EASE_OUT, fill: 'backwards' });
+          }
+        });
+      };
+
+      if (leaving.length && !reduced) {
+        const outs = leaving.map((el) => el.animate([
+          { opacity: 1, transform: 'scale(1)' },
+          { opacity: 0, transform: 'scale(.96)' }
+        ], { duration: 170, easing: EASE_OUT, fill: 'forwards' }));
+        Promise.all(outs.map((a) => a.finished.catch(() => {}))).then(layout);
+      } else {
+        layout();
+      }
+    }
+
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      if (f === filter) return;
+      filter = f;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      moveClip(false);
+      syncMore();
+      apply();
+    }));
+    if (moreBtn) moreBtn.addEventListener('click', () => {
+      expanded = !expanded;
+      syncMore();
+      apply();
+      if (!expanded) {
+        const top = grid.getBoundingClientRect().top;
+        if (top < 0) $('#galeria').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+    window.addEventListener('resize', () => moveClip(true), { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => moveClip(true));
+    moveClip(true);
+    syncMore();
+    if (featuredCount >= total && moreWrap) moreWrap.hidden = true;
+
+    /* Para el visor: índices de las imágenes visibles, en orden */
+    return () => items.map((el, i) => i).filter((i) => !items[i].hidden);
+  }
+
+  /* =========================================================
+     5 · PARTÍCULAS MÁGICAS (canvas)
+     ========================================================= */
+  function initParticles() {
+    const canvas = $('#magic');
+    const noop = { setIntensity() {}, burst() {}, pointer() {} };
+    if (!canvas || !canvas.getContext) return noop;
+    const ctx = canvas.getContext('2d');
+    const small = mq('(max-width: 720px)').matches;
+    const low = small || (navigator.hardwareConcurrency || 8) <= 4;
+    const COUNT = low ? 46 : 105;
+    const P = [], S = [];
+    const mouse = { x: -1e4, y: -1e4 };
+    let W = 0, H = 0, raf = 0, last = 0, intensity = 1.3, target = 1.3;
+
+    const sprite = (stops) => {
+      const c = document.createElement('canvas');
+      c.width = c.height = 64;
+      const g = c.getContext('2d');
+      const gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+      stops.forEach(([o, col]) => gr.addColorStop(o, col));
+      g.fillStyle = gr;
+      g.fillRect(0, 0, 64, 64);
+      return c;
+    };
+    const RED = sprite([[0, 'rgba(255,236,236,1)'], [0.16, 'rgba(255,92,112,.95)'], [0.42, 'rgba(214,24,52,.38)'], [1, 'rgba(120,0,20,0)']]);
+    const GOLD = sprite([[0, 'rgba(255,250,232,1)'], [0.18, 'rgba(242,210,146,.9)'], [0.48, 'rgba(201,163,90,.28)'], [1, 'rgba(201,163,90,0)']]);
+    /* Chispas del clic: solo energía escarlata (sin núcleo blanco ni dorado) */
+    const SPARK = sprite([[0, 'rgba(255,58,84,1)'], [0.22, 'rgba(240,24,56,.9)'], [0.5, 'rgba(190,10,38,.36)'], [1, 'rgba(120,0,20,0)']]);
+    const SPARK_DEEP = sprite([[0, 'rgba(214,18,46,1)'], [0.25, 'rgba(176,8,34,.88)'], [0.55, 'rgba(120,2,24,.32)'], [1, 'rgba(80,0,14,0)']]);
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, low ? 1.25 : 1.75);
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function spawn(p, initial) {
+      p.z = 0.15 + Math.pow(Math.random(), 1.7) * 0.85;
+      p.x = Math.random() * W;
+      p.y = initial ? Math.random() * H : H + 10 + Math.random() * 60;
+      p.vx = 0; p.vy = 0;
+      p.speed = 0.16 + p.z * 0.5;
+      p.r = 0.8 + p.z * 2.4;
+      p.phase = Math.random() * 6.283; p.freq = 0.0005 + Math.random() * 0.0011; p.amp = 0.15 + Math.random() * 0.5;
+      p.gold = Math.random() < 0.15;
+      p.tw = Math.random() * 6.283;
+      p.life = 0; p.max = 7000 + Math.random() * 9000;
+    }
+    function draw(img, x, y, size, a) {
+      ctx.globalAlpha = a > 1 ? 1 : a;
+      ctx.drawImage(img, x - size / 2, y - size / 2, size, size);
+    }
+    function frame(now) {
+      raf = requestAnimationFrame(frame);
+      const dt = Math.min(48, now - (last || now)) || 16.667;
+      last = now;
+      const k = dt / 16.667;
+      intensity += (target - intensity) * damp(0.03, dt);
+      /* Se limpia cada cuadro (sin acumulación: evita estelas fantasma) */
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.globalAlpha = 1;
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = 'lighter';
+      /* Más tenues sobre las secciones de lectura, más intensas en la portada y el final */
+      const boost = 0.3 + intensity * 0.7;
+      for (let i = 0; i < P.length; i++) {
+        const p = P[i];
+        p.life += dt;
+        const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < 22500) {
+          const d = Math.sqrt(d2) || 1, f = Math.pow(1 - d / 150, 2) * 1.5;
+          p.vx += (dx / d) * f * k; p.vy += (dy / d) * f * k;
+        }
+        const fr = Math.pow(0.94, k);
+        p.vx *= fr; p.vy *= fr;
+        p.x += (Math.sin(now * p.freq + p.phase) * p.amp + p.vx) * k;
+        p.y += (-p.speed * (0.65 + intensity * 0.35) + p.vy) * k;
+        if (p.y < -30 || p.x < -50 || p.x > W + 50 || p.life > p.max) { spawn(p, false); continue; }
+        const fade = Math.min(1, p.life / 1400, (p.max - p.life) / 1600);
+        const tw = 0.65 + 0.35 * Math.sin(now * 0.003 + p.tw);
+        const a = p.z * 0.8 * fade * tw * boost;
+        if (a > 0.01) draw(p.gold ? GOLD : RED, p.x, p.y, p.r * 7, a);
+      }
+      /* Chispas: trazo con estela propia + núcleo, en dos tonos de rojo.
+         Se dibujan sin mezcla aditiva para que, al superponerse, sigan siendo rojas. */
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.lineCap = 'round';
+      for (let i = S.length - 1; i >= 0; i--) {
+        const s = S[i];
+        s.life += dt;
+        if (s.life >= s.max) { S.splice(i, 1); continue; }
+        const fr = Math.pow(0.93, k);
+        s.vx *= fr; s.vy = s.vy * fr - 0.035 * k;
+        s.x += s.vx * k; s.y += s.vy * k;
+        const t = 1 - s.life / s.max;
+        ctx.globalAlpha = t * 0.7;
+        ctx.strokeStyle = s.deep ? 'rgb(196,12,40)' : 'rgb(255,36,66)';
+        ctx.lineWidth = s.r * 0.9;
+        ctx.beginPath();
+        ctx.moveTo(s.x - s.vx * 5, s.y - s.vy * 5);
+        ctx.lineTo(s.x, s.y);
+        ctx.stroke();
+        draw(s.deep ? SPARK_DEEP : SPARK, s.x, s.y, s.r * 8 * (0.5 + t * 0.6), t * 0.95);
+      }
+      ctx.globalAlpha = 1;
+    }
+    function staticFrame() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = 'lighter';
+      P.forEach((p) => draw(p.gold ? GOLD : RED, p.x, p.y, p.r * 7, p.z * 0.6));
+      ctx.globalAlpha = 1;
+    }
+    resize();
+    for (let i = 0; i < COUNT; i++) { const p = {}; spawn(p, true); p.life = Math.random() * p.max * 0.6; P.push(p); }
+    let rt = 0;
+    window.addEventListener('resize', () => {
+      clearTimeout(rt);
+      rt = setTimeout(() => { resize(); if (reduced) staticFrame(); }, 150);
+    }, { passive: true });
+    if (reduced) { staticFrame(); return noop; }
+    raf = requestAnimationFrame(frame);
+    return {
+      setIntensity(v) { target = v; },
+      pointer(x, y) { mouse.x = x; mouse.y = y; },
+      burst(x, y, n) {
+        for (let i = 0; i < n; i++) {
+          const a = Math.random() * 6.283, sp = 1.4 + Math.random() * 4.6;
+          S.push({ x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 0.8, life: 0, max: 600 + Math.random() * 650, r: 0.9 + Math.random() * 2, deep: Math.random() < 0.45 });
+        }
+        if (S.length > 240) S.splice(0, S.length - 240);
+      }
+    };
+  }
+
+  /* Aura que sigue al cursor con suavizado tipo muelle (solo puntero fino) */
+  function initAura(particles) {
+    const el = $('#aura');
+    if (!el || !fine || reduced) return;
+    let x = 0, y = 0, tx = 0, ty = 0, raf = 0, last = 0, on = false;
+    function tick(now) {
+      const dt = Math.min(48, now - (last || now)) || 16.667;
+      last = now;
+      const f = damp(0.14, dt);
+      x += (tx - x) * f; y += (ty - y) * f;
+      el.style.transform = `translate3d(${(x - 280).toFixed(1)}px, ${(y - 280).toFixed(1)}px, 0)`;
+      if (Math.abs(tx - x) + Math.abs(ty - y) > 0.4) raf = requestAnimationFrame(tick);
+      else { raf = 0; last = 0; }
+    }
+    window.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      tx = e.clientX; ty = e.clientY;
+      particles.pointer(tx, ty);
+      if (!on) { on = true; x = tx; y = ty; el.classList.add('is-on'); }
+      if (!raf) raf = requestAnimationFrame(tick);
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', () => {
+      on = false;
+      el.classList.remove('is-on');
+      particles.pointer(-1e4, -1e4);
+    });
+  }
+
+  /* =========================================================
+     6 · NAVEGACIÓN, PROGRESO Y MENÚ
+     ========================================================= */
+  function initNav() {
+    const nav = $('#nav');
+    const bar = $('.progress span');
+    const links = $$('.nav__links a');
+    const indicator = $('.nav__indicator');
+    const toggle = $('.nav__toggle');
+    const menu = $('#menu');
+    const menuLinks = $$('#menu a');
+    let ticking = false, active = null;
+
+    function onScroll() {
+      ticking = false;
+      const y = window.scrollY;
+      nav.classList.toggle('is-scrolled', y > 24);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max).toFixed(4) : 0})`;
+    }
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    onScroll();
+
+    function moveIndicator() {
+      if (!indicator) return;
+      const a = links.find((l) => l.getAttribute('href') === '#' + active);
+      if (!a || !a.offsetWidth) { indicator.style.opacity = '0'; return; }
+      indicator.style.opacity = '1';
+      indicator.style.transform = `translateX(${a.offsetLeft.toFixed(1)}px) scaleX(${(a.offsetWidth / 100).toFixed(3)})`;
+    }
+    function setActive(id) {
+      if (id === active) return;
+      active = id;
+      links.forEach((l) => {
+        const on = l.getAttribute('href') === '#' + id;
+        l.classList.toggle('is-active', on);
+        if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+      });
+      menuLinks.forEach((l) => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
+      moveIndicator();
+    }
+    if (hasIO) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
+      }, { rootMargin: '-45% 0px -54% 0px' });
+      $$('main > section[id]').forEach((s) => io.observe(s));
+    }
+    window.addEventListener('resize', moveIndicator, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveIndicator);
+
+    /* Menú móvil */
+    let open = false;
+    if (menu) menu.inert = true;
+    function setMenu(v, restoreFocus) {
+      if (!menu || open === v) return;
+      open = v;
+      toggle.setAttribute('aria-expanded', String(v));
+      toggle.setAttribute('aria-label', v ? 'Cerrar menú' : 'Abrir menú');
+      menu.classList.toggle('is-open', v);
+      menu.inert = !v;
+      /* Mientras el menú está abierto, el contenido de fondo no recibe foco */
+      ['main', '.footer'].forEach((s) => { const el = $(s); if (el) el.inert = v; });
+      document.documentElement.classList.toggle('menu-open', v);
+      if (v) { lockScroll(); setTimeout(() => menuLinks[0] && menuLinks[0].focus({ preventScroll: true }), 80); }
+      else { unlockScroll(); if (restoreFocus) toggle.focus({ preventScroll: true }); }
+    }
+    if (toggle) toggle.addEventListener('click', () => setMenu(!open));
+    menuLinks.forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) setMenu(false, true); });
+    const wide = mq('(min-width: 1100px)');
+    const onWide = (e) => { if (e.matches) setMenu(false); };
+    if (wide.addEventListener) wide.addEventListener('change', onWide);
+  }
+
+  /* =========================================================
+     7 · PORTADA (intro de letras + parallax)
+     ========================================================= */
+  function initHero() {
+    const hero = $('#inicio');
+    if (!hero) return { play() {} };
+    const media = $('.hero__media', hero);
+    const ring = $('.hero__ringwrap', hero);
+    const content = $('.hero__content', hero);
+
+    $$('.hero__line', hero).forEach((line) => {
+      const text = line.textContent.trim();
+      line.textContent = '';
+      for (const ch of text) {
+        const s = document.createElement('span');
+        s.className = 'ch';
+        s.textContent = ch;
+        s.setAttribute('aria-hidden', 'true');
+        line.appendChild(s);
+      }
+    });
+
+    let mx = 0, my = 0, cx = 0, cy = 0, raf = 0, last = 0, visible = true;
+    function kick() { if (!raf && visible) raf = requestAnimationFrame(tick); }
+    function tick(now) {
+      raf = 0;
+      const dt = Math.min(48, now - (last || now)) || 16.667;
+      last = now;
+      const f = damp(0.07, dt);
+      cx += (mx - cx) * f; cy += (my - cy) * f;
+      const sy = Math.max(0, window.scrollY);
+      const h = hero.offsetHeight || window.innerHeight;
+      media.style.transform = `translate3d(${(cx * -18).toFixed(2)}px, ${(sy * 0.22 + cy * -12).toFixed(2)}px, 0) scale(1.04)`;
+      if (ring) ring.style.transform = `translate3d(${(cx * 30).toFixed(2)}px, ${(sy * 0.1 + cy * 20).toFixed(2)}px, 0)`;
+      const p = Math.min(1, sy / (h * 0.7));
+      content.style.transform = `translate3d(0, ${(sy * 0.14).toFixed(2)}px, 0)`;
+      content.style.opacity = String(Math.max(0, 1 - p * 1.15).toFixed(3));
+      if (Math.abs(mx - cx) > 0.0005 || Math.abs(my - cy) > 0.0005) kick();
+      else last = 0;
+    }
+    if (!reduced) {
+      if (hasIO) new IntersectionObserver(([e]) => { visible = e.isIntersecting; kick(); }).observe(hero);
+      window.addEventListener('scroll', kick, { passive: true });
+      if (fine) hero.addEventListener('pointermove', (e) => {
+        mx = e.clientX / window.innerWidth - 0.5;
+        my = e.clientY / window.innerHeight - 0.5;
+        kick();
+      }, { passive: true });
+    }
+
+    function play() {
+      hero.classList.remove('is-pre');
+      kick();
+      const chars = $$('.ch', hero);
+      const rest = ['.hero__eyebrow', '.hero__subtitle', '.hero__quote', '.hero__quote-cite', '.hero__cta', '.hero__scroll'].map((s) => $(s, hero)).filter(Boolean);
+      if (reduced) {
+        chars.concat(rest).forEach((el) => el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 600, easing: 'ease', fill: 'backwards' }));
+        return;
+      }
+      chars.forEach((c, i) => c.animate([
+        { opacity: 0, transform: 'translate3d(0, .42em, 0)', filter: 'blur(10px)' },
+        { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+      ], { duration: 1200, delay: 120 + i * 55, easing: EASE_OUT, fill: 'backwards' }));
+      const delays = [0, 760, 920, 1040, 1180, 1500];
+      rest.forEach((el, i) => el.animate([
+        { opacity: 0, transform: 'translate3d(0, 18px, 0)', filter: 'blur(6px)' },
+        { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+      ], { duration: 1000, delay: delays[i] || 0, easing: EASE_OUT, fill: 'backwards' }));
+    }
+    return { play };
+  }
+
+  function runIntro(done) {
+    const intro = $('#intro');
+    if (!intro || reduced) { if (intro) intro.remove(); done(); return; }
+    const heroImg = $('.hero__media img');
+    const imgReady = new Promise((res) => {
+      if (!heroImg || (heroImg.complete && heroImg.naturalWidth)) return res();
+      heroImg.addEventListener('load', res, { once: true });
+      heroImg.addEventListener('error', res, { once: true });
+    });
+    const fonts = document.fonts && document.fonts.ready ? document.fonts.ready.catch(() => {}) : Promise.resolve();
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    Promise.race([Promise.all([imgReady, fonts, wait(1450)]), wait(2800)]).then(() => {
+      intro.classList.add('is-leaving');
+      setTimeout(done, 260);
+      setTimeout(() => intro.remove(), 1000);
+    });
+  }
+
+  /* =========================================================
+     8 · REVELADO AL HACER SCROLL (WAAPI)
+     ========================================================= */
+  function animateIn(el, delay) {
+    if (reduced) return el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay, easing: 'ease', fill: 'backwards' });
+    return el.animate([
+      { opacity: 0, transform: 'translate3d(0, 28px, 0)', filter: 'blur(6px)' },
+      { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+    ], { duration: 1000, delay, easing: EASE_OUT, fill: 'backwards' });
+  }
+  function initReveal() {
+    const targets = $$('[data-reveal], [data-stagger]');
+    const show = (el) => {
+      el.classList.add('is-in');
+      const base = Number(el.dataset.delay || 0);
+      if (el.hasAttribute('data-stagger')) Array.from(el.children).forEach((c, i) => animateIn(c, base + Math.min(i, 10) * 70));
+      else animateIn(el, base);
+    };
+    if (!hasIO) { targets.forEach(show); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); show(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    targets.forEach((t) => io.observe(t));
+  }
+
+  /* =========================================================
+     9 · HISTORIA (escenario fijo + capítulos)
+     ========================================================= */
+  function initStory() {
+    const chapters = $$('.chapter');
+    if (!chapters.length) return;
+    const imgs = $$('.stage__img');
+    const dots = $$('.stage__dot');
+    const num = $('.stage__num'), place = $('.stage__place'), year = $('.stage__year');
+    let cur = -1;
+    const pop = (el, text) => {
+      if (!el || el.textContent === text) return;
+      el.textContent = text;
+      if (!reduced) el.animate([
+        { opacity: 0, transform: 'translate3d(0, 10px, 0)', filter: 'blur(4px)' },
+        { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+      ], { duration: 600, easing: EASE_OUT });
+    };
+    function set(i) {
+      if (i === cur || i < 0) return;
+      cur = i;
+      chapters.forEach((c, j) => c.classList.toggle('is-active', j === i));
+      imgs.forEach((m, j) => m.classList.toggle('is-active', j === i));
+      dots.forEach((d, j) => d.classList.toggle('is-active', j === i));
+      const c = chapters[i];
+      pop(num, c.dataset.roman); pop(place, c.dataset.place); pop(year, c.dataset.year);
+    }
+    set(0);
+    if (hasIO) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) set(chapters.indexOf(e.target)); });
+      }, { rootMargin: '-46% 0px -46% 0px' });
+      chapters.forEach((c) => io.observe(c));
+    }
+    dots.forEach((d, i) => d.addEventListener('click', () => chapters[i].scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' })));
+  }
+
+  /* =========================================================
+     10 · PODERES (giro + inclinación 3D)
+     ========================================================= */
+  function initPowers() {
+    $$('.power').forEach((card, i) => {
+      const btn = $('.power__hit', card);
+      const label = $('.sr-only', btn);
+      const name = POWERS[i].name;
+      btn.addEventListener('click', () => {
+        const flipped = card.classList.toggle('is-flipped');
+        btn.setAttribute('aria-expanded', String(flipped));
+        label.textContent = (flipped ? 'Volver a la portada de la carta: ' : 'Ver detalles: ') + name;
+      });
+      if (fine && !reduced) tilt(card);
+    });
+  }
+  function tilt(card) {
+    const glows = $$('.power__glow', card);
+    let tx = 0, ty = 0, rx = 0, ry = 0, raf = 0, last = 0;
+    function tick(now) {
+      const dt = Math.min(48, now - (last || now)) || 16.667;
+      last = now;
+      const f = damp(0.12, dt);
+      rx += (tx - rx) * f; ry += (ty - ry) * f;
+      card.style.transform = `perspective(1000px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+      if (Math.abs(tx - rx) + Math.abs(ty - ry) > 0.02) raf = requestAnimationFrame(tick);
+      else { raf = 0; last = 0; if (!tx && !ty) card.style.transform = ''; }
+    }
+    card.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      ty = (px - 0.5) * 14;
+      tx = (0.5 - py) * 12;
+      const gx = e.clientX - r.left, gy = e.clientY - r.top;
+      if (glows[0]) glows[0].style.transform = `translate3d(${gx.toFixed(1)}px, ${gy.toFixed(1)}px, 0)`;
+      if (glows[1]) glows[1].style.transform = `translate3d(${(r.width - gx).toFixed(1)}px, ${gy.toFixed(1)}px, 0)`;
+      if (!raf) raf = requestAnimationFrame(tick);
+    }, { passive: true });
+    card.addEventListener('pointerleave', () => { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(tick); });
+  }
+
+  /* =========================================================
+     11 · LÍNEA TEMPORAL
+     ========================================================= */
+  function initTimeline() {
+    const root = $('#tl');
+    if (!root) return;
+    const track = $('.tl__track', root);
+    const fill = $('.tl__line i', root);
+    const visual = $('.tl__visual', root);
+    const content = $('.tl__content', root);
+    const status = $('#tl-status');
+    const prevB = $('.tl__prev', root), nextB = $('.tl__next', root);
+    const N = TIMELINE.length;
+
+    track.insertAdjacentHTML('beforeend', TIMELINE.map((s, i) => `
+      <button class="tl__node" type="button" role="tab" id="tl-tab-${i}" aria-controls="tl-panel" aria-selected="false" tabindex="-1">
+        <span class="tl__dot" aria-hidden="true"></span>
+        <span class="tl__year">${s.year}</span>
+        <span class="tl__label">${s.title}</span>
+      </button>`).join(''));
+    visual.innerHTML = TIMELINE.map((s) => `<div class="tl__img media" data-img="${s.img}" data-widths="960,1440" data-sizes="(min-width: 900px) 64vw, 150vw" data-label="${esc(s.film)}"></div>`).join('');
+
+    const nodes = $$('.tl__node', root);
+    const imgs = $$('.tl__img', root);
+    const f = {
+      era: $('.tl__era', content), title: $('.tl__title', content), film: $('.tl__film', content),
+      text: $('.tl__text', content), role: $('.tl__role', content), moment: $('.tl__moment', content),
+      level: $('.tl__meter b', content), bar: $('.tl__meter .bar i', content), count: $('.tl__count', root)
+    };
+    let cur = -1, anim = null;
+
+    function fillContent(i, silent) {
+      const s = TIMELINE[i];
+      f.era.textContent = `${s.era} · ${s.year}`;
+      f.title.textContent = s.title;
+      f.film.textContent = s.film;
+      f.text.textContent = s.text;
+      f.role.textContent = s.role;
+      f.moment.textContent = s.moment;
+      f.level.textContent = s.power == null ? 'Legado' : s.power + '%';
+      f.count.textContent = `${pad(i + 1)} / ${pad(N)}`;
+      if (status && !silent) status.textContent = `Etapa ${i + 1} de ${N}: ${s.title}, ${s.film} (${s.year}).`;
+    }
+    function centerNode(i) {
+      if (track.scrollWidth <= track.clientWidth + 2) return;
+      const n = nodes[i];
+      track.scrollTo({ left: n.offsetLeft - (track.clientWidth - n.offsetWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+    }
+    function set(i, opts) {
+      opts = opts || {};
+      i = Math.max(0, Math.min(N - 1, i));
+      if (i === cur) return;
+      const first = cur < 0;
+      const dir = i > cur ? 1 : -1;
+      cur = i;
+      nodes.forEach((n, j) => {
+        const on = j === i;
+        n.setAttribute('aria-selected', String(on));
+        n.tabIndex = on ? 0 : -1;
+        n.classList.toggle('is-past', j < i);
+      });
+      if (prevB) prevB.disabled = i === 0;
+      if (nextB) nextB.disabled = i === N - 1;
+      fill.style.transform = `scaleX(${(i / (N - 1)).toFixed(4)})`;
+      imgs.forEach((m, j) => m.classList.toggle('is-active', j === i));
+      const s = TIMELINE[i];
+      root.classList.toggle('is-legacy', s.power == null);
+      f.bar.style.transform = `scaleX(${s.power == null ? 1 : s.power / 100})`;
+      if (opts.focus) nodes[i].focus({ preventScroll: true });
+      if (!first) centerNode(i);
+      if (first || reduced) { fillContent(i, first); return; }
+      if (anim) anim.cancel();
+      const out = content.animate([
+        { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' },
+        { opacity: 0, transform: `translate3d(${-dir * 16}px, 0, 0)`, filter: 'blur(4px)' }
+      ], { duration: 150, easing: EASE_OUT, fill: 'forwards' });
+      anim = out;
+      out.onfinish = () => {
+        if (anim !== out) return;
+        fillContent(i);
+        anim = content.animate([
+          { opacity: 0, transform: `translate3d(${dir * 16}px, 0, 0)`, filter: 'blur(4px)' },
+          { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+        ], { duration: 420, easing: EASE_OUT });
+        out.cancel();
+      };
+    }
+    /* Reserva la altura de la etapa con más texto para que el panel no "salte" al cambiar */
+    function reserveHeight() {
+      content.style.minHeight = '';
+      let max = 0;
+      for (let j = 0; j < N; j++) { fillContent(j, true); max = Math.max(max, content.offsetHeight); }
+      fillContent(Math.max(0, cur), true);
+      content.style.minHeight = max + 'px';
+    }
+    let rt = 0;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(reserveHeight, 200); }, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserveHeight);
+
+    nodes.forEach((n, i) => n.addEventListener('click', () => set(i)));
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); set(cur + 1, { focus: true }); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); set(cur - 1, { focus: true }); }
+      else if (e.key === 'Home') { e.preventDefault(); set(0, { focus: true }); }
+      else if (e.key === 'End') { e.preventDefault(); set(N - 1, { focus: true }); }
+    });
+    if (prevB) prevB.addEventListener('click', () => set(cur - 1));
+    if (nextB) nextB.addEventListener('click', () => set(cur + 1));
+
+    /* Deslizar en pantallas táctiles */
+    const panel = $('.tl__panel', root);
+    let sx = 0, sy = 0, st = 0, sid = null;
+    panel.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'mouse' || sid !== null) return;
+      sid = e.pointerId; sx = e.clientX; sy = e.clientY; st = performance.now();
+    }, { passive: true });
+    panel.addEventListener('pointerup', (e) => {
+      if (e.pointerId !== sid) return;
+      sid = null;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      const v = Math.abs(dx) / Math.max(1, performance.now() - st);
+      if (Math.abs(dx) > Math.abs(dy) * 1.3 && (Math.abs(dx) > 56 || v > 0.3)) set(cur + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+    panel.addEventListener('pointercancel', () => { sid = null; });
+
+    set(0);
+    reserveHeight();
+  }
+
+  /* =========================================================
+     12 · CÓMICS VS MCU (selector móvil con clip-path)
+     ========================================================= */
+  function initVersus() {
+    const versus = $('.versus');
+    const sw = $('.vswitch');
+    if (!versus || !sw) return;
+    const btns = $$('.vswitch__opt', sw);
+    btns.forEach((b) => b.addEventListener('click', () => {
+      const v = b.dataset.view;
+      if (versus.dataset.view === v) return;
+      versus.dataset.view = v;
+      sw.dataset.view = v;
+      btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      if (reduced) return;
+      $$(v === 'comics' ? '.vrow__c' : '.vrow__m', versus).forEach((el, i) => el.animate([
+        { opacity: 0, transform: 'translate3d(0, 6px, 0)', filter: 'blur(3px)' },
+        { opacity: 1, transform: 'translate3d(0, 0, 0)', filter: 'blur(0px)' }
+      ], { duration: 380, delay: i * 30, easing: EASE_OUT, fill: 'backwards' }));
+    }));
+  }
+
+  /* =========================================================
+     13 · VISOR DE GALERÍA (FLIP desde la miniatura + gestos)
+     ========================================================= */
+  function initLightbox(items, getVisible) {
+    const lb = $('#lightbox');
+    if (!lb || !items.length) return;
+    const img = $('.lb__img', lb);
+    const backdrop = $('.lb__backdrop', lb);
+    const title = $('.lb__title', lb), meta = $('.lb__meta', lb), count = $('.lb__count', lb);
+    const btnClose = $('.lb__close', lb), btnPrev = $('.lb__prev', lb), btnNext = $('.lb__next', lb);
+    /* El visor recorre solo las imágenes visibles (según el filtro activo) */
+    const visibleList = () => {
+      const v = getVisible ? getVisible() : items.map((el, i) => i);
+      return v.length ? v : [Math.max(0, index)];
+    };
+    let index = -1, isOpen = false, closing = false, rect = null, natural = { w: 16, h: 10 }, token = 0, returnFocus = null, drag = null;
+
+    const thumb = (i) => $('img', items[i]);
+    const box = (i) => $('.media', items[i]);
+    const hiRes = (i) => imgUrl(IMAGES[GALLERY[i].img].src, 1920);
+    const stopAnims = () => { if (img.getAnimations) img.getAnimations().forEach((a) => a.cancel()); };
+    const preload = (src) => new Promise((res) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; });
+
+    function fit(nw, nh) {
+      const vw = window.innerWidth, vh = window.innerHeight, small = vw < 720;
+      const padX = small ? 12 : 112, top = small ? 66 : 80, bottom = small ? 140 : 122;
+      const aw = Math.max(80, vw - padX * 2), ah = Math.max(80, vh - top - bottom);
+      const ratio = nw / nh;
+      let w = aw, h = aw / ratio;
+      if (h > ah) { h = ah; w = ah * ratio; }
+      return { x: Math.round((vw - w) / 2), y: Math.round(top + (ah - h) / 2), w: Math.round(w), h: Math.round(h) };
+    }
+    function place(r) {
+      rect = r;
+      img.style.left = r.x + 'px'; img.style.top = r.y + 'px';
+      img.style.width = r.w + 'px'; img.style.height = r.h + 'px';
+    }
+    function objPos(el) {
+      const v = (s) => (s && /%$/.test(s) ? parseFloat(s) / 100 : 0.5);
+      const p = (el.style.objectPosition || getComputedStyle(el).objectPosition || '50% 50%').split(' ');
+      return [v(p[0]), v(p[1] || p[0])];
+    }
+    /* Calcula el transform + clip-path que hacen coincidir la imagen ampliada con su miniatura recortada */
+    function flipTo(i) {
+      const th = thumb(i), b = box(i);
+      if (!th || !b || !rect) return null;
+      const t = b.getBoundingClientRect();
+      if (!t.width || !t.height) return null;
+      const r = rect, ratioT = t.width / t.height, ratioI = r.w / r.h;
+      let vw, vh;
+      if (ratioI > ratioT) { vh = r.h; vw = r.h * ratioT; } else { vw = r.w; vh = r.w / ratioT; }
+      const [px, py] = objPos(th);
+      const ix = (r.w - vw) * px, iy = (r.h - vh) * py, s = t.width / vw;
+      return {
+        transform: `translate3d(${(t.left - r.x - ix * s).toFixed(2)}px, ${(t.top - r.y - iy * s).toFixed(2)}px, 0) scale(${s.toFixed(4)})`,
+        clip: `inset(${iy.toFixed(1)}px ${(r.w - vw - ix).toFixed(1)}px ${(r.h - vh - iy).toFixed(1)}px ${ix.toFixed(1)}px round ${(18 / s).toFixed(1)}px)`,
+        visible: t.bottom > 0 && t.top < window.innerHeight
+      };
+    }
+    function updateUI() {
+      const g = GALLERY[index];
+      const film = FILM[g.film].full;
+      const list = visibleList();
+      const pos = Math.max(0, list.indexOf(index));
+      title.textContent = g.title;
+      meta.textContent = `${film} · ${g.year}`;
+      count.textContent = `${pad(pos + 1)} / ${pad(list.length)}`;
+      img.alt = `${g.title} — ${film} (${g.year})`;
+    }
+    function setHidden(i, v) { if (items[i]) items[i].classList.toggle('is-hidden', v); }
+    function upgrade(i, t) {
+      const src = hiRes(i);
+      preload(src).then((im) => {
+        if (!im || t !== token || !isOpen || closing) return;
+        const swap = () => {
+          if (t !== token || !isOpen || closing) return;
+          img.src = src;
+          if (Math.abs(im.naturalWidth / im.naturalHeight - natural.w / natural.h) > 0.02) {
+            natural = { w: im.naturalWidth, h: im.naturalHeight };
+            place(fit(natural.w, natural.h));
+          }
+        };
+        if (im.decode) im.decode().then(swap, swap); else swap();
+      });
+    }
+
+    function open(i) {
+      if (isOpen) return;
+      isOpen = true; closing = false; index = i;
+      const t = ++token;
+      returnFocus = document.activeElement;
+      const th = thumb(i);
+      const ready = th && th.complete && th.naturalWidth;
+      natural = ready ? { w: th.naturalWidth, h: th.naturalHeight } : { w: 16, h: 10 };
+      stopAnims();
+      img.style.transform = '';
+      img.src = ready ? (th.currentSrc || th.src) : hiRes(i);
+      updateUI();
+      lockScroll();
+      lb.hidden = false;
+      place(fit(natural.w, natural.h));
+      void lb.offsetWidth;
+      lb.classList.add('is-open');
+      const from = !reduced && ready ? flipTo(i) : null;
+      if (from && from.visible) {
+        setHidden(i, true);
+        img.animate([
+          { transform: from.transform, clipPath: from.clip },
+          { transform: 'translate3d(0, 0, 0) scale(1)', clipPath: 'inset(0px 0px 0px 0px round 10px)' }
+        ], { duration: 640, easing: EASE_DRAWER });
+      } else {
+        setHidden(i, true);
+        img.animate([{ opacity: 0, transform: 'scale(.96)' }, { opacity: 1, transform: 'scale(1)' }], { duration: reduced ? 200 : 320, easing: EASE_OUT });
+      }
+      upgrade(i, t);
+      btnClose.focus({ preventScroll: true });
+    }
+
+    function close() {
+      if (!isOpen || closing) return;
+      closing = true;
+      token++;
+      const i = index;
+      const current = img.style.transform || 'translate3d(0, 0, 0)';
+      stopAnims();
+      img.style.transform = '';
+      lb.classList.remove('is-open');
+      backdrop.style.opacity = '';
+      const to = !reduced ? flipTo(i) : null;
+      const a = to && to.visible
+        ? img.animate([
+            { transform: current, clipPath: 'inset(0px 0px 0px 0px round 10px)' },
+            { transform: to.transform, clipPath: to.clip }
+          ], { duration: 440, easing: EASE_DRAWER, fill: 'forwards' })
+        : img.animate([
+            { transform: current, opacity: 1 },
+            { transform: current + ' scale(.94)', opacity: 0 }
+          ], { duration: 220, easing: EASE_OUT, fill: 'forwards' });
+      a.onfinish = () => {
+        setHidden(i, false);
+        lb.hidden = true;
+        a.cancel();
+        img.removeAttribute('src');
+        unlockScroll();
+        isOpen = false; closing = false;
+        const target = returnFocus && document.contains(returnFocus) ? returnFocus : items[i];
+        if (target && target.focus) target.focus({ preventScroll: true });
+      };
+    }
+
+    async function go(dir, fromOffset) {
+      if (!isOpen || closing) return;
+      const t = ++token;
+      const prev = index;
+      const list = visibleList();
+      const pos = list.indexOf(index);
+      index = list[((pos < 0 ? 0 : pos) + dir + list.length) % list.length];
+      setHidden(prev, false); setHidden(index, true);
+      updateUI();
+      const start = img.style.transform || (fromOffset ? `translate3d(${fromOffset}px, 0, 0)` : 'translate3d(0, 0, 0)');
+      stopAnims();
+      img.style.transform = '';
+      const out = img.animate([
+        { transform: start, opacity: 1 },
+        { transform: `translate3d(${-dir * 90 + (fromOffset || 0) * 0.4}px, 0, 0)`, opacity: 0 }
+      ], { duration: reduced ? 1 : 190, easing: EASE_OUT, fill: 'forwards' });
+      const th = thumb(index);
+      const ready = th && th.complete && th.naturalWidth;
+      const src = ready ? (th.currentSrc || th.src) : hiRes(index);
+      const [, im] = await Promise.all([out.finished.catch(() => {}), preload(src)]);
+      if (t !== token) return;
+      if (im) natural = { w: im.naturalWidth, h: im.naturalHeight };
+      img.src = src;
+      place(fit(natural.w, natural.h));
+      stopAnims();
+      img.animate([
+        { transform: `translate3d(${dir * 90}px, 0, 0)`, opacity: 0 },
+        { transform: 'translate3d(0, 0, 0)', opacity: 1 }
+      ], { duration: reduced ? 1 : 380, easing: EASE_OUT });
+      upgrade(index, t);
+    }
+
+    items.forEach((b, i) => b.addEventListener('click', () => open(i)));
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', () => go(-1));
+    btnNext.addEventListener('click', () => go(1));
+    backdrop.addEventListener('click', close);
+    lb.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      else if (e.key === 'Tab') {
+        const f = [btnClose, btnPrev, btnNext];
+        const k = f.indexOf(document.activeElement);
+        e.preventDefault();
+        f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+      }
+    });
+    window.addEventListener('resize', () => { if (isOpen && !closing) place(fit(natural.w, natural.h)); }, { passive: true });
+
+    /* Gestos: deslizar en horizontal = navegar; hacia abajo = cerrar (con amortiguación) */
+    img.addEventListener('pointerdown', (e) => {
+      if (!isOpen || closing || drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, t0: performance.now(), axis: null, dx: 0, dy: 0 };
+      try { img.setPointerCapture(e.pointerId); } catch (err) { /* sin captura */ }
+    });
+    img.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.axis) {
+        if (Math.hypot(dx, dy) < 8) return;
+        drag.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        stopAnims();
+        img.classList.add('is-dragging');
+      }
+      drag.dx = dx; drag.dy = dy;
+      if (drag.axis === 'x') {
+        img.style.transform = `translate3d(${dx.toFixed(1)}px, 0, 0)`;
+      } else {
+        const d = dy > 0 ? dy : dy * 0.2;
+        const s = 1 - Math.min(Math.abs(d), 400) / 2200;
+        img.style.transform = `translate3d(0, ${d.toFixed(1)}px, 0) scale(${s.toFixed(4)})`;
+        backdrop.style.opacity = String(1 - Math.min(Math.abs(d) / 520, 0.65));
+      }
+    });
+    const endDrag = (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag;
+      drag = null;
+      img.classList.remove('is-dragging');
+      if (!d.axis) return;
+      const elapsed = Math.max(1, performance.now() - d.t0);
+      if (d.axis === 'x') {
+        if (Math.abs(d.dx) > 90 || Math.abs(d.dx) / elapsed > 0.11) { go(d.dx < 0 ? 1 : -1, d.dx); return; }
+      } else if (d.dy > 120 || (d.dy > 24 && d.dy / elapsed > 0.11)) {
+        close();
+        return;
+      }
+      const from = img.style.transform || 'translate3d(0, 0, 0)';
+      img.style.transform = '';
+      img.animate([{ transform: from }, { transform: 'translate3d(0, 0, 0) scale(1)' }], { duration: 320, easing: EASE_OUT });
+      const bo = backdrop.style.opacity;
+      backdrop.style.opacity = '';
+      if (bo) backdrop.animate([{ opacity: Number(bo) }, { opacity: 1 }], { duration: 320, easing: EASE_OUT });
+    };
+    img.addEventListener('pointerup', endDrag);
+    img.addEventListener('pointercancel', endDrag);
+  }
+
+  /* =========================================================
+     14 · FRASES (carrusel con progreso y pausas inteligentes)
+     ========================================================= */
+  function initQuotes() {
+    const root = $('#frases');
+    if (!root) return;
+    const stage = $('.qstage', root), tabs = $('.qtabs', root), bg = $('.quotes__bg', root);
+    const toggle = $('.qtoggle', root), prevB = $('.qprev', root), nextB = $('.qnext', root);
+    const words = (s) => s.split(' ').map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`).join(' ');
+    stage.innerHTML = QUOTES.map((q, i) => `
+      <figure class="quote" id="quote-${i}" role="tabpanel" aria-labelledby="qtab-${i}" aria-hidden="true">
+        <span class="quote__mark" aria-hidden="true">“</span>
+        <blockquote class="quote__en" lang="en">${words(q.en)}</blockquote>
+        ${q.extra ? `<p class="quote__extra" lang="en">${q.extra}</p>` : ''}
+        <p class="quote__es">${q.es}</p>
+        <figcaption class="quote__cite"><span>${q.who}</span><cite>${q.src} · ${q.year}</cite></figcaption>
+      </figure>`).join('');
+    tabs.innerHTML = QUOTES.map((q, i) => `<button class="qtab" type="button" role="tab" id="qtab-${i}" aria-controls="quote-${i}" aria-selected="false" tabindex="-1"><span class="sr-only">Frase ${i + 1}</span><i></i></button>`).join('');
+    bg.innerHTML = QUOTES.map((q) => `<div class="media" data-img="${q.img}" data-widths="960,1600" data-sizes="100vw" data-alt="" data-label=""></div>`).join('');
+
+    const quotes = $$('.quote', stage), tabEls = $$('.qtab', tabs), bgs = $$('.media', bg);
+    const N = QUOTES.length;
+    const pausers = new Set();
+    let cur = -1;
+    if (reduced) root.classList.add('is-static');
+
+    function syncPause() {
+      root.classList.toggle('is-paused', pausers.size > 0);
+      if (!toggle) return;
+      const user = pausers.has('user');
+      toggle.setAttribute('aria-pressed', String(user));
+      toggle.setAttribute('aria-label', user ? 'Reanudar frases' : 'Pausar frases');
+      $('use', toggle).setAttribute('href', user ? '#i-play' : '#i-pause');
+    }
+    function set(i) {
+      i = (i + N) % N;
+      cur = i;
+      quotes.forEach((q, j) => { const on = j === i; q.classList.toggle('is-active', on); q.setAttribute('aria-hidden', String(!on)); });
+      bgs.forEach((b, j) => b.classList.toggle('is-active', j === i));
+      tabEls.forEach((t, j) => {
+        t.classList.toggle('is-done', j < i);
+        t.setAttribute('aria-selected', String(j === i));
+        t.tabIndex = j === i ? 0 : -1;
+        t.classList.remove('is-active');
+        if (j === i) { void t.offsetWidth; t.classList.add('is-active'); }
+      });
+    }
+    tabs.addEventListener('animationend', (e) => {
+      const tab = e.target.parentElement;
+      if (!reduced && tab && tab.classList.contains('is-active')) set(cur + 1);
+    });
+    tabEls.forEach((t, i) => t.addEventListener('click', () => set(i)));
+    tabs.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      set(cur + (e.key === 'ArrowRight' ? 1 : -1));
+      tabEls[cur].focus();
+    });
+    if (prevB) prevB.addEventListener('click', () => set(cur - 1));
+    if (nextB) nextB.addEventListener('click', () => set(cur + 1));
+    if (toggle) toggle.addEventListener('click', () => { if (pausers.has('user')) pausers.delete('user'); else pausers.add('user'); syncPause(); });
+    root.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') { pausers.add('hover'); syncPause(); } });
+    root.addEventListener('pointerleave', () => { pausers.delete('hover'); syncPause(); });
+    root.addEventListener('focusin', (e) => {
+      let kb = false;
+      try { kb = e.target.matches(':focus-visible'); } catch (err) { kb = false; }
+      if (kb) { pausers.add('focus'); syncPause(); }
+    });
+    root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget)) { pausers.delete('focus'); syncPause(); } });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) pausers.add('hidden'); else pausers.delete('hidden'); syncPause(); });
+    if (hasIO) {
+      pausers.add('offscreen');
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) pausers.delete('offscreen'); else pausers.add('offscreen');
+        syncPause();
+      }, { threshold: 0.35 }).observe(root);
+    }
+    syncPause();
+    set(0);
+  }
+
+  /* =========================================================
+     15 · CONTADORES, FINAL Y CHISPAS AL HACER CLIC
+     ========================================================= */
+  function initCounters() {
+    const els = $$('[data-count]');
+    if (!els.length || !hasIO || reduced) return;
+    els.forEach((el) => { el.textContent = el.dataset.from || '0'; });
+    const run = (el) => {
+      const to = Number(el.dataset.count), from = Number(el.dataset.from || 0), t0 = performance.now(), dur = 1700;
+      const step = (now) => {
+        const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 4);
+        el.textContent = String(Math.round(from + (to - from) * e));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); setTimeout(() => run(e.target), 250); } });
+    }, { threshold: 0.6 });
+    els.forEach((el) => io.observe(el));
+  }
+
+  function initIntensity(particles) {
+    if (!hasIO) return;
+    let inFinal = false, inHero = true;
+    const apply = () => particles.setIntensity(inFinal ? 2.4 : inHero ? 1.3 : 0.6);
+    const fin = $('#final'), hero = $('#inicio');
+    if (fin) new IntersectionObserver(([e]) => { inFinal = e.isIntersecting; apply(); }, { threshold: 0.3 }).observe(fin);
+    if (hero) new IntersectionObserver(([e]) => { inHero = e.isIntersecting; apply(); }, { threshold: 0.2 }).observe(hero);
+  }
+
+  /* =========================================================
+     16 · ARRANQUE
+     ========================================================= */
+  function init() {
+    renderPowers();
+    renderRelations();
+    renderCuriosities();
+    const items = renderGallery();
+    initTimeline();
+    initQuotes();
+    $$('.media[data-img]').forEach(mountMedia);
+
+    const particles = initParticles();
+    initAura(particles);
+    initNav();
+    const hero = initHero();
+    initStory();
+    initPowers();
+    initVersus();
+    const visibleGallery = initGalleryFilters(items);
+    initLightbox(items, visibleGallery);
+    initCounters();
+    initIntensity(particles);
+    initReveal();
+
+    /* Chispas escarlata al hacer clic (no en clics de teclado) */
+    document.addEventListener('click', (e) => {
+      if (reduced || e.detail === 0 || e.target.closest('.lb')) return;
+      particles.burst(e.clientX, e.clientY, e.target.closest('.btn') ? 26 : 14);
+    });
+
+    runIntro(() => hero.play());
+    window.__scarletReady = true;
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
