@@ -6,6 +6,17 @@
 <title>Wanda Maximoff · The Scarlet Witch</title>
 <meta name="description" content="Fan site no oficial de Wanda Maximoff, la Bruja Escarlata del Universo Cinematográfico de Marvel: perfil, historia, poderes, evolución, relaciones, curiosidades, galería y frases.">
 <meta name="theme-color" content="#050203">
+<!-- Vista previa al compartir el enlace (WhatsApp, Discord, redes) -->
+<link rel="canonical" href="https://lugamernobuy.github.io/wanda-maximoff-scarlet-witch/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wanda Maximoff · The Scarlet Witch">
+<meta property="og:title" content="Wanda Maximoff · The Scarlet Witch">
+<meta property="og:description" content="Fan site no oficial de la Bruja Escarlata: su historia, poderes, evolución en el MCU, galería y frases memorables.">
+<meta property="og:url" content="https://lugamernobuy.github.io/wanda-maximoff-scarlet-witch/">
+<meta property="og:image" content="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/9/9c/Wanda_Maximoff_%28The_Scarlet_Witch%29.png/revision/latest/scale-to-width-down/1200">
+<meta property="og:image:alt" content="Wanda Maximoff con la corona de la Bruja Escarlata">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='28 20 64 64'%3E%3Cpath d='M60 26 L65 50 L79 33 L72.5 56 L87 51 L77 72 L43 72 L33 51 L47.5 56 L41 33 L55 50 Z' fill='%23c8102e' stroke='%23ecd39a' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -451,6 +462,112 @@ h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
 }
 .media.is-loaded > img { opacity: 1; transform: none; }
 .media.is-loaded::before, .media.is-loaded::after { opacity: 0; }
+
+/* ---------- Imágenes "vivas": zoom lento (Ken Burns) + energía escarlata ----------
+   Solo se animan las imágenes cercanas a la pantalla (.is-live), así no se gasta GPU
+   en las que no se ven. Usan scale/translate (propiedades individuales), que se
+   combinan con los transform del resto de efectos (hover, carga, parallax). */
+@keyframes kb-1 { from { scale: 1.06; translate: -1.4% -1%; } to { scale: 1.15; translate: 1.4% 1%; } }
+@keyframes kb-2 { from { scale: 1.15; translate: 1.4% -1%; } to { scale: 1.06; translate: -1.2% 1%; } }
+@keyframes kb-3 { from { scale: 1.07; translate: 0 1.4%; } to { scale: 1.14; translate: 0 -1.4%; } }
+@keyframes kb-4 { from { scale: 1.13; translate: -1.4% 0; } to { scale: 1.06; translate: 1.4% 0; } }
+.media.is-live > img {
+  animation: var(--kb, kb-1) var(--kb-dur, 18s) ease-in-out var(--kb-delay, 0s) infinite alternate both;
+}
+/* Las imágenes apiladas que no están activas se congelan (sin saltos al cambiar) */
+.stage__img:not(.is-active) > img,
+.tl__img:not(.is-active) > img,
+.quotes__bg .media:not(.is-active) > img { animation-play-state: paused; }
+
+.media__fx {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1200ms ease;
+}
+.media.is-loaded > .media__fx,
+.stage__frame > .media__fx,
+.tl__visual > .media__fx { opacity: 1; }
+.media__fx i { position: absolute; display: block; pointer-events: none; }
+.fx-glow {
+  inset: -25%;
+  background: radial-gradient(30% 28% at var(--gx, 30%) var(--gy, 70%), rgba(255, 36, 66, .6), rgba(200, 16, 46, .2) 45%, transparent 72%);
+  mix-blend-mode: screen;
+  opacity: .3;
+}
+.fx-embers {
+  left: 0; right: 0; top: 0;
+  height: calc(100% + 600px);
+  background-image:
+    radial-gradient(circle at 14% 22%, rgba(255, 96, 112, .95) 0 1.1px, rgba(255, 40, 70, .35) 1.8px, transparent 3.4px),
+    radial-gradient(circle at 66% 9%, rgba(255, 70, 90, .9) 0 .9px, rgba(255, 30, 60, .3) 1.5px, transparent 3px),
+    radial-gradient(circle at 41% 54%, rgba(255, 110, 120, .95) 0 1.3px, rgba(255, 40, 70, .35) 2px, transparent 3.8px),
+    radial-gradient(circle at 88% 38%, rgba(230, 24, 52, .9) 0 1px, rgba(200, 16, 46, .3) 1.6px, transparent 3px),
+    radial-gradient(circle at 27% 83%, rgba(255, 80, 96, .85) 0 .9px, rgba(255, 30, 60, .3) 1.5px, transparent 2.8px);
+  background-size: 300px 300px;
+  mix-blend-mode: screen;
+  opacity: .6;
+}
+.fx-embers--far { background-size: 220px 200px; opacity: .35; }
+.fx-sweep {
+  top: -15%; bottom: -15%; left: -55%;
+  width: 42%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255, 70, 90, .05) 30%, rgba(255, 130, 140, .24) 50%, rgba(255, 70, 90, .05) 70%, transparent 100%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transform: skewX(-14deg);
+}
+.is-live > .media__fx .fx-glow { animation: fx-breathe var(--glow-dur, 7s) ease-in-out var(--fx-delay, 0s) infinite alternate both; }
+.is-live > .media__fx .fx-embers { animation: fx-rise var(--ember-dur, 16s) linear var(--fx-delay, 0s) infinite both, fx-twinkle 2.6s ease-in-out infinite alternate; }
+.is-live > .media__fx .fx-embers--far { animation: fx-rise-far calc(var(--ember-dur, 16s) * 1.5) linear var(--fx-delay, 0s) infinite both, fx-twinkle-far 3.4s ease-in-out infinite alternate; }
+.is-live > .media__fx .fx-sweep { animation: fx-sweep var(--sweep-dur, 12s) cubic-bezier(.45, .05, .25, 1) var(--sweep-delay, 0s) infinite both; }
+@keyframes fx-breathe {
+  from { opacity: .16; transform: translate3d(-4%, 3%, 0) scale(.96); }
+  to { opacity: .62; transform: translate3d(4%, -3%, 0) scale(1.08); }
+}
+@keyframes fx-rise { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, -600px, 0); } }
+@keyframes fx-rise-far { from { transform: translate3d(-10px, 0, 0); } to { transform: translate3d(10px, -400px, 0); } }
+@keyframes fx-twinkle { from { opacity: .35; } to { opacity: .75; } }
+@keyframes fx-twinkle-far { from { opacity: .15; } to { opacity: .42; } }
+@keyframes fx-sweep {
+  0%, 60% { opacity: 0; transform: translate3d(0, 0, 0) skewX(-14deg); }
+  68% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(380%, 0, 0) skewX(-14deg); }
+}
+@media (max-width: 639px) { .fx-embers--far { display: none; } }
+
+/* Botón flotante "volver arriba" con anillo de progreso */
+.totop {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  z-index: 47;
+  width: 52px; height: 52px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(10, 4, 6, .72);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .8), 0 0 30px -10px rgba(255, 43, 74, .6);
+  opacity: 0; translate: 0 12px;
+  pointer-events: none;
+  transition: opacity 260ms ease, translate 360ms var(--ease-out), scale 160ms var(--ease-out), border-color 200ms ease;
+}
+.totop.is-visible { opacity: 1; translate: 0 0; pointer-events: auto; }
+.totop:active { scale: .94; }
+.totop .ico { width: 20px; height: 20px; }
+.totop__ring {
+  position: absolute; inset: -1px;
+  width: calc(100% + 2px); height: calc(100% + 2px);
+  rotate: -90deg;
+  fill: none; stroke: var(--scarlet); stroke-width: 2;
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 4px rgba(255, 43, 74, .8));
+}
+html.menu-open .totop { opacity: 0; pointer-events: none; }
+@media (hover: hover) and (pointer: fine) { .totop:hover { border-color: var(--gold); } }
 
 /* =========================================================
    HERO
@@ -1538,7 +1655,8 @@ button.gchip:active { scale: .96; }
   .power__face--back { transform: none; opacity: 0; }
   .power.is-flipped .power__face--back { opacity: 1; }
   .power.is-flipped .power__face--front { opacity: 0; }
-  .media > img, .stage__img > img, .tl__img > img { transform: none !important; }
+  .media > img, .stage__img > img, .tl__img > img { transform: none !important; animation: none !important; }
+  .media__fx { display: none; }
   .quote__en .w { transform: none; filter: none; }
   .finale__crown { transition: none; stroke-dashoffset: 0; }
 }
@@ -1638,7 +1756,7 @@ button.gchip:active { scale: .96; }
   <!-- 01 · PORTADA -->
   <section class="hero is-pre" id="inicio" aria-labelledby="hero-title">
     <div class="hero__bg">
-      <div class="hero__media media" data-img="hero" data-eager data-widths="1280,1920,2560,3840" data-sizes="(max-width: 899px) 258vh, (orientation: portrait) 258vh, 272vh" data-label="The Scarlet Witch"></div>
+      <div class="hero__media media" data-img="hero" data-gx="34%" data-gy="56%" data-eager data-widths="1280,1920,2560,3840" data-sizes="(max-width: 899px) 258vh, (orientation: portrait) 258vh, 272vh" data-label="The Scarlet Witch"></div>
     </div>
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="hero__aura" aria-hidden="true"></div>
@@ -1730,14 +1848,14 @@ button.gchip:active { scale: .96; }
       <div class="story">
         <div class="story__stage" aria-hidden="true">
           <div class="stage__frame">
-            <div class="stage__img media" data-img="hist1" data-widths="960,1440,1920" data-sizes="190vh" data-label="Sokovia"></div>
-            <div class="stage__img media" data-img="hist2" data-widths="960,1440,1920" data-sizes="190vh" data-label="Novi Grad"></div>
-            <div class="stage__img media" data-img="hist3" data-widths="960,1440,1920" data-sizes="190vh" data-label="Pietro"></div>
-            <div class="stage__img media" data-img="hist4" data-widths="960,1440,1920" data-sizes="190vh" data-label="HYDRA"></div>
-            <div class="stage__img media" data-img="hist5" data-widths="960,1440,1920" data-sizes="190vh" data-label="Avengers"></div>
-            <div class="stage__img media" data-img="hist6" data-widths="960,1440,1920" data-sizes="190vh" data-label="Vision"></div>
-            <div class="stage__img media" data-img="hist7" data-widths="960,1440,1920" data-sizes="190vh" data-label="WandaVision"></div>
-            <div class="stage__img media" data-img="hist8" data-widths="960,1440,1920" data-sizes="190vh" data-label="Multiverso"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist1" data-widths="960,1440,1920" data-sizes="190vh" data-label="Sokovia"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist2" data-widths="960,1440,1920" data-sizes="190vh" data-label="Novi Grad"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist3" data-widths="960,1440,1920" data-sizes="190vh" data-label="Pietro"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist4" data-widths="960,1440,1920" data-sizes="190vh" data-label="HYDRA"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist5" data-widths="960,1440,1920" data-sizes="190vh" data-label="Avengers"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist6" data-widths="960,1440,1920" data-sizes="190vh" data-label="Vision"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist7" data-widths="960,1440,1920" data-sizes="190vh" data-label="WandaVision"></div>
+            <div class="stage__img media" data-fx="off" data-img="hist8" data-widths="960,1440,1920" data-sizes="190vh" data-label="Multiverso"></div>
             <div class="stage__meta">
               <span class="stage__num">I</span>
               <span class="stage__where"><span class="stage__place">Novi Grad, Sokovia</span><span class="stage__year">1989 – 1999</span></span>
@@ -1969,7 +2087,7 @@ button.gchip:active { scale: .96; }
 
   <!-- 10 · FINAL -->
   <section class="finale" id="final" aria-labelledby="final-title">
-    <div class="finale__bg media" data-img="finale" data-widths="1280,1920" data-sizes="240vh" data-alt="" data-label=""></div>
+    <div class="finale__bg media" data-fx="off" data-img="finale" data-widths="1280,1920" data-sizes="240vh" data-alt="" data-label=""></div>
     <div class="finale__veil" aria-hidden="true"></div>
     <div class="finale__rings" aria-hidden="true">
       <svg class="finale__ring finale__ring--a" viewBox="0 0 600 600">
@@ -2029,6 +2147,12 @@ button.gchip:active { scale: .96; }
     </div>
   </div>
 </div>
+
+<!-- Volver arriba -->
+<a class="totop" href="#inicio" aria-label="Volver al inicio">
+  <svg class="totop__ring" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" pathLength="1"/></svg>
+  <svg class="ico" aria-hidden="true"><use href="#i-up"/></svg>
+</a>
 
 <noscript><p class="noscript">Activa JavaScript para disfrutar de la experiencia completa.</p></noscript>
 
@@ -2286,6 +2410,38 @@ button.gchip:active { scale: .96; }
     document.documentElement.style.removeProperty('--sbw');
   }
 
+  /* Imágenes "vivas": cada una se mueve a su propio ritmo y dirección.
+     Solo se animan las que están cerca de la pantalla (clase .is-live). */
+  const KB = ['kb-1', 'kb-2', 'kb-3', 'kb-4'];
+  const FX_HTML = '<i class="fx-glow"></i><i class="fx-embers"></i><i class="fx-embers fx-embers--far"></i><i class="fx-sweep"></i>';
+  const liveIO = hasIO && !reduced ? new IntersectionObserver((entries) => {
+    entries.forEach((e) => e.target.classList.toggle('is-live', e.isIntersecting));
+  }, { rootMargin: '200px 0px' }) : null;
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  function makeLive(el) {
+    el.style.setProperty('--kb', KB[Math.floor(Math.random() * KB.length)]);
+    el.style.setProperty('--kb-dur', rnd(11, 17).toFixed(1) + 's');
+    el.style.setProperty('--kb-delay', (-rnd(0, 20)).toFixed(1) + 's');
+    if (liveIO) liveIO.observe(el);
+  }
+  /* Capa de energía escarlata: resplandor que respira, brasas que suben y un destello */
+  function addFx(host) {
+    if (!host || $('.media__fx', host)) return;
+    host.style.setProperty('--gx', host.dataset.gx || rnd(18, 82).toFixed(0) + '%');
+    host.style.setProperty('--gy', host.dataset.gy || rnd(35, 85).toFixed(0) + '%');
+    host.style.setProperty('--glow-dur', rnd(5.5, 9).toFixed(1) + 's');
+    host.style.setProperty('--ember-dur', rnd(13, 19).toFixed(1) + 's');
+    host.style.setProperty('--sweep-dur', rnd(10, 15).toFixed(1) + 's');
+    host.style.setProperty('--fx-delay', (-rnd(0, 12)).toFixed(1) + 's');
+    host.style.setProperty('--sweep-delay', (-rnd(0, 15)).toFixed(1) + 's');
+    const fx = document.createElement('span');
+    fx.className = 'media__fx';
+    fx.setAttribute('aria-hidden', 'true');
+    fx.innerHTML = FX_HTML;
+    host.appendChild(fx);
+    if (liveIO) liveIO.observe(host);
+  }
+
   /* Imagen con fundido y arte de respaldo si falla la carga */
   function mountMedia(el) {
     const def = IMAGES[el.dataset.img];
@@ -2307,6 +2463,8 @@ button.gchip:active { scale: .96; }
     img.addEventListener('error', () => { el.classList.add('is-error'); img.remove(); }, { once: true });
     el.appendChild(img);
     if (img.complete && img.naturalWidth) ok();
+    makeLive(el);
+    if (el.dataset.fx !== 'off') addFx(el);
   }
 
   /* =========================================================
@@ -2707,12 +2865,19 @@ button.gchip:active { scale: .96; }
     const menuLinks = $$('#menu a');
     let ticking = false, active = null;
 
+    const toTop = $('.totop');
+    const ring = $('.totop__ring circle');
     function onScroll() {
       ticking = false;
       const y = window.scrollY;
       nav.classList.toggle('is-scrolled', y > 24);
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      if (bar) bar.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max).toFixed(4) : 0})`;
+      const p = max > 0 ? Math.min(1, y / max) : 0;
+      if (bar) bar.style.transform = `scaleX(${p.toFixed(4)})`;
+      if (toTop) {
+        toTop.classList.toggle('is-visible', y > window.innerHeight * 0.9);
+        if (ring) ring.style.strokeDashoffset = (1 - p).toFixed(4);
+      }
     }
     window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
     onScroll();
@@ -2982,7 +3147,7 @@ button.gchip:active { scale: .96; }
         <span class="tl__year">${s.year}</span>
         <span class="tl__label">${s.title}</span>
       </button>`).join(''));
-    visual.innerHTML = TIMELINE.map((s) => `<div class="tl__img media" data-img="${s.img}" data-widths="960,1440" data-sizes="(min-width: 900px) 64vw, 150vw" data-label="${esc(s.film)}"></div>`).join('');
+    visual.innerHTML = TIMELINE.map((s) => `<div class="tl__img media" data-fx="off" data-img="${s.img}" data-widths="960,1440" data-sizes="(min-width: 900px) 64vw, 150vw" data-label="${esc(s.film)}"></div>`).join('');
 
     const nodes = $$('.tl__node', root);
     const imgs = $$('.tl__img', root);
@@ -3165,7 +3330,28 @@ button.gchip:active { scale: .96; }
       let vw, vh;
       if (ratioI > ratioT) { vh = r.h; vw = r.h * ratioT; } else { vw = r.w; vh = r.w / ratioT; }
       const [px, py] = objPos(th);
-      const ix = (r.w - vw) * px, iy = (r.h - vh) * py, s = t.width / vw;
+      let ix = (r.w - vw) * px, iy = (r.h - vh) * py;
+      /* La miniatura está "viva" (zoom lento + hover): se tiene en cuenta su escala y
+         desplazamiento actuales para que la ampliación arranque exactamente desde lo que se ve */
+      const cs = getComputedStyle(th);
+      let k = parseFloat(cs.scale);
+      if (!(k > 0)) k = 1;
+      const m = cs.transform && cs.transform !== 'none' ? cs.transform.match(/matrix\(\s*([-\d.e]+)/) : null;
+      if (m) k *= parseFloat(m[1]) || 1;
+      let tx = 0, ty = 0;
+      if (cs.translate && cs.translate !== 'none') {
+        const parts = cs.translate.trim().split(/\s+/);
+        const conv = (v, size) => (!v ? 0 : /%$/.test(v) ? (parseFloat(v) / 100) * size : parseFloat(v) || 0);
+        tx = conv(parts[0], t.width); ty = conv(parts[1], t.height);
+      }
+      if (k !== 1 || tx || ty) {
+        const f = vw / t.width;
+        const nw = vw / k, nh = vh / k;
+        ix = ix + vw / 2 - (f * tx) / k - nw / 2;
+        iy = iy + vh / 2 - (f * ty) / k - nh / 2;
+        vw = nw; vh = nh;
+      }
+      const s = t.width / vw;
       return {
         transform: `translate3d(${(t.left - r.x - ix * s).toFixed(2)}px, ${(t.top - r.y - iy * s).toFixed(2)}px, 0) scale(${s.toFixed(4)})`,
         clip: `inset(${iy.toFixed(1)}px ${(r.w - vw - ix).toFixed(1)}px ${(r.h - vh - iy).toFixed(1)}px ${ix.toFixed(1)}px round ${(18 / s).toFixed(1)}px)`,
@@ -3380,7 +3566,7 @@ button.gchip:active { scale: .96; }
         <figcaption class="quote__cite"><span>${q.who}</span><cite>${q.src} · ${q.year}</cite></figcaption>
       </figure>`).join('');
     tabs.innerHTML = QUOTES.map((q, i) => `<button class="qtab" type="button" role="tab" id="qtab-${i}" aria-controls="quote-${i}" aria-selected="false" tabindex="-1"><span class="sr-only">Frase ${i + 1}</span><i></i></button>`).join('');
-    bg.innerHTML = QUOTES.map((q) => `<div class="media" data-img="${q.img}" data-widths="960,1600" data-sizes="100vw" data-alt="" data-label=""></div>`).join('');
+    bg.innerHTML = QUOTES.map((q) => `<div class="media" data-fx="off" data-img="${q.img}" data-widths="960,1600" data-sizes="100vw" data-alt="" data-label=""></div>`).join('');
 
     const quotes = $$('.quote', stage), tabEls = $$('.qtab', tabs), bgs = $$('.media', bg);
     const N = QUOTES.length;
@@ -3485,6 +3671,9 @@ button.gchip:active { scale: .96; }
     initTimeline();
     initQuotes();
     $$('.media[data-img]').forEach(mountMedia);
+    /* Las imágenes apiladas (historia y línea temporal) comparten una sola capa de energía */
+    addFx($('.stage__frame'));
+    addFx($('.tl__visual'));
 
     const particles = initParticles();
     initAura(particles);
